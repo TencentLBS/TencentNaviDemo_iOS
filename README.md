@@ -6,22 +6,22 @@
 - [获取导航数据](#NaviData)
 - [自定义UI](#UIDesign)
 
-###介绍
+### 介绍
 腾讯导航SDK是一款针对在线导航的产品。该产品能够结合实时交通信息计算路径，并且提供路径规划、模拟导航、实时导航、导航设置、自定义导航界面等功能，力求为用户提供更加人性化的导航服务。
 
-
 <div id="ProjectConfig"></div>
-###工程配置
-------------
-#### 1、权限申请
+
+### 工程配置
+
+#### 1. 权限申请
 (1) 若使用实时导航，则需要在`info.list`中添加NSLocationWhenInUseUsageDescriptionh和NSLocationAlwaysUsageDescription字段。
 (2) 如果需要后台定位，需在IOS 9.0及以后设置allowBackgroundLocationUpdates为YES，此时必须保证`TARGETS->Capabilities->Background Modes->Location updates`处于选中状态。
 
-#### 2、引入SDK
+#### 2. 引入SDK
 在`TARGETS->Build Phases->Link Binary Libraries`中添加`WebP.framework`、导航SDK`TNKNavigationKit.framework`，在`TARGETS->Build Phases->Copy Bundle Resources`中添加资源文件`TencentNavigationKit.bundle`。
 由于导航SDK依赖地图SDK，还需要依照[http://lbs.qq.com/ios_v1/guide-project-setup.html](http://lbs.qq.com/ios_v1/guide-project-setup.html)添加地图SDK。
 
-#### 3、申请和设置开发密钥
+#### 3. 申请和设置开发密钥
 前往[http://lbs.qq.com/console/mykey.html](http://lbs.qq.com/console/mykey.html)申请开发密钥，分别在QMapServices和TNKNaviServices的APIKey属性上设置。
 ```objc
 [QMapServices sharedServices].APIKey = @"您的key";
@@ -30,9 +30,10 @@
 
 
 <div id="NaviPlan"></div>
-###驾车路径规划
-------------
-####基本介绍
+
+### 驾车路径规划
+
+#### 基本介绍
 `TNKCarNaviManager`根据起点、终点、途经点以及路径策略，为用户提供出行路线。方法：
 ```objc
 - (TNKSearchTask *)searchNavigationRoutesWithRequest:(TNKCarRouteSearchRequest *)request completion:(void (^)(TNKCarRouteSearchResult *result, NSError *error))callback;
@@ -50,6 +51,7 @@
 - searchOption：路线规划配置项，不可为空
 
 **路线规划请求参数说明**
+
 通过searchOption，可以配置是否避开收费道路、是否避开高速道路、是否结合路况、导航场景、起点路段类型。默认配置是不避开收费道路、不避开高速道路、不结合路况、接客模式、无详细起点路段类型。
 
 算路配置方法概览：
@@ -61,6 +63,7 @@ int navScene：设置导航场景，1表示接客，2表示送客
 TNKStartRoadType startRoadType：使用枚举设置起点路段类型，TNKStartRoadType_None为无详细类型，TNKStartRoadType_Elevated为在桥上，TNKStartRoadType_Downstairs为在桥下，TNKStartRoadType_MainRoad为在主路，TNKStartRoadType_ServingRoad为在辅路，TNKStartRoadType_DirectionRoad为在对面，TNKStartRoadType_DownstairsMainRoad为在桥下主路，TNKStartRoadType_DownstairsServingRoad为在桥下辅路
 ```
 **算路失败回调错误说明**
+
 回调NSError的错误码：
 
 - 1001：网络错误
@@ -71,7 +74,7 @@ TNKStartRoadType startRoadType：使用枚举设置起点路段类型，TNKStart
 - 2005：算路失败
 - 2999：服务器内部错误
 
-####示例
+#### 示例
 ```objc
 // 初始化
 self.carManager = [[TNKCarNaviManager alloc] init];
@@ -107,6 +110,7 @@ request.wayPoints = wayPoints;
 }];
 ```
 **驾车路线**
+
 路线规划获取的`TNKCarRouteSearchResult`包含属性：
 ```
 NSArray<TNKCarRouteSearchRoutePlan *> *routes
@@ -119,8 +123,9 @@ NSArray<TNKCarRouteSearchRoutePlan *> *routes
 - line：路线数据，包含起终点、途经点、道路信息的坐标点串等
 
 <div id="Navi"></div>
-###导航
-------------
+
+### 导航
+
 #### 基本介绍
 腾讯导航SDK提供了实时导航和模拟导航，实时导航是基于用户真实的定位信息来驱动的导航过程，模拟导航是基于线路模拟点驱动的导航过程，路线规划完成后就可以开始导航。
 方法：
@@ -131,6 +136,7 @@ locationEntry:(id <TNKLocationEntry> __nullable)locationEntry，路线规划成�
 - 停止实时导航：stop。
 
 **导航界面**
+
 腾讯导航SDK提供了默认的导航界面`TNKCarNaviView`，包括导航面板，导航地图：
 
 导航面板：
@@ -152,9 +158,10 @@ locationEntry:(id <TNKLocationEntry> __nullable)locationEntry，路线规划成�
 导航地图可以通过`self.carNaviView.naviMapView`获取。
 
 
-####使用说明
+#### 使用说明
 
 **1. 初始化**
+
 导航过程中，导航SDK提供类TNKCarNaviView用于显示导航界面，由驾车导航控制类TNKCarNaviManager设置导航状态回调，调用驾车路线规划，启动/停止导航，设置路口方法图/车道线加载资源等。
 初始化过程如下：
 ```objc
@@ -170,10 +177,12 @@ self.carNaviView.delegate = self;
 [self.carManager registerUIDelegate:self.carNaviView];
 ```
 
-**3. 发起路线规划**
+**2. 发起路线规划**
+
 具体参考[驾车路径规划](#NaviPlan)。
 
-**4. 开始导航**
+**3. 开始导航**
+
 路线规划成功后，在回调中获取用于导航的线路。
 ```objc
 [self.carManager searchNavigationRoutesWithRequest:request completion:^(TNKCarRouteSearchResult *result, NSError *error) {
@@ -186,6 +195,7 @@ if(error == nil)
 }];
 ```
 **4. 结束导航**
+
 到达终点后会自动结束导航，导航过程中可以手动结束导航：
 ```objc
 [self.carManager stop];
@@ -196,10 +206,11 @@ if(error == nil)
 ```
 
 <div id="NaviConfig"></div>
-###导航设置
-------------
+
+### 导航设置
+
 腾讯导航SDK提供导航模式、日夜模式等界面的动态设置，这些设置都是即时生效的。
-####设施导航模式
+#### 设施导航模式
 通过`TNKCarNaviView`的属性mode进行设置:
 
 - TNKCarNaviUIModeBounce：默认值，回弹模式，导航态中，用户使用手势操作地图后进入该模式，手势结束5秒后切换回之前的导航模式，直接设置为该模式不会被响应。
@@ -213,6 +224,7 @@ self.carNaviView.mode = TNKCarNaviUIMode3DCarTowardsUp;
 ```
 
 **设置导航日夜模式**
+
 通过`TNKCarNaviView`的属性dayNightMode设置日夜模式，默认为自动切换模式，可以通过dayNightStatus获取地图当前日夜状态。
 
 日夜切换模式TNKCarNaviDayNightMode：
@@ -231,13 +243,14 @@ self.carNaviView.mode = TNKCarNaviUIMode3DCarTowardsUp;
 self.carNaviView.dayNightMode = TNKCarNaviDayNightModeAlwaysDay;
 ```
 **设置导航面板**
+
 用户可以设定默认导航面板、车道线、路口放大图是否显示。
 ```objc
 // 设置默认面板（包含导航面板、车道线、路口放大图）的总开关
 self.carNaviView.hideNavigationPanel = NO;
-// 车道线开关
-self.carManager.enableEnlargedIntersection = YES;
 // 路口放大图开关
+self.carManager.enableEnlargedIntersection = YES;
+// 车道线开关  
 self.carManager.enableGuidedLane = YES;
 ```
 **设置导航线路**
@@ -257,9 +270,10 @@ self.carNaviView.TNKCarNaviFixCarProportion3D = CGPointMake(0.5, 0.75);
 ```
 
 <div id="NaviData"></div>
-###获取导航数据
-------------
-####面板数据
+
+### 获取导航数据
+
+#### 面板数据
 用户若需要自定义导航面板，可以通过采用`TNKCarNaviUIDelegate`协议获取面板数据，TNKCarNaviManager可同时注册多个对象接收更新：
 ```objc
 // 获取导航数据，包括当前道路名称、当前道路剩余距离、当前速度、总剩余距离、总剩余时间、下一条道路名称等
@@ -279,7 +293,7 @@ self.carNaviView.TNKCarNaviFixCarProportion3D = CGPointMake(0.5, 0.75);
 ```objc
 [self.carManager registerUIDelegate:self.carNaviView];
 ```
-####导航模式
+#### 导航模式
 用户可以采用`TNKCarNaviViewDelegate`协议获取导航模式和日夜模式改变信息：
 ```objc
 // 获取导航模式改变回调
@@ -291,7 +305,7 @@ self.carNaviView.TNKCarNaviFixCarProportion3D = CGPointMake(0.5, 0.75);
 ```objc
 self.carNaviView.naviMapView.delegate = self;
 ```
-####导航状态数据
+#### 导航状态数据
 用户可以采用`TNKCarNaviDelegate`协议获取导航过程中出现的状态信息：
 ```objc
 // 导航开始回调
@@ -322,8 +336,9 @@ didFailRecaculateRoute:(TNKCarNaviManagerRecaculateType)type;
 ```
 
 <div id="UIDesign"></div>
-###自定义UI
-------------
+
+### 自定义UI
+
 #### 添加地图标注
 可以获取TNKCarNaviView的地图实例，通过地图实例操控地图视野、添加路线/标注等；
 
@@ -333,6 +348,7 @@ didFailRecaculateRoute:(TNKCarNaviManagerRecaculateType)type;
 self.naviView.naviMapView.delegate = self;
 ```
 **2. 添加折线**
+
 实现协议中的mapView: viewForOverlay回调函数：
 ```objc
 - (QOverlayView *)mapView:(QMapView *)mapView viewForOverlay:(id<QOverlay>)overlay
@@ -376,8 +392,9 @@ self.polyline = [QPolyline polylineWithCoordinates:lineCoord count:2];
 ![](designed4.jpeg)
 
 
-####添加面板控件
+#### 添加面板控件
 获取的导航数据可以用来添加导航面板控件，自定义导航面板。
+
 **1. 添加控件**
 ```objc
 self.textView = [[UITextField alloc] initWithFrame:CGRectMake(7, 130, 60, 60)];
@@ -405,6 +422,7 @@ self.textView2 = [[UITextField alloc] initWithFrame:CGRectMake(7, 200, 60, 60)];
 ```
 
 **2. 实现回调**
+
 使用`TNKCarNaviUIDelegate`协议获取数据。
 ```objc
 - (void)carNavigationManager:(TNKCarNaviManager *)manager updateNavigationData:(TNKCarNavigationData *)data
@@ -415,7 +433,7 @@ self.textView2 = [[UITextField alloc] initWithFrame:CGRectMake(7, 200, 60, 60)];
 ```
 ![](designed1.jpeg)
 
-####自定义导航面板
+#### 自定义导航面板
 **1. 关闭默认面板**
 ```objc
 self.carNaviView.hideNavigationPanel = YES;
@@ -454,6 +472,7 @@ self.textView2 = [[UITextView alloc] initWithFrame:CGRectMake(200, 30, 170, 70)]
 ```
 
 **3. 实现回调**
+
 使用`TNKCarNaviUIDelegate`协议获取数据。
 ```objc
 - (void)carNavigationManager:(TNKCarNaviManager *)manager updateNavigationData:(TNKCarNavigationData *)data
@@ -465,6 +484,6 @@ self.textView2 = [[UITextView alloc] initWithFrame:CGRectMake(200, 30, 170, 70)]
 ```
 ![](designed2.jpeg)
 
-####自定义资源
+#### 自定义资源
 如果想要自定义资源，如小车Marker、自车罗盘等，用户可以直接替换`TencentNavigationKit.bundle`中的资源文件，（不能修改资源名称）此时导航SDK在使用时会加载用户提供的资源文件。
 ![](desinged3.jpeg)
