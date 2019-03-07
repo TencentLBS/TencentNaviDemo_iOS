@@ -15,6 +15,7 @@
 
 #### 1. 权限申请
 (1) 若使用实时导航，则需要在`info.list`中添加NSLocationWhenInUseUsageDescriptionh和NSLocationAlwaysUsageDescription字段。
+
 (2) 如果需要后台定位，需在IOS 9.0及以后设置allowBackgroundLocationUpdates为YES，此时必须保证`TARGETS->Capabilities->Background Modes->Location updates`处于选中状态。
 
 #### 2. 引入SDK
