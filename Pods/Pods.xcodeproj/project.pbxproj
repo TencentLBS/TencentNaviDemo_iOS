@@ -1,0 +1,1501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		3514DC2B425E399712A23458DCF9A53D /* TNKNavigationKit */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 8579F0479EA7B063B1C74F480CDD4882 /* Build configuration list for PBXAggregateTarget "TNKNavigationKit" */;
+			buildPhases = (
+			);
+			dependencies = (
+				34642A8861F596A7CCD20484104F6F67 /* PBXTargetDependency */,
+				9697EE7C1984A12FE39831A426E2E471 /* PBXTargetDependency */,
+			);
+			name = TNKNavigationKit;
+		};
+		D2E36FF391E4650977F494EBB8957373 /* QMapKit */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = DA4D74E0F0D0EF9801CA1B541305C1A0 /* Build configuration list for PBXAggregateTarget "QMapKit" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = QMapKit;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		002D1FAB67E246CF25FFDDBA719F4350 /* lossless_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AFB56EF7421230E0B804A4A6B59ED /* lossless_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		00A38523156058F41FB20121E76180DC /* anim_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 98154AF647F0F489ABFCD67BAF4E8B09 /* anim_encode.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		00CF9664E3F9463F407A1A6554F99D66 /* dec_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = 77C8985EF723A2CD7FE837A8051D0478 /* dec_sse41.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0271086CF16C6A005C7162EEE0A7CA4F /* cost_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 004F22633E54201785524347B8A5A0EC /* cost_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0319BD1FFE5F87BF59F364D133372E24 /* enc_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = B2C151D0D31E5C69536F62301A0D4C48 /* enc_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		03CF0271345D728D78F283BE8AAD7B2E /* rescaler.c in Sources */ = {isa = PBXBuildFile; fileRef = A6371A7ED953B81175EFF849CF54D913 /* rescaler.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		059EAD4AF95F558DFED7AB18AFFFE749 /* mux.h in Headers */ = {isa = PBXBuildFile; fileRef = 895811FA6C1D500C34A23B672D62ACEB /* mux.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		084BA6CD150406159419932D22E9D9A8 /* random_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = DF5536D6ECFE5B3429CAFC3B4CD115CA /* random_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0880A0D8B8A451A90A6C658E0109218E /* backward_references_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 63609963A96E7D575063CF5A0423FA2B /* backward_references_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		08FEAE5DA9EE428BC5345E2CA87220E9 /* lossless_enc_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = ECA77AE0601894E05921F3357D06EB97 /* lossless_enc_msa.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		09795563D547D1918C826CF813260F51 /* enc_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = 672F6D58316EF1725FB6755CB8F5A354 /* enc_sse41.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0984932EC29A2A57BF1076BFFF7D6D00 /* cost_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C80DA7BCAEE638238F193F40EC1A80F /* cost_enc.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0CC1DD2C481A4F252B260AA9449D786E /* webp_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = D7FB5F0690637ED5023FC663C8153F8B /* webp_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0DC7E1DE055AA50396B8888161CA2C6E /* enc_avx2.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F0871B16B6456E97057F7DC717CD6F5 /* enc_avx2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0F32699B738590A2FA2C761E86C8E1AF /* lossless_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = D4D2F3B711E752EE3AD12E08BCC43536 /* lossless_msa.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0F805273131694621AFB4F955E2E3645 /* lossless_enc_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FC0C3B13CFD4945AC4241F178A1EB4B /* lossless_enc_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		143B8E16F567217C584839C646DE2EC6 /* yuv.h in Headers */ = {isa = PBXBuildFile; fileRef = A331D8EF7EC13A9A8025A98B71FFB0F5 /* yuv.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		160D9D3F91A713F0108A8CE560B4D41F /* config_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = F4AE77BCA68E03BBBC4E5ECB00D5AA72 /* config_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		16BC7F5B084C4A08EC47C963CF5A63EE /* filter_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = CB73BA7DDF45BA78C66E62974A5430D7 /* filter_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		17D32C31FB8540844F746B69E67C6A38 /* syntax_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = C178697B2C9410EBA3EB713E5ABB8DBD /* syntax_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		18BCFAEA437E0E1CA6681204AE760FFA /* alpha_processing.c in Sources */ = {isa = PBXBuildFile; fileRef = C5A8352D17D23DC3DECEB2989A106789 /* alpha_processing.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1979FD5279BE9E8AB2BD637D4110BEB2 /* frame_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 04738143238303688B266D61E410BAE1 /* frame_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		198EA11D56F471D878BED161E65B38F7 /* vp8_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = AA50933054A327FFB4A727C2C349E528 /* vp8_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1A678BAC9A1CBD713D2283EF61904111 /* quant_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 36A1F73E97B1ECBB0606F1B4AC0BBD20 /* quant_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		21999613528EFB24BDD3F3D37F57D447 /* quant_levels_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = FE6F35627AC440F1D4D0E34007F52694 /* quant_levels_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		237F7186446FC938AA6174FCC24AD599 /* bit_reader_inl_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = A0115586A98DC053ABF100412AC3D123 /* bit_reader_inl_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		253FE54E5F87591648FA711398BAE432 /* muxinternal.c in Sources */ = {isa = PBXBuildFile; fileRef = 86A26E436FE6CFED07BF1FC5F36973DC /* muxinternal.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2578301D765A9B27A2CC9B983B2E2B98 /* decode.h in Headers */ = {isa = PBXBuildFile; fileRef = E47500B3ABD2581ECE1E3B5F675339F2 /* decode.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		285B7701583FFB0F6CF29C2B72D70930 /* upsampling_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D5A8EFB141CB73C1D5802E4F980FF /* upsampling_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		287884C825AB01478972A2DCD517A5B7 /* delta_palettization_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 1981A114482A052D2FE90DB08BB6A8CC /* delta_palettization_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		28A80C6E486F945F40E293C03F233F48 /* filters_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = EB8F6BE3519AB552DE1342D7B9D6B8E4 /* filters_msa.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2A6EE304E04798323E0DB1DBFD6B2132 /* lossless.h in Headers */ = {isa = PBXBuildFile; fileRef = 910A8A0B50BECE37CD6500F48DB68D2A /* lossless.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2AAF8B5C846C3B9267DB283AE6FFFA58 /* mux_types.h in Headers */ = {isa = PBXBuildFile; fileRef = A9527A2659FC10B8E16FA1F4BC8125E6 /* mux_types.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2D6926987151E382DD5687AF61062312 /* lossless_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 70E66BEF1FC7B4F24A8E4FB80062C2F7 /* lossless_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		319DCD7966E31D54563C9D8CF09FE5BE /* dec_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 09B5167315DD20AE20C0386F6185511E /* dec_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3206A264BDEC87F0B0083F6B1B874447 /* Pods-QMapKitDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE2B4ECA726EC6FC6C8363B88C963E6 /* Pods-QMapKitDemo-dummy.m */; };
+		33D1A5BF56B8B01E60D457548A6C813E /* io_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = AF26F2A5003BBC371D071EFDAE79F069 /* io_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3423EB19778A11C308D6190D64C4F1DA /* tree_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = ECBBCC8028D58F90FDF44D10FF759A51 /* tree_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3B8AE61A7B8270E767D313FA77699A5B /* ssim.c in Sources */ = {isa = PBXBuildFile; fileRef = CD269E97D30CAF4AB159C9C999C21506 /* ssim.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3CD0A6D6F8D9339BE58EAF9EDB957710 /* endian_inl_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 803061C46BD07C3EAD6DD953C139DC20 /* endian_inl_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3EB27668F474D67029B733597202D825 /* vp8li_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = 8535BA69B4004DCE09DB86CC4648507F /* vp8li_dec.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		41A90EA80B7ED462B02DE6689D072C2E /* filters_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 173DD0FD2822D3D1D2FF604D9C9A91C3 /* filters_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		443C5345C5D873F1B27322366D88C30D /* upsampling_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = 6539C2D26E266C882DABE36B5C750C36 /* upsampling_msa.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4534E06153579A666387F6295D2A4014 /* lossless_enc_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = 4D8E73002D89BEF892568886A944E3DA /* lossless_enc_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		459DDBE31D04971D848BF97CD443F81C /* lossless_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = 72C38BBABA85F16494183604CBA5FE82 /* lossless_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		461EF2B0781A57529E2F2EC9CE743BB1 /* vp8l_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = E22D621BEE00A4F032F01C057C05D8CC /* vp8l_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4759FC95AE9FDE2E6A6445E305C50938 /* upsampling_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = D3039D01FC9851509372E3783FC21847 /* upsampling_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4992A9B19D145DA46FBE899FF06456CE /* iterator_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 77AD417EB3330A8B1E2FAFC16AACDA24 /* iterator_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4B53C3453F9EAB65457036C100013481 /* yuv_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 3821B3D286B9D888257DBEE0DA10EAD8 /* yuv_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4BE4C32DD2F7525A62ABC7BEC94850B8 /* alpha_processing_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 4E36E4F405218502616905415D92820B /* alpha_processing_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4C4B5E57BE47E2705510EB46255A791C /* webp_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 359596C62AD9AD86BD7AB31BBEEC485B /* webp_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4D5D5D0088EF72B021352FB843C5A1DC /* demux.c in Sources */ = {isa = PBXBuildFile; fileRef = 0306A99E48DFD54A09CF03B9FDCFBE12 /* demux.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4E03B4CCE5A27997E67D2ED9C8090F03 /* buffer_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = B494922CD2620F968869C5BD8B3BB8AE /* buffer_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		529648D2F52AA44DBCFA98F400C5FF8B /* ssim_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = BEF1295E26865C08482742CA534B312A /* ssim_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		52E37014025498F830A7B72355499E77 /* dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B3F45B7ADB2DB6B48D5654BFF3363 /* dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5B475221FD3E38E5BB1E580E62E5838F /* analysis_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = AE956A23B40D345FF88C36B72B40CF60 /* analysis_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5D2569B992505B8A95161103D286E6B3 /* thread_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = E3D25390343BB1D04B0F35CEC67B1A5D /* thread_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5DACF5F3BF377F8FB7352BAC117FE653 /* cost_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = 606E48076AD3DD7EF3547B07235DE972 /* cost_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5F40DFD8187DA8EAF1ED15EF9C44E46E /* lossless.c in Sources */ = {isa = PBXBuildFile; fileRef = 99367F480A73C378BC83A9CCBAFC4527 /* lossless.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		63C00821F7BACCF6E639BD33A2E67E5B /* rescaler_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 7D951A0FFA6DEDD9D9895CA99E46FAEB /* rescaler_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		64C93561D62FD1EDBC4E4D894341350D /* bit_writer_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 0B18A7717086C9F51B15C1E2E244ACE4 /* bit_writer_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		66F37CDA35C0CF734D264E868883A575 /* mips_macro.h in Headers */ = {isa = PBXBuildFile; fileRef = BB0D9B4A3063C6809BCE222FCC65604B /* mips_macro.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6969ED7FF4F3412A288BC0ED49387158 /* alpha_processing_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = BC9D8A00FF77C379A889F481AA91AF6B /* alpha_processing_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6B29A4F8C659E16B89F8C6328444A4F3 /* dec_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = 9EA57E97BFC1AFC9541154BA46BCFA23 /* dec_msa.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6B2E30806905250C2EDB3647A2297784 /* vp8_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = EB8F75A175F2C200C24E603E7406112D /* vp8_dec.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6D56CF1A98CC9CB665A722F08655E613 /* dec_mips32.c in Sources */ = {isa = PBXBuildFile; fileRef = 16D5E443BC2A8ECD4E45C3BB17607CCD /* dec_mips32.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6DD1A8FCC8755AC20CE4EDC1283B49E8 /* cost_mips32.c in Sources */ = {isa = PBXBuildFile; fileRef = BA925DF38C59D32743F2D05F8140C9EB /* cost_mips32.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6F2C3120EDFFCFCC7A924DD77F925740 /* dsp.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E00D48945E5E150A3E112B2D06C9425 /* dsp.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6FBF4ED8A1B599EBF16CE92281B83FF8 /* upsampling_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 4DBB6666A421B5263C8E7D3E8936012F /* upsampling_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		723F01D3FD1287A7580E1AF60863BD50 /* enc_mips32.c in Sources */ = {isa = PBXBuildFile; fileRef = 32E4170A5D91DB117D3DDC12F0F01D1C /* enc_mips32.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7464492EBE96ECDE6CDDB577FBE1AC46 /* quant_levels_dec_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = B535EB73281C34AF62FB30193214C1EE /* quant_levels_dec_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7660F08139295B2FA6CC69E8A5517D28 /* vp8i_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = B8AB782F13A4BFDDA1C6740E00584EBE /* vp8i_dec.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		77C391BFBBFE30B924357A5B31E2B192 /* enc_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F208D5A6498CDBAB3A1D21DDB7368 /* enc_msa.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		78ABDCA5E0894EDFF255C02A82CED7FC /* idec_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 476DF098C8884761D294977737FC1A75 /* idec_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		78D2EECE55379CC46A8E896543368900 /* delta_palettization_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = 67674D54BC3FFC3526C70899A328F232 /* delta_palettization_enc.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7AD767B8BBC94ACF1FB2C81404D50365 /* filters_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F69BA83DE29AEA6154D649ADC093E88A /* filters_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7CF1468ECAF83B5F999D7B71ABF523FC /* quant_levels_dec_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 23A7C03F1D2DC9260605EEA1A9780B2A /* quant_levels_dec_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7D343F14C782CA61B96C991D3907A0C8 /* vp8i_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F9E1982E9EAB46F18B5821D68E79BE /* vp8i_enc.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		81F85711695476E9E964C434FC4C1FA3 /* muxread.c in Sources */ = {isa = PBXBuildFile; fileRef = 64D12406732E31C46EC96691C587BB38 /* muxread.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		825329A8F4547874DEDD3C2E4D4ADF75 /* rescaler_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F4EF75EDF6C642A50EBF224DE720D19 /* rescaler_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		82758583C119D7A39A122E3357EC541A /* common_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = BAEA97E65475FB820892DACB2F8C3218 /* common_dec.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		83FE9B5775DE3DD0C206D48C6DE2D9B2 /* cpu.c in Sources */ = {isa = PBXBuildFile; fileRef = 7E2FC26F6D0626728FB7CF9FFBC9FB58 /* cpu.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		856EEDBF7E3F9BD4D43328F8B6935F74 /* lossless_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = EE47E0A9E42A6FC9FE83B813D61E944E /* lossless_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		86EB6FD1A31B4BC060E71DBDD1808F23 /* neon.h in Headers */ = {isa = PBXBuildFile; fileRef = 8680B2BCCEE4337A7409945AA96F3DE1 /* neon.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8ABD6CAB992ACB09D221591DDAC5A7EA /* muxi.h in Headers */ = {isa = PBXBuildFile; fileRef = EAA256FE447113A8511269F47922DBD9 /* muxi.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8B0D5598C62EC7C2F5D1853CB57EB0B4 /* demux.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E5645B92CC5AEE076CBB03D6E6E9F1E /* demux.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8CEDEC5786AA1B82D8E93A0A3EC921AD /* rescaler_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = C2E355ABD368561EF0EAAF35EBD4B5CE /* rescaler_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8FD5D5826D5788246B24054353ECFB76 /* encode.h in Headers */ = {isa = PBXBuildFile; fileRef = 172EFB948C40492E957F7C135CCFFD94 /* encode.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		92A17F0DEF125CCD6558332900F4D6C9 /* yuv.c in Sources */ = {isa = PBXBuildFile; fileRef = A3293508EE6A071D6FBD1A687F67171D /* yuv.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9324F4CADBA5020CB1795020F240CF6F /* yuv_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = 36ABE76AB3631A80AC284FF2EFC23D36 /* yuv_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		93DFDDFE3847DA59AE4D6C0C96E52469 /* tree_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = F2F1C6A66EFADE617810059D4BFBC054 /* tree_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		948A95C187FB7D3D58C90400110A6539 /* histogram_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = 41EF514E432F6E0D3CAFDF25121A4167 /* histogram_enc.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		94AD9CB2C1141DCB07F8DF788D85DF77 /* picture_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 20DD190D8E8E68B91B74CC58E66DE805 /* picture_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		95741AB74E224A104DE5C06743850F44 /* histogram_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 5417B017B279A73BE927AAF2C335F193 /* histogram_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		961904C2EF893A40734D81EE9A165941 /* lossless_enc_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = 34FA3AA1F972A8BEE830967C12E1B5CD /* lossless_enc_sse41.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9675CBDE62BE9CA4418F44F789E4862A /* picture_csp_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = BAC76B73266F8838E6BEE051BE7FD077 /* picture_csp_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		997B3CD4DD8C2632B415F38D383CF8EB /* huffman_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 7D104E58DCBBA9ED419050506E786227 /* huffman_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9993F14E59544DCF35D1AC17740ECBB3 /* lossless_enc_mips32.c in Sources */ = {isa = PBXBuildFile; fileRef = 1057AA19F429FED265C3E0505A6B1C74 /* lossless_enc_mips32.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9CB774E76A1CDE683D4BF71F76130850 /* color_cache_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = F29822F62C0DFC3B531182AEE3256356 /* color_cache_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9E91F76550718251CCF5DF7D67E88252 /* dec_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = B24B726901C14AB70A02F21B57747C15 /* dec_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9FD09F4C90EC673E868A789C40DCAE08 /* color_cache_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = ED31C912E031E3B4C9AE3B3AD4E5C2DB /* color_cache_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A0DECE365A0D8D0C35179F111CA160E7 /* webpi_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = 4548AAC4E7454B59625F3927A249259E /* webpi_dec.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A0E9A472D8A3CC198936EEF14EF6B208 /* common_sse2.h in Headers */ = {isa = PBXBuildFile; fileRef = CBA3027EE32DF22A33709C7B1E1D40BE /* common_sse2.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A255BC4F51C7759B1919A9679792071A /* vp8l_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 548D23B2800E874E79442616A22D6937 /* vp8l_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A33ADFA9E31E13CABFE76D0F36F11265 /* filters_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 28CD3C120EA62F9F39C21FF412F88A9E /* filters_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A33F091B75F08B13545E0C9BA0E017EB /* picture_rescale_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 7119D705738A87CECA177FD7155B5A10 /* picture_rescale_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A71EE17E1D459412F56D91BB1D789134 /* picture_psnr_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 9BE8D5A4CDF63A62F9A0CBC2F6B57C0A /* picture_psnr_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A74C04C5964EC810F679F8F2BFF8E2DB /* random_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DA810B5F8BDBE76C14407FED69BE414 /* random_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A80BF55C2B92CF10126A53B2C4F3207C /* rescaler_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = CC0983ABB08B5075399230B231CA83ED /* rescaler_msa.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A8D563F111F91F521AD0772EF0E15CF5 /* msa_macro.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A515754179315572864A24FA37BB6B /* msa_macro.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AA46738FDD223637777CA003B7F78273 /* bit_reader_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 127675EEC214E2DC749EAFE7E1EC4B9B /* bit_reader_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AB1F1ADD94BD47C723611D051A6C34BB /* vp8li_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = 508D700BFDCAFDD6BF52856440ED6BC6 /* vp8li_enc.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AD1F24E8D0B47BFF15BEC133F55E7734 /* rescaler_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = D4BA1147BF64A06DAA73685C3A6F9606 /* rescaler_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B14DC2305919555DEB5CF6B2B466DE5E /* alpha_processing_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = D785B41040ECAB802EEB39B53DC0E16E /* alpha_processing_sse41.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B191256E735CB4BC62D8AFD972CDCDD4 /* dec_clip_tables.c in Sources */ = {isa = PBXBuildFile; fileRef = 65BC992D8E4DAE852EA0A6508163BDB2 /* dec_clip_tables.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B20CE72C7473FF2927CB39A1A1E07D97 /* quant_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = CE3976BEF64648E4A7245F5EDCD9209A /* quant_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B28A856ECDF8B8E6A147956FE7F94396 /* alpha_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 192573EDEFA63976F656535D64CB0F3F /* alpha_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B3235BB5F7277BE4E9320A8B7533CCF1 /* rescaler_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 63019AF52AC66896F614B98C8251093D /* rescaler_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B72FE1584BF79D9C3076C7747CF9DD33 /* muxedit.c in Sources */ = {isa = PBXBuildFile; fileRef = BE02734D2CAF2841F1AC5708EE57E98C /* muxedit.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B7697B52092A894BA20F86B77A240A43 /* types.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CD558402367606C6555B93F270DED27 /* types.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B8B497990CA643B09FDE6426082E3203 /* cost.c in Sources */ = {isa = PBXBuildFile; fileRef = ABB77858AC6352B9B8E5D05B74B985C8 /* cost.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B9868BB3689BB0A0F5E986289CB7FE88 /* upsampling.c in Sources */ = {isa = PBXBuildFile; fileRef = 1EE62096FA7A4D51E112390495D0E17B /* upsampling.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C07F0A048740F26586202B7B7E73F05B /* enc_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = BCF058BEA86F62378ED7FA64AEAE979A /* enc_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C34D5F1E43980FA3F2755810F1EFDFFE /* enc_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 9357E085FFBB65EE3E1A0D7D0F6F2F00 /* enc_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C5265EB0407CEFA256D915CFA078AEF8 /* alpha_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E698423EF33AF34D8B0E948ACCDB5 /* alpha_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C72250AE70F6B9F985A1759B1A38444E /* filters.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A5EE36CB7B3AC8C2A7E5C02EE4ED52F /* filters.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C78AE7F70A09BF54B0520AA65FA83279 /* bit_writer_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = A8C0D4D156FC586CDBA8CD5815924B80 /* bit_writer_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C90A68034C081A43F55344759548F07C /* thread_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = D7F6FE3AB5170FE75584CAF0AF5E83D4 /* thread_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CA0BA4F339D6A8153DCD8FBDA399D841 /* alpha_processing_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = E438180DFC91D39A1AED43BE91AA21A4 /* alpha_processing_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CA56A16465FDD31EB0EFF650BBD2F7FF /* backward_references_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = 38C776DBA928DF7B38773D526079512A /* backward_references_enc.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CF3B95B5A9F887302F3F587447F2974D /* predictor_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = F3BAE2EA9FC2E30A21B1802288566845 /* predictor_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D269F0A9F56B2412E86F9E7E804D4E63 /* yuv_mips32.c in Sources */ = {isa = PBXBuildFile; fileRef = E4921CD9018748B75755E12AC0617C91 /* yuv_mips32.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D70E63B57DE2F14CC1CF1EB2EDB65F85 /* dec_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = 581B0A28AD35A98D5B074267618FA3F3 /* dec_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D7CD23EE10FBBF70F50055CF0AF0CB75 /* lossless_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 114025063D7C2C3A3EEA79F9057C3097 /* lossless_common.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D8F10298207E6B5AA81EF94CC5C30521 /* frame_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 1064ADE003E8B20012860DEB4953320F /* frame_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DAFEAA770868198F1358300CFDF33D68 /* format_constants.h in Headers */ = {isa = PBXBuildFile; fileRef = E3EF05113511F8836EBEBC271EA7295F /* format_constants.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DCD062EF6F39434E1BD1E833C5F93116 /* quant_levels_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 519AF25730A713D81B6D754A84FC8C6C /* quant_levels_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DD021A44DF2ED39DEF816009EB5EDBBA /* lossless_enc_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = EF60A4D87FD412AF5A8E1D188D92FA94 /* lossless_enc_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DF2CDC7B4DB7202B66D58B7FDC1DCD73 /* cost_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D4B081D9F6A610661973D3621103EB3 /* cost_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DFD37932FA3EBF25F6B0C1F334373B40 /* libwebp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC0014F9D93D8B34D9534B0072E2F50 /* libwebp-dummy.m */; };
+		E580E4F36ECE1F56C120112DCB09F1CC /* filters_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = B5D051C734E90D514D5AFF4BFDBD2622 /* filters_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E64FDA0CC5EE06E4CF1A1C3D8DE95481 /* yuv_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = BA2F677163BD67863E105DC0ACCBDACD /* yuv_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E7B8537EA823DC6C8CBA77DE482B9BF5 /* huffman_encode_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 49787A3F50CF4D1C7BBAFBA62A97BA0A /* huffman_encode_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E95391486D0E7B55B3716852681F4033 /* token_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D838AC49AB474E9D945CDAF7A13C9A2 /* token_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EA98A4EE3F89DC62F6620846D818726A /* bit_reader_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 361DD31D5AD24468B13FFD2565FBB1A8 /* bit_reader_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EB7674A48ABE08BD2EFA2322A2B50DA5 /* huffman_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F373695BB77EF7B0E6ACB85472D3951 /* huffman_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EC0AE62A11DF83F522ECC3CD9D08B522 /* animi.h in Headers */ = {isa = PBXBuildFile; fileRef = DB3A2923AF7FF5E36837E938C43A2A11 /* animi.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EC115E1351C2EAD5E99D01F8ECFDDCA8 /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FD22A0D56776659CEC4BCC5EC722D3E /* utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EF771B2FCEE453061C1E90C271F044B7 /* picture_tools_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D151B73832FDFAEB7527FFA730CBD5F /* picture_tools_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F07157FF7C5C9466B826133203023774 /* near_lossless_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = F2A94C1421F032019742F1ADC6E8CBEE /* near_lossless_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F0DF95EEEBBC089E4D08BA59EB474379 /* utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 87A0F642D14892C0248197855F9A09CA /* utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F163720F73AFC4D8669790355539C505 /* anim_decode.c in Sources */ = {isa = PBXBuildFile; fileRef = 4886E61E8B3951173C0EC1B8167AABAD /* anim_decode.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F60B9049F27C8CC4DC4B6488BB9F4EBA /* enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F113B43C0E0A6FA4F1F637833F0C578 /* enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F7F94AA28CDCF8B3EB9F61F223D64215 /* filters_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = 64AF717A34F1CC6A61D9B6BE8CA8EEC2 /* filters_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F93B184D60D9F68025E8B33D0F7A24A9 /* rescaler_mips32.c in Sources */ = {isa = PBXBuildFile; fileRef = 49EFF0243A28C9A6AA815663E07DF451 /* rescaler_mips32.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F94B8CAE5373EA5FE525502B7A73BDD5 /* alphai_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E9153DD8825C4B27BA6B0D5CABF7CD4 /* alphai_dec.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F9BD30438437A293056970A9231EE987 /* backward_references_cost_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 56EF1E8532C321865E7354CD578CC2A3 /* backward_references_cost_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FD31062CBBE56AC5E4F7549E6405353B /* huffman_encode_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B5B344A4F4C060A87767C9B7467C952 /* huffman_encode_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		145722D3430F02D118499DBE22336AB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3514DC2B425E399712A23458DCF9A53D;
+			remoteInfo = TNKNavigationKit;
+		};
+		1F34EB007C4E0781567B8A2E2038DB20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2E36FF391E4650977F494EBB8957373;
+			remoteInfo = QMapKit;
+		};
+		66349DFA804F127C66C72E911509F61F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47D2E85A78C25869BB13521D8561A638;
+			remoteInfo = libwebp;
+		};
+		85B73FE972F1029AFDF6E4921E761DE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2E36FF391E4650977F494EBB8957373;
+			remoteInfo = QMapKit;
+		};
+		D68DE209C1D5FA1CC6A60FFEAB949109 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47D2E85A78C25869BB13521D8561A638;
+			remoteInfo = libwebp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		004F22633E54201785524347B8A5A0EC /* cost_sse2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = cost_sse2.c; path = src/dsp/cost_sse2.c; sourceTree = "<group>"; };
+		00E6D40B22360408B144AF858D6AAD6C /* TNKGPSFileLocationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TNKGPSFileLocationManager.h; path = TNKNavigationKit.framework/Headers/TNKGPSFileLocationManager.h; sourceTree = "<group>"; };
+		0164038D1C8A782C6F88CF0B55DEB45D /* QTexturePolylineView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QTexturePolylineView.h; path = sdk/QMapKit.framework/Headers/QTexturePolylineView.h; sourceTree = "<group>"; };
+		02F9E1982E9EAB46F18B5821D68E79BE /* vp8i_enc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vp8i_enc.h; path = src/enc/vp8i_enc.h; sourceTree = "<group>"; };
+		0306A99E48DFD54A09CF03B9FDCFBE12 /* demux.c */ = {isa = PBXFileReference; includeInIndex = 1; name = demux.c; path = src/demux/demux.c; sourceTree = "<group>"; };
+		03BE3037279834F858017196DADFDA71 /* TNKNavigationKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TNKNavigationKit.xcconfig; sourceTree = "<group>"; };
+		04738143238303688B266D61E410BAE1 /* frame_dec.c */ = {isa = PBXFileReference; includeInIndex = 1; name = frame_dec.c; path = src/dec/frame_dec.c; sourceTree = "<group>"; };
+		09A515754179315572864A24FA37BB6B /* msa_macro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = msa_macro.h; path = src/dsp/msa_macro.h; sourceTree = "<group>"; };
+		09B5167315DD20AE20C0386F6185511E /* dec_sse2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = dec_sse2.c; path = src/dsp/dec_sse2.c; sourceTree = "<group>"; };
+		0A56128F2D0EE9ED4A6893927E07B570 /* QOverlayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QOverlayView.h; path = sdk/QMapKit.framework/Headers/QOverlayView.h; sourceTree = "<group>"; };
+		0B18A7717086C9F51B15C1E2E244ACE4 /* bit_writer_utils.c */ = {isa = PBXFileReference; includeInIndex = 1; name = bit_writer_utils.c; path = src/utils/bit_writer_utils.c; sourceTree = "<group>"; };
+		0DF425429636CEA93A88423BC3CCFFBB /* QPolygon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QPolygon.h; path = sdk/QMapKit.framework/Headers/QPolygon.h; sourceTree = "<group>"; };
+		0E00D48945E5E150A3E112B2D06C9425 /* dsp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dsp.h; path = src/dsp/dsp.h; sourceTree = "<group>"; };
+		0E7E698423EF33AF34D8B0E948ACCDB5 /* alpha_dec.c */ = {isa = PBXFileReference; includeInIndex = 1; name = alpha_dec.c; path = src/dec/alpha_dec.c; sourceTree = "<group>"; };
+		0F0871B16B6456E97057F7DC717CD6F5 /* enc_avx2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = enc_avx2.c; path = src/dsp/enc_avx2.c; sourceTree = "<group>"; };
+		1057AA19F429FED265C3E0505A6B1C74 /* lossless_enc_mips32.c */ = {isa = PBXFileReference; includeInIndex = 1; name = lossless_enc_mips32.c; path = src/dsp/lossless_enc_mips32.c; sourceTree = "<group>"; };
+		1064ADE003E8B20012860DEB4953320F /* frame_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = frame_enc.c; path = src/enc/frame_enc.c; sourceTree = "<group>"; };
+		114025063D7C2C3A3EEA79F9057C3097 /* lossless_common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lossless_common.h; path = src/dsp/lossless_common.h; sourceTree = "<group>"; };
+		11DE78EBF6A8C118E31662AF14FC5A6A /* TNKGeometry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TNKGeometry.h; path = TNKNavigationKit.framework/Headers/TNKGeometry.h; sourceTree = "<group>"; };
+		127675EEC214E2DC749EAFE7E1EC4B9B /* bit_reader_utils.c */ = {isa = PBXFileReference; includeInIndex = 1; name = bit_reader_utils.c; path = src/utils/bit_reader_utils.c; sourceTree = "<group>"; };
+		14B8C89794AE8D18D8EF701BDCE88870 /* QTileOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QTileOverlay.h; path = sdk/QMapKit.framework/Headers/QTileOverlay.h; sourceTree = "<group>"; };
+		16D5E443BC2A8ECD4E45C3BB17607CCD /* dec_mips32.c */ = {isa = PBXFileReference; includeInIndex = 1; name = dec_mips32.c; path = src/dsp/dec_mips32.c; sourceTree = "<group>"; };
+		172EFB948C40492E957F7C135CCFFD94 /* encode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = encode.h; path = src/webp/encode.h; sourceTree = "<group>"; };
+		173DD0FD2822D3D1D2FF604D9C9A91C3 /* filters_sse2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = filters_sse2.c; path = src/dsp/filters_sse2.c; sourceTree = "<group>"; };
+		192573EDEFA63976F656535D64CB0F3F /* alpha_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = alpha_enc.c; path = src/enc/alpha_enc.c; sourceTree = "<group>"; };
+		1981A114482A052D2FE90DB08BB6A8CC /* delta_palettization_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = delta_palettization_enc.c; path = src/enc/delta_palettization_enc.c; sourceTree = "<group>"; };
+		1D44772F5735AFF344F81D5ACA264B66 /* TNKSearchTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TNKSearchTypes.h; path = TNKNavigationKit.framework/Headers/TNKSearchTypes.h; sourceTree = "<group>"; };
+		1D51E00B71E893573C808881217421AF /* Pods-QMapKitDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-QMapKitDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1EE62096FA7A4D51E112390495D0E17B /* upsampling.c */ = {isa = PBXFileReference; includeInIndex = 1; name = upsampling.c; path = src/dsp/upsampling.c; sourceTree = "<group>"; };
+		1F373695BB77EF7B0E6ACB85472D3951 /* huffman_utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = huffman_utils.h; path = src/utils/huffman_utils.h; sourceTree = "<group>"; };
+		1FD22A0D56776659CEC4BCC5EC722D3E /* utils.c */ = {isa = PBXFileReference; includeInIndex = 1; name = utils.c; path = src/utils/utils.c; sourceTree = "<group>"; };
+		20DD190D8E8E68B91B74CC58E66DE805 /* picture_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = picture_enc.c; path = src/enc/picture_enc.c; sourceTree = "<group>"; };
+		217C5292414D84C745E5222F0022BCE4 /* QUserLocation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QUserLocation.h; path = sdk/QMapKit.framework/Headers/QUserLocation.h; sourceTree = "<group>"; };
+		23A7C03F1D2DC9260605EEA1A9780B2A /* quant_levels_dec_utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = quant_levels_dec_utils.h; path = src/utils/quant_levels_dec_utils.h; sourceTree = "<group>"; };
+		2826B34BD2FFE2990B81239917B28CDC /* TNKCarNavigationData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TNKCarNavigationData.h; path = TNKNavigationKit.framework/Headers/TNKCarNavigationData.h; sourceTree = "<group>"; };
+		28CD3C120EA62F9F39C21FF412F88A9E /* filters_neon.c */ = {isa = PBXFileReference; includeInIndex = 1; name = filters_neon.c; path = src/dsp/filters_neon.c; sourceTree = "<group>"; };
+		29139BF49D85F87DA71EAEC288484B63 /* QHeatTileNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QHeatTileNode.h; path = sdk/QMapKit.framework/Headers/QHeatTileNode.h; sourceTree = "<group>"; };
+		2A1D5A8EFB141CB73C1D5802E4F980FF /* upsampling_mips_dsp_r2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = upsampling_mips_dsp_r2.c; path = src/dsp/upsampling_mips_dsp_r2.c; sourceTree = "<group>"; };
+		2D151B73832FDFAEB7527FFA730CBD5F /* picture_tools_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = picture_tools_enc.c; path = src/enc/picture_tools_enc.c; sourceTree = "<group>"; };
+		2D4B081D9F6A610661973D3621103EB3 /* cost_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = cost_enc.c; path = src/enc/cost_enc.c; sourceTree = "<group>"; };
+		2D838AC49AB474E9D945CDAF7A13C9A2 /* token_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = token_enc.c; path = src/enc/token_enc.c; sourceTree = "<group>"; };
+		2DA810B5F8BDBE76C14407FED69BE414 /* random_utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = random_utils.h; path = src/utils/random_utils.h; sourceTree = "<group>"; };
+		2DD244DC5E5FB30719EE97EADAF83F3B /* QBasicMapViewLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QBasicMapViewLayer.h; path = sdk/QMapKit.framework/Headers/QBasicMapViewLayer.h; sourceTree = "<group>"; };
+		32E4170A5D91DB117D3DDC12F0F01D1C /* enc_mips32.c */ = {isa = PBXFileReference; includeInIndex = 1; name = enc_mips32.c; path = src/dsp/enc_mips32.c; sourceTree = "<group>"; };
+		33A02F7899960C0180E0FFA1A3877A78 /* TNKNaviTTS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TNKNaviTTS.h; path = TNKNavigationKit.framework/Headers/TNKNaviTTS.h; sourceTree = "<group>"; };
+		34FA3AA1F972A8BEE830967C12E1B5CD /* lossless_enc_sse41.c */ = {isa = PBXFileReference; includeInIndex = 1; name = lossless_enc_sse41.c; path = src/dsp/lossless_enc_sse41.c; sourceTree = "<group>"; };
+		35477DAD965741C70B382EB5E1852BDC /* QPolylineView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QPolylineView.h; path = sdk/QMapKit.framework/Headers/QPolylineView.h; sourceTree = "<group>"; };
+		359596C62AD9AD86BD7AB31BBEEC485B /* webp_dec.c */ = {isa = PBXFileReference; includeInIndex = 1; name = webp_dec.c; path = src/dec/webp_dec.c; sourceTree = "<group>"; };
+		35B33F5B69981B68322D63B82D675612 /* libwebp.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = libwebp.xcconfig; sourceTree = "<group>"; };
+		361DD31D5AD24468B13FFD2565FBB1A8 /* bit_reader_utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bit_reader_utils.h; path = src/utils/bit_reader_utils.h; sourceTree = "<group>"; };
+		36A1F73E97B1ECBB0606F1B4AC0BBD20 /* quant_dec.c */ = {isa = PBXFileReference; includeInIndex = 1; name = quant_dec.c; path = src/dec/quant_dec.c; sourceTree = "<group>"; };
+		36ABE76AB3631A80AC284FF2EFC23D36 /* yuv_mips_dsp_r2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = yuv_mips_dsp_r2.c; path = src/dsp/yuv_mips_dsp_r2.c; sourceTree = "<group>"; };
+		36D3CD556610D8E1232A423A3470D2F0 /* QPolyline.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QPolyline.h; path = sdk/QMapKit.framework/Headers/QPolyline.h; sourceTree = "<group>"; };
+		3821B3D286B9D888257DBEE0DA10EAD8 /* yuv_sse2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = yuv_sse2.c; path = src/dsp/yuv_sse2.c; sourceTree = "<group>"; };
+		38C776DBA928DF7B38773D526079512A /* backward_references_enc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = backward_references_enc.h; path = src/enc/backward_references_enc.h; sourceTree = "<group>"; };
+		3A0AFBA3C58851343BBDD86FD1C7B420 /* TNKNavigationKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TNKNavigationKit.h; path = TNKNavigationKit.framework/Headers/TNKNavigationKit.h; sourceTree = "<group>"; };
+		3C825D9A5051C59B8945A311B03C1A39 /* TNKRemainingOverviewData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TNKRemainingOverviewData.h; path = TNKNavigationKit.framework/Headers/TNKRemainingOverviewData.h; sourceTree = "<group>"; };
+		3F113B43C0E0A6FA4F1F637833F0C578 /* enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = enc.c; path = src/dsp/enc.c; sourceTree = "<group>"; };
+		3F4EF75EDF6C642A50EBF224DE720D19 /* rescaler_sse2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = rescaler_sse2.c; path = src/dsp/rescaler_sse2.c; sourceTree = "<group>"; };
+		41EF514E432F6E0D3CAFDF25121A4167 /* histogram_enc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = histogram_enc.h; path = src/enc/histogram_enc.h; sourceTree = "<group>"; };
+		4207CA9D21AA2384DFA4733A9269EDD1 /* QMSSearchResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QMSSearchResult.h; path = sdk/QMapKit.framework/Headers/QMSSearchResult.h; sourceTree = "<group>"; };
+		439F96F96C415AF40D208AE85A738895 /* Pods-QMapKitDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-QMapKitDemo-resources.sh"; sourceTree = "<group>"; };
+		43B28A464CD2F71313D06090148ADEA3 /* QIndoorBuilding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QIndoorBuilding.h; path = sdk/QMapKit.framework/Headers/QIndoorBuilding.h; sourceTree = "<group>"; };
+		4548AAC4E7454B59625F3927A249259E /* webpi_dec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = webpi_dec.h; path = src/dec/webpi_dec.h; sourceTree = "<group>"; };
+		4618E151B7693BE0D5CA213F107234C7 /* QPointAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QPointAnnotation.h; path = sdk/QMapKit.framework/Headers/QPointAnnotation.h; sourceTree = "<group>"; };
+		46C67F731F3DA78EEE6E7EA640DB922B /* TNKRouteTrafficStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TNKRouteTrafficStatus.h; path = TNKNavigationKit.framework/Headers/TNKRouteTrafficStatus.h; sourceTree = "<group>"; };
+		476DF098C8884761D294977737FC1A75 /* idec_dec.c */ = {isa = PBXFileReference; includeInIndex = 1; name = idec_dec.c; path = src/dec/idec_dec.c; sourceTree = "<group>"; };
+		4886E61E8B3951173C0EC1B8167AABAD /* anim_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; name = anim_decode.c; path = src/demux/anim_decode.c; sourceTree = "<group>"; };
+		49787A3F50CF4D1C7BBAFBA62A97BA0A /* huffman_encode_utils.c */ = {isa = PBXFileReference; includeInIndex = 1; name = huffman_encode_utils.c; path = src/utils/huffman_encode_utils.c; sourceTree = "<group>"; };
+		49EFF0243A28C9A6AA815663E07DF451 /* rescaler_mips32.c */ = {isa = PBXFileReference; includeInIndex = 1; name = rescaler_mips32.c; path = src/dsp/rescaler_mips32.c; sourceTree = "<group>"; };
+		4BBF367B35E4852609DF1E6EFB07DDB1 /* QMapKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QMapKit.h; path = sdk/QMapKit.framework/Headers/QMapKit.h; sourceTree = "<group>"; };
+		4D8E73002D89BEF892568886A944E3DA /* lossless_enc_mips_dsp_r2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = lossless_enc_mips_dsp_r2.c; path = src/dsp/lossless_enc_mips_dsp_r2.c; sourceTree = "<group>"; };
+		4DBB6666A421B5263C8E7D3E8936012F /* upsampling_sse2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = upsampling_sse2.c; path = src/dsp/upsampling_sse2.c; sourceTree = "<group>"; };
+		4DD193ED29B6D500C6CC9F6E025FD492 /* QAnnotationViewLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QAnnotationViewLayer.h; path = sdk/QMapKit.framework/Headers/QAnnotationViewLayer.h; sourceTree = "<group>"; };
+		4E36E4F405218502616905415D92820B /* alpha_processing_sse2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = alpha_processing_sse2.c; path = src/dsp/alpha_processing_sse2.c; sourceTree = "<group>"; };
+		4F54D6789B11ED942458FEC5C02988A9 /* QAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QAnnotation.h; path = sdk/QMapKit.framework/Headers/QAnnotation.h; sourceTree = "<group>"; };
+		508D700BFDCAFDD6BF52856440ED6BC6 /* vp8li_enc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vp8li_enc.h; path = src/enc/vp8li_enc.h; sourceTree = "<group>"; };
+		519AF25730A713D81B6D754A84FC8C6C /* quant_levels_utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = quant_levels_utils.h; path = src/utils/quant_levels_utils.h; sourceTree = "<group>"; };
+		51D80ED7EE757FC042A3D34741804F46 /* QUserLocationPresentation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QUserLocationPresentation.h; path = sdk/QMapKit.framework/Headers/QUserLocationPresentation.h; sourceTree = "<group>"; };
+		527AB9CD1AD8700D4F7A97AC69E2B142 /* Pods-QMapKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QMapKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		5417B017B279A73BE927AAF2C335F193 /* histogram_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = histogram_enc.c; path = src/enc/histogram_enc.c; sourceTree = "<group>"; };
+		542F8B897FC983DE45E8B9FB46ADB9CE /* TNKSearchTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TNKSearchTask.h; path = TNKNavigationKit.framework/Headers/TNKSearchTask.h; sourceTree = "<group>"; };
+		548D23B2800E874E79442616A22D6937 /* vp8l_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = vp8l_enc.c; path = src/enc/vp8l_enc.c; sourceTree = "<group>"; };
+		555C1AF713DE00E6F893571C0F65389C /* QMapView+Config.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "QMapView+Config.h"; path = "sdk/QMapKit.framework/Headers/QMapView+Config.h"; sourceTree = "<group>"; };
+		56EF1E8532C321865E7354CD578CC2A3 /* backward_references_cost_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = backward_references_cost_enc.c; path = src/enc/backward_references_cost_enc.c; sourceTree = "<group>"; };
+		581B0A28AD35A98D5B074267618FA3F3 /* dec_mips_dsp_r2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = dec_mips_dsp_r2.c; path = src/dsp/dec_mips_dsp_r2.c; sourceTree = "<group>"; };
+		5AC0014F9D93D8B34D9534B0072E2F50 /* libwebp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "libwebp-dummy.m"; sourceTree = "<group>"; };
+		5E4674603A5D5B9215FFA0F8E69F8B71 /* liblibwebp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = liblibwebp.a; path = liblibwebp.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E5645B92CC5AEE076CBB03D6E6E9F1E /* demux.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = demux.h; path = src/webp/demux.h; sourceTree = "<group>"; };
+		5E9153DD8825C4B27BA6B0D5CABF7CD4 /* alphai_dec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = alphai_dec.h; path = src/dec/alphai_dec.h; sourceTree = "<group>"; };
+		5ECEC766CF3C8DBB8E806CF69AD05D93 /* TNKLocationEntryProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TNKLocationEntryProtocol.h; path = TNKNavigationKit.framework/Headers/TNKLocationEntryProtocol.h; sourceTree = "<group>"; };
+		5FC0C3B13CFD4945AC4241F178A1EB4B /* lossless_enc_neon.c */ = {isa = PBXFileReference; includeInIndex = 1; name = lossless_enc_neon.c; path = src/dsp/lossless_enc_neon.c; sourceTree = "<group>"; };
+		5FCCCCA42490A37D57315C49BFBD28C1 /* TNKAudioPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TNKAudioPlayer.h; path = TNKNavigationKit.framework/Headers/TNKAudioPlayer.h; sourceTree = "<group>"; };
+		606E48076AD3DD7EF3547B07235DE972 /* cost_mips_dsp_r2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = cost_mips_dsp_r2.c; path = src/dsp/cost_mips_dsp_r2.c; sourceTree = "<group>"; };
+		60CDE1AD1AD342894D2EFC3DC59593E6 /* TencentNavigationKit.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TencentNavigationKit.bundle; path = TNKNavigationKit.framework/TencentNavigationKit.bundle; sourceTree = "<group>"; };
+		63019AF52AC66896F614B98C8251093D /* rescaler_neon.c */ = {isa = PBXFileReference; includeInIndex = 1; name = rescaler_neon.c; path = src/dsp/rescaler_neon.c; sourceTree = "<group>"; };
+		63609963A96E7D575063CF5A0423FA2B /* backward_references_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = backward_references_enc.c; path = src/enc/backward_references_enc.c; sourceTree = "<group>"; };
+		64AF717A34F1CC6A61D9B6BE8CA8EEC2 /* filters_mips_dsp_r2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = filters_mips_dsp_r2.c; path = src/dsp/filters_mips_dsp_r2.c; sourceTree = "<group>"; };
+		64BDDF9DFF29F285EFCB83B7EAA4AA5B /* QOverlayPathView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QOverlayPathView.h; path = sdk/QMapKit.framework/Headers/QOverlayPathView.h; sourceTree = "<group>"; };
+		64D12406732E31C46EC96691C587BB38 /* muxread.c */ = {isa = PBXFileReference; includeInIndex = 1; name = muxread.c; path = src/mux/muxread.c; sourceTree = "<group>"; };
+		6508EAB1035D50F5DF11B4D61283AB78 /* libPods-QMapKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-QMapKitDemo.a"; path = "libPods-QMapKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6539C2D26E266C882DABE36B5C750C36 /* upsampling_msa.c */ = {isa = PBXFileReference; includeInIndex = 1; name = upsampling_msa.c; path = src/dsp/upsampling_msa.c; sourceTree = "<group>"; };
+		65BC992D8E4DAE852EA0A6508163BDB2 /* dec_clip_tables.c */ = {isa = PBXFileReference; includeInIndex = 1; name = dec_clip_tables.c; path = src/dsp/dec_clip_tables.c; sourceTree = "<group>"; };
+		672F6D58316EF1725FB6755CB8F5A354 /* enc_sse41.c */ = {isa = PBXFileReference; includeInIndex = 1; name = enc_sse41.c; path = src/dsp/enc_sse41.c; sourceTree = "<group>"; };
+		67674D54BC3FFC3526C70899A328F232 /* delta_palettization_enc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = delta_palettization_enc.h; path = src/enc/delta_palettization_enc.h; sourceTree = "<group>"; };
+		6970A8FF2448D33342D18CE833BAD48F /* QAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QAnnotationView.h; path = sdk/QMapKit.framework/Headers/QAnnotationView.h; sourceTree = "<group>"; };
+		6A3B3F45B7ADB2DB6B48D5654BFF3363 /* dec.c */ = {isa = PBXFileReference; includeInIndex = 1; name = dec.c; path = src/dsp/dec.c; sourceTree = "<group>"; };
+		70D598CDABD163EE4E5B0BE9B37E58B9 /* QOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QOverlay.h; path = sdk/QMapKit.framework/Headers/QOverlay.h; sourceTree = "<group>"; };
+		70E66BEF1FC7B4F24A8E4FB80062C2F7 /* lossless_neon.c */ = {isa = PBXFileReference; includeInIndex = 1; name = lossless_neon.c; path = src/dsp/lossless_neon.c; sourceTree = "<group>"; };
+		7119D705738A87CECA177FD7155B5A10 /* picture_rescale_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = picture_rescale_enc.c; path = src/enc/picture_rescale_enc.c; sourceTree = "<group>"; };
+		72C38BBABA85F16494183604CBA5FE82 /* lossless_mips_dsp_r2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = lossless_mips_dsp_r2.c; path = src/dsp/lossless_mips_dsp_r2.c; sourceTree = "<group>"; };
+		733FD85BCC9BF2A08887961EFFE262ED /* TNKRouteTrafficData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TNKRouteTrafficData.h; path = TNKNavigationKit.framework/Headers/TNKRouteTrafficData.h; sourceTree = "<group>"; };
+		73EB7E7F60BE48DE940FCC9F19DF4E7C /* QPinAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QPinAnnotationView.h; path = sdk/QMapKit.framework/Headers/QPinAnnotationView.h; sourceTree = "<group>"; };
+		776F67CD844A15178E58C61AD604B354 /* TNKCarNaviManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TNKCarNaviManager.h; path = TNKNavigationKit.framework/Headers/TNKCarNaviManager.h; sourceTree = "<group>"; };
+		77AD417EB3330A8B1E2FAFC16AACDA24 /* iterator_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = iterator_enc.c; path = src/enc/iterator_enc.c; sourceTree = "<group>"; };
+		77C8985EF723A2CD7FE837A8051D0478 /* dec_sse41.c */ = {isa = PBXFileReference; includeInIndex = 1; name = dec_sse41.c; path = src/dsp/dec_sse41.c; sourceTree = "<group>"; };
+		7A5EE36CB7B3AC8C2A7E5C02EE4ED52F /* filters.c */ = {isa = PBXFileReference; includeInIndex = 1; name = filters.c; path = src/dsp/filters.c; sourceTree = "<group>"; };
+		7D104E58DCBBA9ED419050506E786227 /* huffman_utils.c */ = {isa = PBXFileReference; includeInIndex = 1; name = huffman_utils.c; path = src/utils/huffman_utils.c; sourceTree = "<group>"; };
+		7D134F842EC7E2BB7C7DD4820AB1DF2F /* TNKNaviServices.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TNKNaviServices.h; path = TNKNavigationKit.framework/Headers/TNKNaviServices.h; sourceTree = "<group>"; };
+		7D7F208D5A6498CDBAB3A1D21DDB7368 /* enc_msa.c */ = {isa = PBXFileReference; includeInIndex = 1; name = enc_msa.c; path = src/dsp/enc_msa.c; sourceTree = "<group>"; };
+		7D951A0FFA6DEDD9D9895CA99E46FAEB /* rescaler_utils.c */ = {isa = PBXFileReference; includeInIndex = 1; name = rescaler_utils.c; path = src/utils/rescaler_utils.c; sourceTree = "<group>"; };
+		7E2FC26F6D0626728FB7CF9FFBC9FB58 /* cpu.c */ = {isa = PBXFileReference; includeInIndex = 1; name = cpu.c; path = src/dsp/cpu.c; sourceTree = "<group>"; };
+		801F8F642E84BBC6AA6A51C77864A811 /* QMSSearcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QMSSearcher.h; path = sdk/QMapKit.framework/Headers/QMSSearcher.h; sourceTree = "<group>"; };
+		803061C46BD07C3EAD6DD953C139DC20 /* endian_inl_utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = endian_inl_utils.h; path = src/utils/endian_inl_utils.h; sourceTree = "<group>"; };
+		8535BA69B4004DCE09DB86CC4648507F /* vp8li_dec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vp8li_dec.h; path = src/dec/vp8li_dec.h; sourceTree = "<group>"; };
+		8680B2BCCEE4337A7409945AA96F3DE1 /* neon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = neon.h; path = src/dsp/neon.h; sourceTree = "<group>"; };
+		86A26E436FE6CFED07BF1FC5F36973DC /* muxinternal.c */ = {isa = PBXFileReference; includeInIndex = 1; name = muxinternal.c; path = src/mux/muxinternal.c; sourceTree = "<group>"; };
+		87A0F642D14892C0248197855F9A09CA /* utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = utils.h; path = src/utils/utils.h; sourceTree = "<group>"; };
+		895811FA6C1D500C34A23B672D62ACEB /* mux.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mux.h; path = src/webp/mux.h; sourceTree = "<group>"; };
+		8B5B344A4F4C060A87767C9B7467C952 /* huffman_encode_utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = huffman_encode_utils.h; path = src/utils/huffman_encode_utils.h; sourceTree = "<group>"; };
+		8C80DA7BCAEE638238F193F40EC1A80F /* cost_enc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cost_enc.h; path = src/enc/cost_enc.h; sourceTree = "<group>"; };
+		8CD558402367606C6555B93F270DED27 /* types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = types.h; path = src/webp/types.h; sourceTree = "<group>"; };
+		8D4AFB56EF7421230E0B804A4A6B59ED /* lossless_sse2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = lossless_sse2.c; path = src/dsp/lossless_sse2.c; sourceTree = "<group>"; };
+		910A8A0B50BECE37CD6500F48DB68D2A /* lossless.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lossless.h; path = src/dsp/lossless.h; sourceTree = "<group>"; };
+		91F364DD32044C54F49EDFF4BBCA3976 /* Pods-QMapKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QMapKitDemo.release.xcconfig"; sourceTree = "<group>"; };
+		9357E085FFBB65EE3E1A0D7D0F6F2F00 /* enc_neon.c */ = {isa = PBXFileReference; includeInIndex = 1; name = enc_neon.c; path = src/dsp/enc_neon.c; sourceTree = "<group>"; };
+		963904366DEEFBD51A9A84264149B18A /* QMSSearchServices.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QMSSearchServices.h; path = sdk/QMapKit.framework/Headers/QMSSearchServices.h; sourceTree = "<group>"; };
+		9665BE0D8CCB6AC0092E4F1A1CFD3B77 /* QHeatTileOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QHeatTileOverlay.h; path = sdk/QMapKit.framework/Headers/QHeatTileOverlay.h; sourceTree = "<group>"; };
+		98154AF647F0F489ABFCD67BAF4E8B09 /* anim_encode.c */ = {isa = PBXFileReference; includeInIndex = 1; name = anim_encode.c; path = src/mux/anim_encode.c; sourceTree = "<group>"; };
+		98DBF0163B1EA4224ED1D8A595CBA129 /* QPolygonView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QPolygonView.h; path = sdk/QMapKit.framework/Headers/QPolygonView.h; sourceTree = "<group>"; };
+		99367F480A73C378BC83A9CCBAFC4527 /* lossless.c */ = {isa = PBXFileReference; includeInIndex = 1; name = lossless.c; path = src/dsp/lossless.c; sourceTree = "<group>"; };
+		9BE8D5A4CDF63A62F9A0CBC2F6B57C0A /* picture_psnr_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = picture_psnr_enc.c; path = src/enc/picture_psnr_enc.c; sourceTree = "<group>"; };
+		9C4450ED580F31DE8B2145138C602A80 /* TNKNavigationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TNKNavigationKit.framework; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EA57E97BFC1AFC9541154BA46BCFA23 /* dec_msa.c */ = {isa = PBXFileReference; includeInIndex = 1; name = dec_msa.c; path = src/dsp/dec_msa.c; sourceTree = "<group>"; };
+		A0115586A98DC053ABF100412AC3D123 /* bit_reader_inl_utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bit_reader_inl_utils.h; path = src/utils/bit_reader_inl_utils.h; sourceTree = "<group>"; };
+		A28131B8A48DC810956ECD379A34AE1B /* TNKLocation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TNKLocation.h; path = TNKNavigationKit.framework/Headers/TNKLocation.h; sourceTree = "<group>"; };
+		A3293508EE6A071D6FBD1A687F67171D /* yuv.c */ = {isa = PBXFileReference; includeInIndex = 1; name = yuv.c; path = src/dsp/yuv.c; sourceTree = "<group>"; };
+		A331D8EF7EC13A9A8025A98B71FFB0F5 /* yuv.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = yuv.h; path = src/dsp/yuv.h; sourceTree = "<group>"; };
+		A6371A7ED953B81175EFF849CF54D913 /* rescaler.c */ = {isa = PBXFileReference; includeInIndex = 1; name = rescaler.c; path = src/dsp/rescaler.c; sourceTree = "<group>"; };
+		A8C0D4D156FC586CDBA8CD5815924B80 /* bit_writer_utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bit_writer_utils.h; path = src/utils/bit_writer_utils.h; sourceTree = "<group>"; };
+		A9527A2659FC10B8E16FA1F4BC8125E6 /* mux_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mux_types.h; path = src/webp/mux_types.h; sourceTree = "<group>"; };
+		AA50933054A327FFB4A727C2C349E528 /* vp8_dec.c */ = {isa = PBXFileReference; includeInIndex = 1; name = vp8_dec.c; path = src/dec/vp8_dec.c; sourceTree = "<group>"; };
+		ABB77858AC6352B9B8E5D05B74B985C8 /* cost.c */ = {isa = PBXFileReference; includeInIndex = 1; name = cost.c; path = src/dsp/cost.c; sourceTree = "<group>"; };
+		AE956A23B40D345FF88C36B72B40CF60 /* analysis_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = analysis_enc.c; path = src/enc/analysis_enc.c; sourceTree = "<group>"; };
+		AF26F2A5003BBC371D071EFDAE79F069 /* io_dec.c */ = {isa = PBXFileReference; includeInIndex = 1; name = io_dec.c; path = src/dec/io_dec.c; sourceTree = "<group>"; };
+		B0AA486D99BB11AFECC006F4E20178E6 /* QMSSearchKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QMSSearchKit.h; path = sdk/QMapKit.framework/Headers/QMSSearchKit.h; sourceTree = "<group>"; };
+		B24B726901C14AB70A02F21B57747C15 /* dec_neon.c */ = {isa = PBXFileReference; includeInIndex = 1; name = dec_neon.c; path = src/dsp/dec_neon.c; sourceTree = "<group>"; };
+		B26737729F9FF79B5F2B41048A1416B3 /* QMapKit.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = QMapKit.bundle; path = sdk/QMapKit.framework/QMapKit.bundle; sourceTree = "<group>"; };
+		B2C151D0D31E5C69536F62301A0D4C48 /* enc_sse2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = enc_sse2.c; path = src/dsp/enc_sse2.c; sourceTree = "<group>"; };
+		B494922CD2620F968869C5BD8B3BB8AE /* buffer_dec.c */ = {isa = PBXFileReference; includeInIndex = 1; name = buffer_dec.c; path = src/dec/buffer_dec.c; sourceTree = "<group>"; };
+		B535EB73281C34AF62FB30193214C1EE /* quant_levels_dec_utils.c */ = {isa = PBXFileReference; includeInIndex = 1; name = quant_levels_dec_utils.c; path = src/utils/quant_levels_dec_utils.c; sourceTree = "<group>"; };
+		B5411C829109F3CAAFA4D117FB312738 /* TNKBaseNaviView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TNKBaseNaviView.h; path = TNKNavigationKit.framework/Headers/TNKBaseNaviView.h; sourceTree = "<group>"; };
+		B5D051C734E90D514D5AFF4BFDBD2622 /* filters_utils.c */ = {isa = PBXFileReference; includeInIndex = 1; name = filters_utils.c; path = src/utils/filters_utils.c; sourceTree = "<group>"; };
+		B7B7DCD11A19D9632D4195C706D9498D /* libwebp-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "libwebp-prefix.pch"; sourceTree = "<group>"; };
+		B8AB782F13A4BFDDA1C6740E00584EBE /* vp8i_dec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vp8i_dec.h; path = src/dec/vp8i_dec.h; sourceTree = "<group>"; };
+		BA2F677163BD67863E105DC0ACCBDACD /* yuv_neon.c */ = {isa = PBXFileReference; includeInIndex = 1; name = yuv_neon.c; path = src/dsp/yuv_neon.c; sourceTree = "<group>"; };
+		BA925DF38C59D32743F2D05F8140C9EB /* cost_mips32.c */ = {isa = PBXFileReference; includeInIndex = 1; name = cost_mips32.c; path = src/dsp/cost_mips32.c; sourceTree = "<group>"; };
+		BAC76B73266F8838E6BEE051BE7FD077 /* picture_csp_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = picture_csp_enc.c; path = src/enc/picture_csp_enc.c; sourceTree = "<group>"; };
+		BAEA97E65475FB820892DACB2F8C3218 /* common_dec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = common_dec.h; path = src/dec/common_dec.h; sourceTree = "<group>"; };
+		BB0D9B4A3063C6809BCE222FCC65604B /* mips_macro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mips_macro.h; path = src/dsp/mips_macro.h; sourceTree = "<group>"; };
+		BC9D8A00FF77C379A889F481AA91AF6B /* alpha_processing_neon.c */ = {isa = PBXFileReference; includeInIndex = 1; name = alpha_processing_neon.c; path = src/dsp/alpha_processing_neon.c; sourceTree = "<group>"; };
+		BC9F84DB054C8F231EC551BCE894751C /* QIndoorLevel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QIndoorLevel.h; path = sdk/QMapKit.framework/Headers/QIndoorLevel.h; sourceTree = "<group>"; };
+		BCF058BEA86F62378ED7FA64AEAE979A /* enc_mips_dsp_r2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = enc_mips_dsp_r2.c; path = src/dsp/enc_mips_dsp_r2.c; sourceTree = "<group>"; };
+		BE02734D2CAF2841F1AC5708EE57E98C /* muxedit.c */ = {isa = PBXFileReference; includeInIndex = 1; name = muxedit.c; path = src/mux/muxedit.c; sourceTree = "<group>"; };
+		BEF1295E26865C08482742CA534B312A /* ssim_sse2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ssim_sse2.c; path = src/dsp/ssim_sse2.c; sourceTree = "<group>"; };
+		C158771DEE93C92A6D8A3D1B3FA91D49 /* QShape.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QShape.h; path = sdk/QMapKit.framework/Headers/QShape.h; sourceTree = "<group>"; };
+		C178697B2C9410EBA3EB713E5ABB8DBD /* syntax_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = syntax_enc.c; path = src/enc/syntax_enc.c; sourceTree = "<group>"; };
+		C2028EB682D233C81022B63ADACE4CB2 /* QMapView+Indoor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "QMapView+Indoor.h"; path = "sdk/QMapKit.framework/Headers/QMapView+Indoor.h"; sourceTree = "<group>"; };
+		C2E355ABD368561EF0EAAF35EBD4B5CE /* rescaler_mips_dsp_r2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = rescaler_mips_dsp_r2.c; path = src/dsp/rescaler_mips_dsp_r2.c; sourceTree = "<group>"; };
+		C51C714EB0E444226D13356597B12257 /* TNKCarNaviView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TNKCarNaviView.h; path = TNKNavigationKit.framework/Headers/TNKCarNaviView.h; sourceTree = "<group>"; };
+		C5A8352D17D23DC3DECEB2989A106789 /* alpha_processing.c */ = {isa = PBXFileReference; includeInIndex = 1; name = alpha_processing.c; path = src/dsp/alpha_processing.c; sourceTree = "<group>"; };
+		CB73BA7DDF45BA78C66E62974A5430D7 /* filter_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = filter_enc.c; path = src/enc/filter_enc.c; sourceTree = "<group>"; };
+		CBA3027EE32DF22A33709C7B1E1D40BE /* common_sse2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = common_sse2.h; path = src/dsp/common_sse2.h; sourceTree = "<group>"; };
+		CC0983ABB08B5075399230B231CA83ED /* rescaler_msa.c */ = {isa = PBXFileReference; includeInIndex = 1; name = rescaler_msa.c; path = src/dsp/rescaler_msa.c; sourceTree = "<group>"; };
+		CD269E97D30CAF4AB159C9C999C21506 /* ssim.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ssim.c; path = src/dsp/ssim.c; sourceTree = "<group>"; };
+		CE3976BEF64648E4A7245F5EDCD9209A /* quant_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = quant_enc.c; path = src/enc/quant_enc.c; sourceTree = "<group>"; };
+		CECA5F5BA95514C3409F17B649761760 /* QTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QTypes.h; path = sdk/QMapKit.framework/Headers/QTypes.h; sourceTree = "<group>"; };
+		D2C5B61C1DB2B7121573C41FDD1C9807 /* QIndoorInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QIndoorInfo.h; path = sdk/QMapKit.framework/Headers/QIndoorInfo.h; sourceTree = "<group>"; };
+		D3039D01FC9851509372E3783FC21847 /* upsampling_neon.c */ = {isa = PBXFileReference; includeInIndex = 1; name = upsampling_neon.c; path = src/dsp/upsampling_neon.c; sourceTree = "<group>"; };
+		D304F07ABAEC1AD2ACC930244958A193 /* Pods-QMapKitDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QMapKitDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		D4B743ABF577E1067FC8CDF1BD3FFF86 /* TNKUserLocationPresentation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TNKUserLocationPresentation.h; path = TNKNavigationKit.framework/Headers/TNKUserLocationPresentation.h; sourceTree = "<group>"; };
+		D4BA1147BF64A06DAA73685C3A6F9606 /* rescaler_utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = rescaler_utils.h; path = src/utils/rescaler_utils.h; sourceTree = "<group>"; };
+		D4D2F3B711E752EE3AD12E08BCC43536 /* lossless_msa.c */ = {isa = PBXFileReference; includeInIndex = 1; name = lossless_msa.c; path = src/dsp/lossless_msa.c; sourceTree = "<group>"; };
+		D785B41040ECAB802EEB39B53DC0E16E /* alpha_processing_sse41.c */ = {isa = PBXFileReference; includeInIndex = 1; name = alpha_processing_sse41.c; path = src/dsp/alpha_processing_sse41.c; sourceTree = "<group>"; };
+		D7F6FE3AB5170FE75584CAF0AF5E83D4 /* thread_utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = thread_utils.h; path = src/utils/thread_utils.h; sourceTree = "<group>"; };
+		D7FB5F0690637ED5023FC663C8153F8B /* webp_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = webp_enc.c; path = src/enc/webp_enc.c; sourceTree = "<group>"; };
+		D8BC05E6B5B75594F77FC24C5A6CC503 /* QMapServices.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QMapServices.h; path = sdk/QMapKit.framework/Headers/QMapServices.h; sourceTree = "<group>"; };
+		DAB209EA176753845F057E31851F506F /* QMapView+Accessibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "QMapView+Accessibility.h"; path = "sdk/QMapKit.framework/Headers/QMapView+Accessibility.h"; sourceTree = "<group>"; };
+		DB3A2923AF7FF5E36837E938C43A2A11 /* animi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = animi.h; path = src/mux/animi.h; sourceTree = "<group>"; };
+		DD9F9DFF2BAB516A7F23BD327944C150 /* QMSSearchOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QMSSearchOption.h; path = sdk/QMapKit.framework/Headers/QMSSearchOption.h; sourceTree = "<group>"; };
+		DF5536D6ECFE5B3429CAFC3B4CD115CA /* random_utils.c */ = {isa = PBXFileReference; includeInIndex = 1; name = random_utils.c; path = src/utils/random_utils.c; sourceTree = "<group>"; };
+		E22D621BEE00A4F032F01C057C05D8CC /* vp8l_dec.c */ = {isa = PBXFileReference; includeInIndex = 1; name = vp8l_dec.c; path = src/dec/vp8l_dec.c; sourceTree = "<group>"; };
+		E27AC242B44A03021EAB819773F7303A /* QHeatTileNodeProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QHeatTileNodeProtocol.h; path = sdk/QMapKit.framework/Headers/QHeatTileNodeProtocol.h; sourceTree = "<group>"; };
+		E3D25390343BB1D04B0F35CEC67B1A5D /* thread_utils.c */ = {isa = PBXFileReference; includeInIndex = 1; name = thread_utils.c; path = src/utils/thread_utils.c; sourceTree = "<group>"; };
+		E3EF05113511F8836EBEBC271EA7295F /* format_constants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = format_constants.h; path = src/webp/format_constants.h; sourceTree = "<group>"; };
+		E438180DFC91D39A1AED43BE91AA21A4 /* alpha_processing_mips_dsp_r2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = alpha_processing_mips_dsp_r2.c; path = src/dsp/alpha_processing_mips_dsp_r2.c; sourceTree = "<group>"; };
+		E47500B3ABD2581ECE1E3B5F675339F2 /* decode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = decode.h; path = src/webp/decode.h; sourceTree = "<group>"; };
+		E4921CD9018748B75755E12AC0617C91 /* yuv_mips32.c */ = {isa = PBXFileReference; includeInIndex = 1; name = yuv_mips32.c; path = src/dsp/yuv_mips32.c; sourceTree = "<group>"; };
+		E9BF8401E29250100584FD3598680C70 /* QCircleView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QCircleView.h; path = sdk/QMapKit.framework/Headers/QCircleView.h; sourceTree = "<group>"; };
+		EAA256FE447113A8511269F47922DBD9 /* muxi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = muxi.h; path = src/mux/muxi.h; sourceTree = "<group>"; };
+		EB2E2F8229ECEB0CCEC9A63F6E0228E1 /* QMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QMapKit.framework; path = sdk/QMapKit.framework; sourceTree = "<group>"; };
+		EB8F6BE3519AB552DE1342D7B9D6B8E4 /* filters_msa.c */ = {isa = PBXFileReference; includeInIndex = 1; name = filters_msa.c; path = src/dsp/filters_msa.c; sourceTree = "<group>"; };
+		EB8F75A175F2C200C24E603E7406112D /* vp8_dec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vp8_dec.h; path = src/dec/vp8_dec.h; sourceTree = "<group>"; };
+		EBA7FF60665F01B0C8EBFD701D6D58FE /* QCircle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QCircle.h; path = sdk/QMapKit.framework/Headers/QCircle.h; sourceTree = "<group>"; };
+		ECA77AE0601894E05921F3357D06EB97 /* lossless_enc_msa.c */ = {isa = PBXFileReference; includeInIndex = 1; name = lossless_enc_msa.c; path = src/dsp/lossless_enc_msa.c; sourceTree = "<group>"; };
+		ECBBCC8028D58F90FDF44D10FF759A51 /* tree_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = tree_enc.c; path = src/enc/tree_enc.c; sourceTree = "<group>"; };
+		ED31C912E031E3B4C9AE3B3AD4E5C2DB /* color_cache_utils.c */ = {isa = PBXFileReference; includeInIndex = 1; name = color_cache_utils.c; path = src/utils/color_cache_utils.c; sourceTree = "<group>"; };
+		EDE60D5A1AA35761E0693AEFA791B165 /* QMapView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QMapView.h; path = sdk/QMapKit.framework/Headers/QMapView.h; sourceTree = "<group>"; };
+		EE47E0A9E42A6FC9FE83B813D61E944E /* lossless_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = lossless_enc.c; path = src/dsp/lossless_enc.c; sourceTree = "<group>"; };
+		EEDED83457D23F72613F35C77EE507E8 /* TNKBaseNaviManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TNKBaseNaviManager.h; path = TNKNavigationKit.framework/Headers/TNKBaseNaviManager.h; sourceTree = "<group>"; };
+		EEE2B4ECA726EC6FC6C8363B88C963E6 /* Pods-QMapKitDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-QMapKitDemo-dummy.m"; sourceTree = "<group>"; };
+		EF60A4D87FD412AF5A8E1D188D92FA94 /* lossless_enc_sse2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = lossless_enc_sse2.c; path = src/dsp/lossless_enc_sse2.c; sourceTree = "<group>"; };
+		F1BA54A49B32CA2F7F13B444D9B76335 /* QMultiPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QMultiPoint.h; path = sdk/QMapKit.framework/Headers/QMultiPoint.h; sourceTree = "<group>"; };
+		F29822F62C0DFC3B531182AEE3256356 /* color_cache_utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = color_cache_utils.h; path = src/utils/color_cache_utils.h; sourceTree = "<group>"; };
+		F29D7DA1E1366628BB7C1A0A7857EE03 /* QGeometry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QGeometry.h; path = sdk/QMapKit.framework/Headers/QGeometry.h; sourceTree = "<group>"; };
+		F2A94C1421F032019742F1ADC6E8CBEE /* near_lossless_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = near_lossless_enc.c; path = src/enc/near_lossless_enc.c; sourceTree = "<group>"; };
+		F2F1C6A66EFADE617810059D4BFBC054 /* tree_dec.c */ = {isa = PBXFileReference; includeInIndex = 1; name = tree_dec.c; path = src/dec/tree_dec.c; sourceTree = "<group>"; };
+		F3BAE2EA9FC2E30A21B1802288566845 /* predictor_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = predictor_enc.c; path = src/enc/predictor_enc.c; sourceTree = "<group>"; };
+		F4AE77BCA68E03BBBC4E5ECB00D5AA72 /* config_enc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = config_enc.c; path = src/enc/config_enc.c; sourceTree = "<group>"; };
+		F69BA83DE29AEA6154D649ADC093E88A /* filters_utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = filters_utils.h; path = src/utils/filters_utils.h; sourceTree = "<group>"; };
+		F8D0E2D2E5DB71BA06475EB9644438E4 /* QMapKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QMapKit.xcconfig; sourceTree = "<group>"; };
+		FDC5B2423D92C5C4219E6D9D1BAF0A03 /* TNKCarRouteSearchTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TNKCarRouteSearchTypes.h; path = TNKNavigationKit.framework/Headers/TNKCarRouteSearchTypes.h; sourceTree = "<group>"; };
+		FE6F35627AC440F1D4D0E34007F52694 /* quant_levels_utils.c */ = {isa = PBXFileReference; includeInIndex = 1; name = quant_levels_utils.c; path = src/utils/quant_levels_utils.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15EB68E3C64BEE09B862B918716146A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B28B9EA6858CA00242C72DD3E89F63A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12C611953622A09D1E13821EDA3763D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C4450ED580F31DE8B2145138C602A80 /* TNKNavigationKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1C54FB68AF50F8520F753E3DE7F7461A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B26737729F9FF79B5F2B41048A1416B3 /* QMapKit.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		24B0228E2D75D11504F889E8C0CFD3E9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8D0E2D2E5DB71BA06475EB9644438E4 /* QMapKit.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/QMapKit";
+			sourceTree = "<group>";
+		};
+		5DD98D332AF03A411EFE5DECFD3AE0F6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				03BE3037279834F858017196DADFDA71 /* TNKNavigationKit.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TNKNavigationKit";
+			sourceTree = "<group>";
+		};
+		704139925BEBE0FABF2BE195999916E0 /* mux */ = {
+			isa = PBXGroup;
+			children = (
+				98154AF647F0F489ABFCD67BAF4E8B09 /* anim_encode.c */,
+				DB3A2923AF7FF5E36837E938C43A2A11 /* animi.h */,
+				BE02734D2CAF2841F1AC5708EE57E98C /* muxedit.c */,
+				EAA256FE447113A8511269F47922DBD9 /* muxi.h */,
+				86A26E436FE6CFED07BF1FC5F36973DC /* muxinternal.c */,
+				64D12406732E31C46EC96691C587BB38 /* muxread.c */,
+			);
+			name = mux;
+			sourceTree = "<group>";
+		};
+		7639AB5FE84BA64AAB5085797F7DB443 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B518550D2DDBAA7198FCD156A654F3FB /* Pods-QMapKitDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7CF614D894BFBBAF9C1CE8A05B031788 /* demux */ = {
+			isa = PBXGroup;
+			children = (
+				4886E61E8B3951173C0EC1B8167AABAD /* anim_decode.c */,
+				0306A99E48DFD54A09CF03B9FDCFBE12 /* demux.c */,
+			);
+			name = demux;
+			sourceTree = "<group>";
+		};
+		8B67ABEAF3A541824F309BA5237D607D /* core */ = {
+			isa = PBXGroup;
+			children = (
+				0E7E698423EF33AF34D8B0E948ACCDB5 /* alpha_dec.c */,
+				192573EDEFA63976F656535D64CB0F3F /* alpha_enc.c */,
+				C5A8352D17D23DC3DECEB2989A106789 /* alpha_processing.c */,
+				E438180DFC91D39A1AED43BE91AA21A4 /* alpha_processing_mips_dsp_r2.c */,
+				BC9D8A00FF77C379A889F481AA91AF6B /* alpha_processing_neon.c */,
+				4E36E4F405218502616905415D92820B /* alpha_processing_sse2.c */,
+				D785B41040ECAB802EEB39B53DC0E16E /* alpha_processing_sse41.c */,
+				5E9153DD8825C4B27BA6B0D5CABF7CD4 /* alphai_dec.h */,
+				AE956A23B40D345FF88C36B72B40CF60 /* analysis_enc.c */,
+				56EF1E8532C321865E7354CD578CC2A3 /* backward_references_cost_enc.c */,
+				63609963A96E7D575063CF5A0423FA2B /* backward_references_enc.c */,
+				38C776DBA928DF7B38773D526079512A /* backward_references_enc.h */,
+				A0115586A98DC053ABF100412AC3D123 /* bit_reader_inl_utils.h */,
+				127675EEC214E2DC749EAFE7E1EC4B9B /* bit_reader_utils.c */,
+				361DD31D5AD24468B13FFD2565FBB1A8 /* bit_reader_utils.h */,
+				0B18A7717086C9F51B15C1E2E244ACE4 /* bit_writer_utils.c */,
+				A8C0D4D156FC586CDBA8CD5815924B80 /* bit_writer_utils.h */,
+				B494922CD2620F968869C5BD8B3BB8AE /* buffer_dec.c */,
+				ED31C912E031E3B4C9AE3B3AD4E5C2DB /* color_cache_utils.c */,
+				F29822F62C0DFC3B531182AEE3256356 /* color_cache_utils.h */,
+				BAEA97E65475FB820892DACB2F8C3218 /* common_dec.h */,
+				CBA3027EE32DF22A33709C7B1E1D40BE /* common_sse2.h */,
+				F4AE77BCA68E03BBBC4E5ECB00D5AA72 /* config_enc.c */,
+				ABB77858AC6352B9B8E5D05B74B985C8 /* cost.c */,
+				2D4B081D9F6A610661973D3621103EB3 /* cost_enc.c */,
+				8C80DA7BCAEE638238F193F40EC1A80F /* cost_enc.h */,
+				BA925DF38C59D32743F2D05F8140C9EB /* cost_mips32.c */,
+				606E48076AD3DD7EF3547B07235DE972 /* cost_mips_dsp_r2.c */,
+				004F22633E54201785524347B8A5A0EC /* cost_sse2.c */,
+				7E2FC26F6D0626728FB7CF9FFBC9FB58 /* cpu.c */,
+				6A3B3F45B7ADB2DB6B48D5654BFF3363 /* dec.c */,
+				65BC992D8E4DAE852EA0A6508163BDB2 /* dec_clip_tables.c */,
+				16D5E443BC2A8ECD4E45C3BB17607CCD /* dec_mips32.c */,
+				581B0A28AD35A98D5B074267618FA3F3 /* dec_mips_dsp_r2.c */,
+				9EA57E97BFC1AFC9541154BA46BCFA23 /* dec_msa.c */,
+				B24B726901C14AB70A02F21B57747C15 /* dec_neon.c */,
+				09B5167315DD20AE20C0386F6185511E /* dec_sse2.c */,
+				77C8985EF723A2CD7FE837A8051D0478 /* dec_sse41.c */,
+				1981A114482A052D2FE90DB08BB6A8CC /* delta_palettization_enc.c */,
+				67674D54BC3FFC3526C70899A328F232 /* delta_palettization_enc.h */,
+				0E00D48945E5E150A3E112B2D06C9425 /* dsp.h */,
+				3F113B43C0E0A6FA4F1F637833F0C578 /* enc.c */,
+				0F0871B16B6456E97057F7DC717CD6F5 /* enc_avx2.c */,
+				32E4170A5D91DB117D3DDC12F0F01D1C /* enc_mips32.c */,
+				BCF058BEA86F62378ED7FA64AEAE979A /* enc_mips_dsp_r2.c */,
+				7D7F208D5A6498CDBAB3A1D21DDB7368 /* enc_msa.c */,
+				9357E085FFBB65EE3E1A0D7D0F6F2F00 /* enc_neon.c */,
+				B2C151D0D31E5C69536F62301A0D4C48 /* enc_sse2.c */,
+				672F6D58316EF1725FB6755CB8F5A354 /* enc_sse41.c */,
+				803061C46BD07C3EAD6DD953C139DC20 /* endian_inl_utils.h */,
+				CB73BA7DDF45BA78C66E62974A5430D7 /* filter_enc.c */,
+				7A5EE36CB7B3AC8C2A7E5C02EE4ED52F /* filters.c */,
+				64AF717A34F1CC6A61D9B6BE8CA8EEC2 /* filters_mips_dsp_r2.c */,
+				EB8F6BE3519AB552DE1342D7B9D6B8E4 /* filters_msa.c */,
+				28CD3C120EA62F9F39C21FF412F88A9E /* filters_neon.c */,
+				173DD0FD2822D3D1D2FF604D9C9A91C3 /* filters_sse2.c */,
+				B5D051C734E90D514D5AFF4BFDBD2622 /* filters_utils.c */,
+				F69BA83DE29AEA6154D649ADC093E88A /* filters_utils.h */,
+				04738143238303688B266D61E410BAE1 /* frame_dec.c */,
+				1064ADE003E8B20012860DEB4953320F /* frame_enc.c */,
+				5417B017B279A73BE927AAF2C335F193 /* histogram_enc.c */,
+				41EF514E432F6E0D3CAFDF25121A4167 /* histogram_enc.h */,
+				49787A3F50CF4D1C7BBAFBA62A97BA0A /* huffman_encode_utils.c */,
+				8B5B344A4F4C060A87767C9B7467C952 /* huffman_encode_utils.h */,
+				7D104E58DCBBA9ED419050506E786227 /* huffman_utils.c */,
+				1F373695BB77EF7B0E6ACB85472D3951 /* huffman_utils.h */,
+				476DF098C8884761D294977737FC1A75 /* idec_dec.c */,
+				AF26F2A5003BBC371D071EFDAE79F069 /* io_dec.c */,
+				77AD417EB3330A8B1E2FAFC16AACDA24 /* iterator_enc.c */,
+				99367F480A73C378BC83A9CCBAFC4527 /* lossless.c */,
+				910A8A0B50BECE37CD6500F48DB68D2A /* lossless.h */,
+				114025063D7C2C3A3EEA79F9057C3097 /* lossless_common.h */,
+				EE47E0A9E42A6FC9FE83B813D61E944E /* lossless_enc.c */,
+				1057AA19F429FED265C3E0505A6B1C74 /* lossless_enc_mips32.c */,
+				4D8E73002D89BEF892568886A944E3DA /* lossless_enc_mips_dsp_r2.c */,
+				ECA77AE0601894E05921F3357D06EB97 /* lossless_enc_msa.c */,
+				5FC0C3B13CFD4945AC4241F178A1EB4B /* lossless_enc_neon.c */,
+				EF60A4D87FD412AF5A8E1D188D92FA94 /* lossless_enc_sse2.c */,
+				34FA3AA1F972A8BEE830967C12E1B5CD /* lossless_enc_sse41.c */,
+				72C38BBABA85F16494183604CBA5FE82 /* lossless_mips_dsp_r2.c */,
+				D4D2F3B711E752EE3AD12E08BCC43536 /* lossless_msa.c */,
+				70E66BEF1FC7B4F24A8E4FB80062C2F7 /* lossless_neon.c */,
+				8D4AFB56EF7421230E0B804A4A6B59ED /* lossless_sse2.c */,
+				BB0D9B4A3063C6809BCE222FCC65604B /* mips_macro.h */,
+				09A515754179315572864A24FA37BB6B /* msa_macro.h */,
+				F2A94C1421F032019742F1ADC6E8CBEE /* near_lossless_enc.c */,
+				8680B2BCCEE4337A7409945AA96F3DE1 /* neon.h */,
+				BAC76B73266F8838E6BEE051BE7FD077 /* picture_csp_enc.c */,
+				20DD190D8E8E68B91B74CC58E66DE805 /* picture_enc.c */,
+				9BE8D5A4CDF63A62F9A0CBC2F6B57C0A /* picture_psnr_enc.c */,
+				7119D705738A87CECA177FD7155B5A10 /* picture_rescale_enc.c */,
+				2D151B73832FDFAEB7527FFA730CBD5F /* picture_tools_enc.c */,
+				F3BAE2EA9FC2E30A21B1802288566845 /* predictor_enc.c */,
+				36A1F73E97B1ECBB0606F1B4AC0BBD20 /* quant_dec.c */,
+				CE3976BEF64648E4A7245F5EDCD9209A /* quant_enc.c */,
+				B535EB73281C34AF62FB30193214C1EE /* quant_levels_dec_utils.c */,
+				23A7C03F1D2DC9260605EEA1A9780B2A /* quant_levels_dec_utils.h */,
+				FE6F35627AC440F1D4D0E34007F52694 /* quant_levels_utils.c */,
+				519AF25730A713D81B6D754A84FC8C6C /* quant_levels_utils.h */,
+				DF5536D6ECFE5B3429CAFC3B4CD115CA /* random_utils.c */,
+				2DA810B5F8BDBE76C14407FED69BE414 /* random_utils.h */,
+				A6371A7ED953B81175EFF849CF54D913 /* rescaler.c */,
+				49EFF0243A28C9A6AA815663E07DF451 /* rescaler_mips32.c */,
+				C2E355ABD368561EF0EAAF35EBD4B5CE /* rescaler_mips_dsp_r2.c */,
+				CC0983ABB08B5075399230B231CA83ED /* rescaler_msa.c */,
+				63019AF52AC66896F614B98C8251093D /* rescaler_neon.c */,
+				3F4EF75EDF6C642A50EBF224DE720D19 /* rescaler_sse2.c */,
+				7D951A0FFA6DEDD9D9895CA99E46FAEB /* rescaler_utils.c */,
+				D4BA1147BF64A06DAA73685C3A6F9606 /* rescaler_utils.h */,
+				CD269E97D30CAF4AB159C9C999C21506 /* ssim.c */,
+				BEF1295E26865C08482742CA534B312A /* ssim_sse2.c */,
+				C178697B2C9410EBA3EB713E5ABB8DBD /* syntax_enc.c */,
+				E3D25390343BB1D04B0F35CEC67B1A5D /* thread_utils.c */,
+				D7F6FE3AB5170FE75584CAF0AF5E83D4 /* thread_utils.h */,
+				2D838AC49AB474E9D945CDAF7A13C9A2 /* token_enc.c */,
+				F2F1C6A66EFADE617810059D4BFBC054 /* tree_dec.c */,
+				ECBBCC8028D58F90FDF44D10FF759A51 /* tree_enc.c */,
+				1EE62096FA7A4D51E112390495D0E17B /* upsampling.c */,
+				2A1D5A8EFB141CB73C1D5802E4F980FF /* upsampling_mips_dsp_r2.c */,
+				6539C2D26E266C882DABE36B5C750C36 /* upsampling_msa.c */,
+				D3039D01FC9851509372E3783FC21847 /* upsampling_neon.c */,
+				4DBB6666A421B5263C8E7D3E8936012F /* upsampling_sse2.c */,
+				1FD22A0D56776659CEC4BCC5EC722D3E /* utils.c */,
+				87A0F642D14892C0248197855F9A09CA /* utils.h */,
+				AA50933054A327FFB4A727C2C349E528 /* vp8_dec.c */,
+				EB8F75A175F2C200C24E603E7406112D /* vp8_dec.h */,
+				B8AB782F13A4BFDDA1C6740E00584EBE /* vp8i_dec.h */,
+				02F9E1982E9EAB46F18B5821D68E79BE /* vp8i_enc.h */,
+				E22D621BEE00A4F032F01C057C05D8CC /* vp8l_dec.c */,
+				548D23B2800E874E79442616A22D6937 /* vp8l_enc.c */,
+				8535BA69B4004DCE09DB86CC4648507F /* vp8li_dec.h */,
+				508D700BFDCAFDD6BF52856440ED6BC6 /* vp8li_enc.h */,
+				359596C62AD9AD86BD7AB31BBEEC485B /* webp_dec.c */,
+				D7FB5F0690637ED5023FC663C8153F8B /* webp_enc.c */,
+				4548AAC4E7454B59625F3927A249259E /* webpi_dec.h */,
+				A3293508EE6A071D6FBD1A687F67171D /* yuv.c */,
+				A331D8EF7EC13A9A8025A98B71FFB0F5 /* yuv.h */,
+				E4921CD9018748B75755E12AC0617C91 /* yuv_mips32.c */,
+				36ABE76AB3631A80AC284FF2EFC23D36 /* yuv_mips_dsp_r2.c */,
+				BA2F677163BD67863E105DC0ACCBDACD /* yuv_neon.c */,
+				3821B3D286B9D888257DBEE0DA10EAD8 /* yuv_sse2.c */,
+			);
+			name = core;
+			sourceTree = "<group>";
+		};
+		8E55F257675A60ECD09FA873481FDC56 /* libwebp */ = {
+			isa = PBXGroup;
+			children = (
+				8B67ABEAF3A541824F309BA5237D607D /* core */,
+				7CF614D894BFBBAF9C1CE8A05B031788 /* demux */,
+				704139925BEBE0FABF2BE195999916E0 /* mux */,
+				94134EF6469A794B4EC543DAC7B231AA /* Support Files */,
+				96617DA7DB4B6D0874CF42D74F5B0A60 /* webp */,
+			);
+			name = libwebp;
+			path = libwebp;
+			sourceTree = "<group>";
+		};
+		94134EF6469A794B4EC543DAC7B231AA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				35B33F5B69981B68322D63B82D675612 /* libwebp.xcconfig */,
+				5AC0014F9D93D8B34D9534B0072E2F50 /* libwebp-dummy.m */,
+				B7B7DCD11A19D9632D4195C706D9498D /* libwebp-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/libwebp";
+			sourceTree = "<group>";
+		};
+		96617DA7DB4B6D0874CF42D74F5B0A60 /* webp */ = {
+			isa = PBXGroup;
+			children = (
+				E47500B3ABD2581ECE1E3B5F675339F2 /* decode.h */,
+				5E5645B92CC5AEE076CBB03D6E6E9F1E /* demux.h */,
+				172EFB948C40492E957F7C135CCFFD94 /* encode.h */,
+				E3EF05113511F8836EBEBC271EA7295F /* format_constants.h */,
+				895811FA6C1D500C34A23B672D62ACEB /* mux.h */,
+				A9527A2659FC10B8E16FA1F4BC8125E6 /* mux_types.h */,
+				8CD558402367606C6555B93F270DED27 /* types.h */,
+			);
+			name = webp;
+			sourceTree = "<group>";
+		};
+		A07107DC7DDD225FAA4BCFDBDB6CA6AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB2E2F8229ECEB0CCEC9A63F6E0228E1 /* QMapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B518550D2DDBAA7198FCD156A654F3FB /* Pods-QMapKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				1D51E00B71E893573C808881217421AF /* Pods-QMapKitDemo-acknowledgements.markdown */,
+				D304F07ABAEC1AD2ACC930244958A193 /* Pods-QMapKitDemo-acknowledgements.plist */,
+				EEE2B4ECA726EC6FC6C8363B88C963E6 /* Pods-QMapKitDemo-dummy.m */,
+				439F96F96C415AF40D208AE85A738895 /* Pods-QMapKitDemo-resources.sh */,
+				527AB9CD1AD8700D4F7A97AC69E2B142 /* Pods-QMapKitDemo.debug.xcconfig */,
+				91F364DD32044C54F49EDFF4BBCA3976 /* Pods-QMapKitDemo.release.xcconfig */,
+			);
+			name = "Pods-QMapKitDemo";
+			path = "Target Support Files/Pods-QMapKitDemo";
+			sourceTree = "<group>";
+		};
+		B7E64FF5F6733138392378E212F6B10E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E55F257675A60ECD09FA873481FDC56 /* libwebp */,
+				F08EA1E07A3B1C0BBE16FFD43820E338 /* QMapKit */,
+				CCD024BB2DA6E8A60DE91274117283D8 /* TNKNavigationKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CCD024BB2DA6E8A60DE91274117283D8 /* TNKNavigationKit */ = {
+			isa = PBXGroup;
+			children = (
+				5FCCCCA42490A37D57315C49BFBD28C1 /* TNKAudioPlayer.h */,
+				EEDED83457D23F72613F35C77EE507E8 /* TNKBaseNaviManager.h */,
+				B5411C829109F3CAAFA4D117FB312738 /* TNKBaseNaviView.h */,
+				2826B34BD2FFE2990B81239917B28CDC /* TNKCarNavigationData.h */,
+				776F67CD844A15178E58C61AD604B354 /* TNKCarNaviManager.h */,
+				C51C714EB0E444226D13356597B12257 /* TNKCarNaviView.h */,
+				FDC5B2423D92C5C4219E6D9D1BAF0A03 /* TNKCarRouteSearchTypes.h */,
+				11DE78EBF6A8C118E31662AF14FC5A6A /* TNKGeometry.h */,
+				00E6D40B22360408B144AF858D6AAD6C /* TNKGPSFileLocationManager.h */,
+				A28131B8A48DC810956ECD379A34AE1B /* TNKLocation.h */,
+				5ECEC766CF3C8DBB8E806CF69AD05D93 /* TNKLocationEntryProtocol.h */,
+				3A0AFBA3C58851343BBDD86FD1C7B420 /* TNKNavigationKit.h */,
+				7D134F842EC7E2BB7C7DD4820AB1DF2F /* TNKNaviServices.h */,
+				33A02F7899960C0180E0FFA1A3877A78 /* TNKNaviTTS.h */,
+				3C825D9A5051C59B8945A311B03C1A39 /* TNKRemainingOverviewData.h */,
+				733FD85BCC9BF2A08887961EFFE262ED /* TNKRouteTrafficData.h */,
+				46C67F731F3DA78EEE6E7EA640DB922B /* TNKRouteTrafficStatus.h */,
+				542F8B897FC983DE45E8B9FB46ADB9CE /* TNKSearchTask.h */,
+				1D44772F5735AFF344F81D5ACA264B66 /* TNKSearchTypes.h */,
+				D4B743ABF577E1067FC8CDF1BD3FFF86 /* TNKUserLocationPresentation.h */,
+				12C611953622A09D1E13821EDA3763D9 /* Frameworks */,
+				D3B2C7A99EB994B8DD7B8A1F89DDD394 /* Resources */,
+				5DD98D332AF03A411EFE5DECFD3AE0F6 /* Support Files */,
+			);
+			name = TNKNavigationKit;
+			path = TNKNavigationKit;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				B7E64FF5F6733138392378E212F6B10E /* Pods */,
+				EBC9852178EC3547B860A4841EBB5A3C /* Products */,
+				7639AB5FE84BA64AAB5085797F7DB443 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D3B2C7A99EB994B8DD7B8A1F89DDD394 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				60CDE1AD1AD342894D2EFC3DC59593E6 /* TencentNavigationKit.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBC9852178EC3547B860A4841EBB5A3C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E4674603A5D5B9215FFA0F8E69F8B71 /* liblibwebp.a */,
+				6508EAB1035D50F5DF11B4D61283AB78 /* libPods-QMapKitDemo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F08EA1E07A3B1C0BBE16FFD43820E338 /* QMapKit */ = {
+			isa = PBXGroup;
+			children = (
+				4F54D6789B11ED942458FEC5C02988A9 /* QAnnotation.h */,
+				6970A8FF2448D33342D18CE833BAD48F /* QAnnotationView.h */,
+				4DD193ED29B6D500C6CC9F6E025FD492 /* QAnnotationViewLayer.h */,
+				2DD244DC5E5FB30719EE97EADAF83F3B /* QBasicMapViewLayer.h */,
+				EBA7FF60665F01B0C8EBFD701D6D58FE /* QCircle.h */,
+				E9BF8401E29250100584FD3598680C70 /* QCircleView.h */,
+				F29D7DA1E1366628BB7C1A0A7857EE03 /* QGeometry.h */,
+				29139BF49D85F87DA71EAEC288484B63 /* QHeatTileNode.h */,
+				E27AC242B44A03021EAB819773F7303A /* QHeatTileNodeProtocol.h */,
+				9665BE0D8CCB6AC0092E4F1A1CFD3B77 /* QHeatTileOverlay.h */,
+				43B28A464CD2F71313D06090148ADEA3 /* QIndoorBuilding.h */,
+				D2C5B61C1DB2B7121573C41FDD1C9807 /* QIndoorInfo.h */,
+				BC9F84DB054C8F231EC551BCE894751C /* QIndoorLevel.h */,
+				4BBF367B35E4852609DF1E6EFB07DDB1 /* QMapKit.h */,
+				D8BC05E6B5B75594F77FC24C5A6CC503 /* QMapServices.h */,
+				EDE60D5A1AA35761E0693AEFA791B165 /* QMapView.h */,
+				DAB209EA176753845F057E31851F506F /* QMapView+Accessibility.h */,
+				555C1AF713DE00E6F893571C0F65389C /* QMapView+Config.h */,
+				C2028EB682D233C81022B63ADACE4CB2 /* QMapView+Indoor.h */,
+				801F8F642E84BBC6AA6A51C77864A811 /* QMSSearcher.h */,
+				B0AA486D99BB11AFECC006F4E20178E6 /* QMSSearchKit.h */,
+				DD9F9DFF2BAB516A7F23BD327944C150 /* QMSSearchOption.h */,
+				4207CA9D21AA2384DFA4733A9269EDD1 /* QMSSearchResult.h */,
+				963904366DEEFBD51A9A84264149B18A /* QMSSearchServices.h */,
+				F1BA54A49B32CA2F7F13B444D9B76335 /* QMultiPoint.h */,
+				70D598CDABD163EE4E5B0BE9B37E58B9 /* QOverlay.h */,
+				64BDDF9DFF29F285EFCB83B7EAA4AA5B /* QOverlayPathView.h */,
+				0A56128F2D0EE9ED4A6893927E07B570 /* QOverlayView.h */,
+				73EB7E7F60BE48DE940FCC9F19DF4E7C /* QPinAnnotationView.h */,
+				4618E151B7693BE0D5CA213F107234C7 /* QPointAnnotation.h */,
+				0DF425429636CEA93A88423BC3CCFFBB /* QPolygon.h */,
+				98DBF0163B1EA4224ED1D8A595CBA129 /* QPolygonView.h */,
+				36D3CD556610D8E1232A423A3470D2F0 /* QPolyline.h */,
+				35477DAD965741C70B382EB5E1852BDC /* QPolylineView.h */,
+				C158771DEE93C92A6D8A3D1B3FA91D49 /* QShape.h */,
+				0164038D1C8A782C6F88CF0B55DEB45D /* QTexturePolylineView.h */,
+				14B8C89794AE8D18D8EF701BDCE88870 /* QTileOverlay.h */,
+				CECA5F5BA95514C3409F17B649761760 /* QTypes.h */,
+				217C5292414D84C745E5222F0022BCE4 /* QUserLocation.h */,
+				51D80ED7EE757FC042A3D34741804F46 /* QUserLocationPresentation.h */,
+				A07107DC7DDD225FAA4BCFDBDB6CA6AE /* Frameworks */,
+				1C54FB68AF50F8520F753E3DE7F7461A /* Resources */,
+				24B0228E2D75D11504F889E8C0CFD3E9 /* Support Files */,
+			);
+			name = QMapKit;
+			path = QMapKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2B19D64E30D177CBE725549610966CF6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F94B8CAE5373EA5FE525502B7A73BDD5 /* alphai_dec.h in Headers */,
+				EC0AE62A11DF83F522ECC3CD9D08B522 /* animi.h in Headers */,
+				CA56A16465FDD31EB0EFF650BBD2F7FF /* backward_references_enc.h in Headers */,
+				237F7186446FC938AA6174FCC24AD599 /* bit_reader_inl_utils.h in Headers */,
+				EA98A4EE3F89DC62F6620846D818726A /* bit_reader_utils.h in Headers */,
+				C78AE7F70A09BF54B0520AA65FA83279 /* bit_writer_utils.h in Headers */,
+				9CB774E76A1CDE683D4BF71F76130850 /* color_cache_utils.h in Headers */,
+				82758583C119D7A39A122E3357EC541A /* common_dec.h in Headers */,
+				A0E9A472D8A3CC198936EEF14EF6B208 /* common_sse2.h in Headers */,
+				0984932EC29A2A57BF1076BFFF7D6D00 /* cost_enc.h in Headers */,
+				2578301D765A9B27A2CC9B983B2E2B98 /* decode.h in Headers */,
+				78D2EECE55379CC46A8E896543368900 /* delta_palettization_enc.h in Headers */,
+				8B0D5598C62EC7C2F5D1853CB57EB0B4 /* demux.h in Headers */,
+				6F2C3120EDFFCFCC7A924DD77F925740 /* dsp.h in Headers */,
+				8FD5D5826D5788246B24054353ECFB76 /* encode.h in Headers */,
+				3CD0A6D6F8D9339BE58EAF9EDB957710 /* endian_inl_utils.h in Headers */,
+				7AD767B8BBC94ACF1FB2C81404D50365 /* filters_utils.h in Headers */,
+				DAFEAA770868198F1358300CFDF33D68 /* format_constants.h in Headers */,
+				948A95C187FB7D3D58C90400110A6539 /* histogram_enc.h in Headers */,
+				FD31062CBBE56AC5E4F7549E6405353B /* huffman_encode_utils.h in Headers */,
+				EB7674A48ABE08BD2EFA2322A2B50DA5 /* huffman_utils.h in Headers */,
+				2A6EE304E04798323E0DB1DBFD6B2132 /* lossless.h in Headers */,
+				D7CD23EE10FBBF70F50055CF0AF0CB75 /* lossless_common.h in Headers */,
+				66F37CDA35C0CF734D264E868883A575 /* mips_macro.h in Headers */,
+				A8D563F111F91F521AD0772EF0E15CF5 /* msa_macro.h in Headers */,
+				059EAD4AF95F558DFED7AB18AFFFE749 /* mux.h in Headers */,
+				2AAF8B5C846C3B9267DB283AE6FFFA58 /* mux_types.h in Headers */,
+				8ABD6CAB992ACB09D221591DDAC5A7EA /* muxi.h in Headers */,
+				86EB6FD1A31B4BC060E71DBDD1808F23 /* neon.h in Headers */,
+				7CF1468ECAF83B5F999D7B71ABF523FC /* quant_levels_dec_utils.h in Headers */,
+				DCD062EF6F39434E1BD1E833C5F93116 /* quant_levels_utils.h in Headers */,
+				A74C04C5964EC810F679F8F2BFF8E2DB /* random_utils.h in Headers */,
+				AD1F24E8D0B47BFF15BEC133F55E7734 /* rescaler_utils.h in Headers */,
+				C90A68034C081A43F55344759548F07C /* thread_utils.h in Headers */,
+				B7697B52092A894BA20F86B77A240A43 /* types.h in Headers */,
+				F0DF95EEEBBC089E4D08BA59EB474379 /* utils.h in Headers */,
+				6B2E30806905250C2EDB3647A2297784 /* vp8_dec.h in Headers */,
+				7660F08139295B2FA6CC69E8A5517D28 /* vp8i_dec.h in Headers */,
+				7D343F14C782CA61B96C991D3907A0C8 /* vp8i_enc.h in Headers */,
+				3EB27668F474D67029B733597202D825 /* vp8li_dec.h in Headers */,
+				AB1F1ADD94BD47C723611D051A6C34BB /* vp8li_enc.h in Headers */,
+				A0DECE365A0D8D0C35179F111CA160E7 /* webpi_dec.h in Headers */,
+				143B8E16F567217C584839C646DE2EC6 /* yuv.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6203CDF581E38B637771179485D113A6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2959687F7A264AABBAD13C6AB99161DE /* Pods-QMapKitDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FA7DB73A0099A7543FD9A3065F97C02 /* Build configuration list for PBXNativeTarget "Pods-QMapKitDemo" */;
+			buildPhases = (
+				6203CDF581E38B637771179485D113A6 /* Headers */,
+				A99084A10AF44146A788915420957FBD /* Sources */,
+				3B28B9EA6858CA00242C72DD3E89F63A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22C338D33E551CF8774D4CA8C4F454C6 /* PBXTargetDependency */,
+				C4FD01B3B93872FF6DBDAD4E907353F4 /* PBXTargetDependency */,
+				FAED20254C0BD92858516BD8B3646983 /* PBXTargetDependency */,
+			);
+			name = "Pods-QMapKitDemo";
+			productName = "Pods-QMapKitDemo";
+			productReference = 6508EAB1035D50F5DF11B4D61283AB78 /* libPods-QMapKitDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		47D2E85A78C25869BB13521D8561A638 /* libwebp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC16E707F8A80DD2A42CC53361FADC0F /* Build configuration list for PBXNativeTarget "libwebp" */;
+			buildPhases = (
+				2B19D64E30D177CBE725549610966CF6 /* Headers */,
+				A30E2DFDF6769B8CDEC9E60944FA3760 /* Sources */,
+				15EB68E3C64BEE09B862B918716146A5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libwebp;
+			productName = libwebp;
+			productReference = 5E4674603A5D5B9215FFA0F8E69F8B71 /* liblibwebp.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = EBC9852178EC3547B860A4841EBB5A3C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				47D2E85A78C25869BB13521D8561A638 /* libwebp */,
+				2959687F7A264AABBAD13C6AB99161DE /* Pods-QMapKitDemo */,
+				D2E36FF391E4650977F494EBB8957373 /* QMapKit */,
+				3514DC2B425E399712A23458DCF9A53D /* TNKNavigationKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A30E2DFDF6769B8CDEC9E60944FA3760 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5265EB0407CEFA256D915CFA078AEF8 /* alpha_dec.c in Sources */,
+				B28A856ECDF8B8E6A147956FE7F94396 /* alpha_enc.c in Sources */,
+				18BCFAEA437E0E1CA6681204AE760FFA /* alpha_processing.c in Sources */,
+				CA0BA4F339D6A8153DCD8FBDA399D841 /* alpha_processing_mips_dsp_r2.c in Sources */,
+				6969ED7FF4F3412A288BC0ED49387158 /* alpha_processing_neon.c in Sources */,
+				4BE4C32DD2F7525A62ABC7BEC94850B8 /* alpha_processing_sse2.c in Sources */,
+				B14DC2305919555DEB5CF6B2B466DE5E /* alpha_processing_sse41.c in Sources */,
+				5B475221FD3E38E5BB1E580E62E5838F /* analysis_enc.c in Sources */,
+				F163720F73AFC4D8669790355539C505 /* anim_decode.c in Sources */,
+				00A38523156058F41FB20121E76180DC /* anim_encode.c in Sources */,
+				F9BD30438437A293056970A9231EE987 /* backward_references_cost_enc.c in Sources */,
+				0880A0D8B8A451A90A6C658E0109218E /* backward_references_enc.c in Sources */,
+				AA46738FDD223637777CA003B7F78273 /* bit_reader_utils.c in Sources */,
+				64C93561D62FD1EDBC4E4D894341350D /* bit_writer_utils.c in Sources */,
+				4E03B4CCE5A27997E67D2ED9C8090F03 /* buffer_dec.c in Sources */,
+				9FD09F4C90EC673E868A789C40DCAE08 /* color_cache_utils.c in Sources */,
+				160D9D3F91A713F0108A8CE560B4D41F /* config_enc.c in Sources */,
+				B8B497990CA643B09FDE6426082E3203 /* cost.c in Sources */,
+				DF2CDC7B4DB7202B66D58B7FDC1DCD73 /* cost_enc.c in Sources */,
+				6DD1A8FCC8755AC20CE4EDC1283B49E8 /* cost_mips32.c in Sources */,
+				5DACF5F3BF377F8FB7352BAC117FE653 /* cost_mips_dsp_r2.c in Sources */,
+				0271086CF16C6A005C7162EEE0A7CA4F /* cost_sse2.c in Sources */,
+				83FE9B5775DE3DD0C206D48C6DE2D9B2 /* cpu.c in Sources */,
+				52E37014025498F830A7B72355499E77 /* dec.c in Sources */,
+				B191256E735CB4BC62D8AFD972CDCDD4 /* dec_clip_tables.c in Sources */,
+				6D56CF1A98CC9CB665A722F08655E613 /* dec_mips32.c in Sources */,
+				D70E63B57DE2F14CC1CF1EB2EDB65F85 /* dec_mips_dsp_r2.c in Sources */,
+				6B29A4F8C659E16B89F8C6328444A4F3 /* dec_msa.c in Sources */,
+				9E91F76550718251CCF5DF7D67E88252 /* dec_neon.c in Sources */,
+				319DCD7966E31D54563C9D8CF09FE5BE /* dec_sse2.c in Sources */,
+				00CF9664E3F9463F407A1A6554F99D66 /* dec_sse41.c in Sources */,
+				287884C825AB01478972A2DCD517A5B7 /* delta_palettization_enc.c in Sources */,
+				4D5D5D0088EF72B021352FB843C5A1DC /* demux.c in Sources */,
+				F60B9049F27C8CC4DC4B6488BB9F4EBA /* enc.c in Sources */,
+				0DC7E1DE055AA50396B8888161CA2C6E /* enc_avx2.c in Sources */,
+				723F01D3FD1287A7580E1AF60863BD50 /* enc_mips32.c in Sources */,
+				C07F0A048740F26586202B7B7E73F05B /* enc_mips_dsp_r2.c in Sources */,
+				77C391BFBBFE30B924357A5B31E2B192 /* enc_msa.c in Sources */,
+				C34D5F1E43980FA3F2755810F1EFDFFE /* enc_neon.c in Sources */,
+				0319BD1FFE5F87BF59F364D133372E24 /* enc_sse2.c in Sources */,
+				09795563D547D1918C826CF813260F51 /* enc_sse41.c in Sources */,
+				16BC7F5B084C4A08EC47C963CF5A63EE /* filter_enc.c in Sources */,
+				C72250AE70F6B9F985A1759B1A38444E /* filters.c in Sources */,
+				F7F94AA28CDCF8B3EB9F61F223D64215 /* filters_mips_dsp_r2.c in Sources */,
+				28A80C6E486F945F40E293C03F233F48 /* filters_msa.c in Sources */,
+				A33ADFA9E31E13CABFE76D0F36F11265 /* filters_neon.c in Sources */,
+				41A90EA80B7ED462B02DE6689D072C2E /* filters_sse2.c in Sources */,
+				E580E4F36ECE1F56C120112DCB09F1CC /* filters_utils.c in Sources */,
+				1979FD5279BE9E8AB2BD637D4110BEB2 /* frame_dec.c in Sources */,
+				D8F10298207E6B5AA81EF94CC5C30521 /* frame_enc.c in Sources */,
+				95741AB74E224A104DE5C06743850F44 /* histogram_enc.c in Sources */,
+				E7B8537EA823DC6C8CBA77DE482B9BF5 /* huffman_encode_utils.c in Sources */,
+				997B3CD4DD8C2632B415F38D383CF8EB /* huffman_utils.c in Sources */,
+				78ABDCA5E0894EDFF255C02A82CED7FC /* idec_dec.c in Sources */,
+				33D1A5BF56B8B01E60D457548A6C813E /* io_dec.c in Sources */,
+				4992A9B19D145DA46FBE899FF06456CE /* iterator_enc.c in Sources */,
+				DFD37932FA3EBF25F6B0C1F334373B40 /* libwebp-dummy.m in Sources */,
+				5F40DFD8187DA8EAF1ED15EF9C44E46E /* lossless.c in Sources */,
+				856EEDBF7E3F9BD4D43328F8B6935F74 /* lossless_enc.c in Sources */,
+				9993F14E59544DCF35D1AC17740ECBB3 /* lossless_enc_mips32.c in Sources */,
+				4534E06153579A666387F6295D2A4014 /* lossless_enc_mips_dsp_r2.c in Sources */,
+				08FEAE5DA9EE428BC5345E2CA87220E9 /* lossless_enc_msa.c in Sources */,
+				0F805273131694621AFB4F955E2E3645 /* lossless_enc_neon.c in Sources */,
+				DD021A44DF2ED39DEF816009EB5EDBBA /* lossless_enc_sse2.c in Sources */,
+				961904C2EF893A40734D81EE9A165941 /* lossless_enc_sse41.c in Sources */,
+				459DDBE31D04971D848BF97CD443F81C /* lossless_mips_dsp_r2.c in Sources */,
+				0F32699B738590A2FA2C761E86C8E1AF /* lossless_msa.c in Sources */,
+				2D6926987151E382DD5687AF61062312 /* lossless_neon.c in Sources */,
+				002D1FAB67E246CF25FFDDBA719F4350 /* lossless_sse2.c in Sources */,
+				B72FE1584BF79D9C3076C7747CF9DD33 /* muxedit.c in Sources */,
+				253FE54E5F87591648FA711398BAE432 /* muxinternal.c in Sources */,
+				81F85711695476E9E964C434FC4C1FA3 /* muxread.c in Sources */,
+				F07157FF7C5C9466B826133203023774 /* near_lossless_enc.c in Sources */,
+				9675CBDE62BE9CA4418F44F789E4862A /* picture_csp_enc.c in Sources */,
+				94AD9CB2C1141DCB07F8DF788D85DF77 /* picture_enc.c in Sources */,
+				A71EE17E1D459412F56D91BB1D789134 /* picture_psnr_enc.c in Sources */,
+				A33F091B75F08B13545E0C9BA0E017EB /* picture_rescale_enc.c in Sources */,
+				EF771B2FCEE453061C1E90C271F044B7 /* picture_tools_enc.c in Sources */,
+				CF3B95B5A9F887302F3F587447F2974D /* predictor_enc.c in Sources */,
+				1A678BAC9A1CBD713D2283EF61904111 /* quant_dec.c in Sources */,
+				B20CE72C7473FF2927CB39A1A1E07D97 /* quant_enc.c in Sources */,
+				7464492EBE96ECDE6CDDB577FBE1AC46 /* quant_levels_dec_utils.c in Sources */,
+				21999613528EFB24BDD3F3D37F57D447 /* quant_levels_utils.c in Sources */,
+				084BA6CD150406159419932D22E9D9A8 /* random_utils.c in Sources */,
+				03CF0271345D728D78F283BE8AAD7B2E /* rescaler.c in Sources */,
+				F93B184D60D9F68025E8B33D0F7A24A9 /* rescaler_mips32.c in Sources */,
+				8CEDEC5786AA1B82D8E93A0A3EC921AD /* rescaler_mips_dsp_r2.c in Sources */,
+				A80BF55C2B92CF10126A53B2C4F3207C /* rescaler_msa.c in Sources */,
+				B3235BB5F7277BE4E9320A8B7533CCF1 /* rescaler_neon.c in Sources */,
+				825329A8F4547874DEDD3C2E4D4ADF75 /* rescaler_sse2.c in Sources */,
+				63C00821F7BACCF6E639BD33A2E67E5B /* rescaler_utils.c in Sources */,
+				3B8AE61A7B8270E767D313FA77699A5B /* ssim.c in Sources */,
+				529648D2F52AA44DBCFA98F400C5FF8B /* ssim_sse2.c in Sources */,
+				17D32C31FB8540844F746B69E67C6A38 /* syntax_enc.c in Sources */,
+				5D2569B992505B8A95161103D286E6B3 /* thread_utils.c in Sources */,
+				E95391486D0E7B55B3716852681F4033 /* token_enc.c in Sources */,
+				93DFDDFE3847DA59AE4D6C0C96E52469 /* tree_dec.c in Sources */,
+				3423EB19778A11C308D6190D64C4F1DA /* tree_enc.c in Sources */,
+				B9868BB3689BB0A0F5E986289CB7FE88 /* upsampling.c in Sources */,
+				285B7701583FFB0F6CF29C2B72D70930 /* upsampling_mips_dsp_r2.c in Sources */,
+				443C5345C5D873F1B27322366D88C30D /* upsampling_msa.c in Sources */,
+				4759FC95AE9FDE2E6A6445E305C50938 /* upsampling_neon.c in Sources */,
+				6FBF4ED8A1B599EBF16CE92281B83FF8 /* upsampling_sse2.c in Sources */,
+				EC115E1351C2EAD5E99D01F8ECFDDCA8 /* utils.c in Sources */,
+				198EA11D56F471D878BED161E65B38F7 /* vp8_dec.c in Sources */,
+				461EF2B0781A57529E2F2EC9CE743BB1 /* vp8l_dec.c in Sources */,
+				A255BC4F51C7759B1919A9679792071A /* vp8l_enc.c in Sources */,
+				4C4B5E57BE47E2705510EB46255A791C /* webp_dec.c in Sources */,
+				0CC1DD2C481A4F252B260AA9449D786E /* webp_enc.c in Sources */,
+				92A17F0DEF125CCD6558332900F4D6C9 /* yuv.c in Sources */,
+				D269F0A9F56B2412E86F9E7E804D4E63 /* yuv_mips32.c in Sources */,
+				9324F4CADBA5020CB1795020F240CF6F /* yuv_mips_dsp_r2.c in Sources */,
+				E64FDA0CC5EE06E4CF1A1C3D8DE95481 /* yuv_neon.c in Sources */,
+				4B53C3453F9EAB65457036C100013481 /* yuv_sse2.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A99084A10AF44146A788915420957FBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3206A264BDEC87F0B0083F6B1B874447 /* Pods-QMapKitDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22C338D33E551CF8774D4CA8C4F454C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QMapKit;
+			target = D2E36FF391E4650977F494EBB8957373 /* QMapKit */;
+			targetProxy = 1F34EB007C4E0781567B8A2E2038DB20 /* PBXContainerItemProxy */;
+		};
+		34642A8861F596A7CCD20484104F6F67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libwebp;
+			target = 47D2E85A78C25869BB13521D8561A638 /* libwebp */;
+			targetProxy = D68DE209C1D5FA1CC6A60FFEAB949109 /* PBXContainerItemProxy */;
+		};
+		9697EE7C1984A12FE39831A426E2E471 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QMapKit;
+			target = D2E36FF391E4650977F494EBB8957373 /* QMapKit */;
+			targetProxy = 85B73FE972F1029AFDF6E4921E761DE7 /* PBXContainerItemProxy */;
+		};
+		C4FD01B3B93872FF6DBDAD4E907353F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TNKNavigationKit;
+			target = 3514DC2B425E399712A23458DCF9A53D /* TNKNavigationKit */;
+			targetProxy = 145722D3430F02D118499DBE22336AB4 /* PBXContainerItemProxy */;
+		};
+		FAED20254C0BD92858516BD8B3646983 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libwebp;
+			target = 47D2E85A78C25869BB13521D8561A638 /* libwebp */;
+			targetProxy = 66349DFA804F127C66C72E911509F61F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1029D50344EB6C2740EFED60B1BD6FEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8D0E2D2E5DB71BA06475EB9644438E4 /* QMapKit.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1A6394B2BBE2EE2175FDB1EB69569990 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03BE3037279834F858017196DADFDA71 /* TNKNavigationKit.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		316DC54E8E2178140F4D146BF297E665 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35B33F5B69981B68322D63B82D675612 /* libwebp.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/libwebp/libwebp-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = libwebp;
+				PRODUCT_NAME = libwebp;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F92256DE768FF05DCBF34E318C4AB40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35B33F5B69981B68322D63B82D675612 /* libwebp.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/libwebp/libwebp-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = libwebp;
+				PRODUCT_NAME = libwebp;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4301EA944D763D8D942D97327F6282A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03BE3037279834F858017196DADFDA71 /* TNKNavigationKit.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5F2426F614526FC919457C2EAFAF8BDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 527AB9CD1AD8700D4F7A97AC69E2B142 /* Pods-QMapKitDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		916E0404255105F480DC4950B7625F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		C2825F0CA31B6ECC6C9E0EDC0455CC98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8D0E2D2E5DB71BA06475EB9644438E4 /* QMapKit.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EBF3D40A6F97D9027FCD9D15ED2ECFA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91F364DD32044C54F49EDFF4BBCA3976 /* Pods-QMapKitDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				916E0404255105F480DC4950B7625F7A /* Debug */,
+				8F17DC3A99F99FBAD606CE6963886315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FA7DB73A0099A7543FD9A3065F97C02 /* Build configuration list for PBXNativeTarget "Pods-QMapKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F2426F614526FC919457C2EAFAF8BDB /* Debug */,
+				EBF3D40A6F97D9027FCD9D15ED2ECFA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8579F0479EA7B063B1C74F480CDD4882 /* Build configuration list for PBXAggregateTarget "TNKNavigationKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4301EA944D763D8D942D97327F6282A0 /* Debug */,
+				1A6394B2BBE2EE2175FDB1EB69569990 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC16E707F8A80DD2A42CC53361FADC0F /* Build configuration list for PBXNativeTarget "libwebp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F92256DE768FF05DCBF34E318C4AB40 /* Debug */,
+				316DC54E8E2178140F4D146BF297E665 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA4D74E0F0D0EF9801CA1B541305C1A0 /* Build configuration list for PBXAggregateTarget "QMapKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1029D50344EB6C2740EFED60B1BD6FEE /* Debug */,
+				C2825F0CA31B6ECC6C9E0EDC0455CC98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

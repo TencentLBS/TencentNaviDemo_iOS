@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[SimuNaviController buttonPrint]:SimuNaviController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.naviView.naviMapView.bounds">
+            </PersistentString>
+            <PersistentString
+               value = "self.view.bounds">
+            </PersistentString>
+            <PersistentString
+               value = "self.naviView.TNKCarNaviFixCarProportion3D">
+            </PersistentString>
+            <PersistentString
+               value = "self.naviView.bounds">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "main:main.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[NaviViewController viewDidLoad]:NaviViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SimuNaviController startNavi]:SimuNaviController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.view.bounds">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[BaseNaviViewController setupSDK]:BaseNaviViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.naviView.frame">
+            </PersistentString>
+            <PersistentString
+               value = "self.navigationController.navigationBar">
+            </PersistentString>
+            <PersistentString
+               value = "self.view.bounds">
+            </PersistentString>
+            <PersistentString
+               value = "self.naviView.bounds">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AddMapKitNaviController mapView:viewForOverlay:]:AddMapKitNaviController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.polylineView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AddMapKitNaviController mapView:didUpdateUserLocation:fromHeading:]:AddMapKitNaviController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "userLocation.location.coordinate">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__31-[RealNaviController startNavi]_block_invoke:RealNaviController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.naviView.bounds">
+            </PersistentString>
+            <PersistentString
+               value = "self.naviView.frame">
+            </PersistentString>
+            <PersistentString
+               value = "self.view.bounds">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__35-[NaviViewController setupNaviView]_block_invoke:NaviViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "line[2]">
+            </PersistentString>
+            <PersistentString
+               value = "[route count]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[EntryViewController tableView:didSelectRowAtIndexPath:]:EntryViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "">
+            </PersistentString>
+            <PersistentString
+               value = "self.navigationController.navigationBar.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0864EE489D930A08E41756E1 /* libPods-QMapKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 321A734CB08200BA1653AB8D /* libPods-QMapKitDemo.a */; };
+		319793F51F3471ED007486B9 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 319793F41F3471DB007486B9 /* ball.png */; };
+		31BFE8DA1F3464180026C9BB /* colorSample.png in Resources */ = {isa = PBXBuildFile; fileRef = 31BFE8D91F3463FC0026C9BB /* colorSample.png */; };
+		31BFE8E61F34675B0026C9BB /* foot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 31BFE8E51F3467550026C9BB /* foot.jpg */; };
+		31BFE8E81F346D760026C9BB /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 31BFE8E71F346D6F0026C9BB /* arrow.png */; };
+		603D1FDE211D234E0017CE94 /* AddMapKitNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603D1FDD211D234E0017CE94 /* AddMapKitNaviController.m */; };
+		6052EDA2211A9A88008A4FF2 /* NaviModeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6052EDA1211A9A88008A4FF2 /* NaviModeController.m */; };
+		6052EDA5211AB421008A4FF2 /* NaviDayNightController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6052EDA4211AB421008A4FF2 /* NaviDayNightController.m */; };
+		6052EDA8211AB99F008A4FF2 /* NaviRouteWidthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6052EDA7211AB99F008A4FF2 /* NaviRouteWidthController.m */; };
+		6052EDAB211ADFAD008A4FF2 /* CustomNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6052EDAA211ADFAD008A4FF2 /* CustomNaviController.m */; };
+		6052EDAE211B046F008A4FF2 /* AddKitNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6052EDAD211B046F008A4FF2 /* AddKitNaviController.m */; };
+		60EEBA34211875E0008CFEF0 /* BaseNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EEBA33211875E0008CFEF0 /* BaseNaviViewController.m */; };
+		60EEBA3821195212008CFEF0 /* NaviSearchRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EEBA3721195212008CFEF0 /* NaviSearchRoutes.m */; };
+		60EEBA3B2119AE04008CFEF0 /* RealNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EEBA3A2119AE03008CFEF0 /* RealNaviController.m */; };
+		60EEBA3E2119B482008CFEF0 /* SimuNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EEBA3D2119B482008CFEF0 /* SimuNaviController.m */; };
+		655F304A1F1CBA8B00FA20A9 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 655F30491F1CBA8B00FA20A9 /* libc++.tbd */; };
+		655F304C1F1CBA8F00FA20A9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 655F304B1F1CBA8F00FA20A9 /* libsqlite3.0.tbd */; };
+		65A0CD891F16008B00811B83 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A0CD881F16008B00811B83 /* main.m */; };
+		65A0CD8C1F16008B00811B83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A0CD8B1F16008B00811B83 /* AppDelegate.m */; };
+		65A0CD941F16008B00811B83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A0CD931F16008B00811B83 /* Assets.xcassets */; };
+		65A0CD971F16008B00811B83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A0CD951F16008B00811B83 /* LaunchScreen.storyboard */; };
+		65A0CDEA1F1601F000811B83 /* EntryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A0CDC71F1601F000811B83 /* EntryData.m */; };
+		65A0CDEB1F1601F000811B83 /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A0CDC91F1601F000811B83 /* EntryViewController.m */; };
+		65A0CDEF1F1601F000811B83 /* car@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65A0CDD21F1601F000811B83 /* car@2x.png */; };
+		65A0CDF01F1601F000811B83 /* good@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65A0CDD31F1601F000811B83 /* good@2x.png */; };
+		65A0CDF11F1601F000811B83 /* gps_map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65A0CDD41F1601F000811B83 /* gps_map@2x.png */; };
+		65A0CDF21F1601F000811B83 /* heatTest_2.heat in Resources */ = {isa = PBXBuildFile; fileRef = 65A0CDD51F1601F000811B83 /* heatTest_2.heat */; };
+		65A0CDF31F1601F000811B83 /* marker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65A0CDD61F1601F000811B83 /* marker@2x.png */; };
+		65A0CDF51F1601F000811B83 /* test_location_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65A0CDD81F1601F000811B83 /* test_location_1@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		60B89DA3211441EA00A678A6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65A0CDF81F16020400811B83 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1E2964B3669D76ADAF63B423 /* Pods-QMapKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMapKitDemo.release.xcconfig"; path = "Target Support Files/Pods-QMapKitDemo/Pods-QMapKitDemo.release.xcconfig"; sourceTree = "<group>"; };
+		319793F41F3471DB007486B9 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
+		31BFE8D91F3463FC0026C9BB /* colorSample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colorSample.png; sourceTree = "<group>"; };
+		31BFE8E51F3467550026C9BB /* foot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = foot.jpg; sourceTree = "<group>"; };
+		31BFE8E71F346D6F0026C9BB /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		321A734CB08200BA1653AB8D /* libPods-QMapKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QMapKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		603D1FDC211D230D0017CE94 /* AddMapKitNaviController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddMapKitNaviController.h; sourceTree = "<group>"; };
+		603D1FDD211D234E0017CE94 /* AddMapKitNaviController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddMapKitNaviController.m; sourceTree = "<group>"; };
+		6052EDA0211A9820008A4FF2 /* NaviModeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaviModeController.h; sourceTree = "<group>"; };
+		6052EDA1211A9A88008A4FF2 /* NaviModeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaviModeController.m; sourceTree = "<group>"; };
+		6052EDA3211AB3DD008A4FF2 /* NaviDayNightController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaviDayNightController.h; sourceTree = "<group>"; };
+		6052EDA4211AB421008A4FF2 /* NaviDayNightController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaviDayNightController.m; sourceTree = "<group>"; };
+		6052EDA6211AB96C008A4FF2 /* NaviRouteWidthController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaviRouteWidthController.h; sourceTree = "<group>"; };
+		6052EDA7211AB99F008A4FF2 /* NaviRouteWidthController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaviRouteWidthController.m; sourceTree = "<group>"; };
+		6052EDA9211ADC2B008A4FF2 /* CustomNaviController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomNaviController.h; sourceTree = "<group>"; };
+		6052EDAA211ADFAD008A4FF2 /* CustomNaviController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomNaviController.m; sourceTree = "<group>"; };
+		6052EDAC211B045A008A4FF2 /* AddKitNaviController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddKitNaviController.h; sourceTree = "<group>"; };
+		6052EDAD211B046F008A4FF2 /* AddKitNaviController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddKitNaviController.m; sourceTree = "<group>"; };
+		60EEBA32211874F0008CFEF0 /* BaseNaviViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNaviViewController.h; sourceTree = "<group>"; };
+		60EEBA33211875E0008CFEF0 /* BaseNaviViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNaviViewController.m; sourceTree = "<group>"; };
+		60EEBA3521193DE3008CFEF0 /* NaviSearchRoutes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaviSearchRoutes.h; sourceTree = "<group>"; };
+		60EEBA3721195212008CFEF0 /* NaviSearchRoutes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaviSearchRoutes.m; sourceTree = "<group>"; };
+		60EEBA392119ACDF008CFEF0 /* RealNaviController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealNaviController.h; sourceTree = "<group>"; };
+		60EEBA3A2119AE03008CFEF0 /* RealNaviController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealNaviController.m; sourceTree = "<group>"; };
+		60EEBA3C2119B442008CFEF0 /* SimuNaviController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimuNaviController.h; sourceTree = "<group>"; };
+		60EEBA3D2119B482008CFEF0 /* SimuNaviController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimuNaviController.m; sourceTree = "<group>"; };
+		655F30491F1CBA8B00FA20A9 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		655F304B1F1CBA8F00FA20A9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		65A0CD841F16008B00811B83 /* QMapKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QMapKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65A0CD881F16008B00811B83 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		65A0CD8A1F16008B00811B83 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		65A0CD8B1F16008B00811B83 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		65A0CD931F16008B00811B83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		65A0CD961F16008B00811B83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		65A0CD981F16008B00811B83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65A0CDC61F1601F000811B83 /* EntryData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryData.h; sourceTree = "<group>"; };
+		65A0CDC71F1601F000811B83 /* EntryData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryData.m; sourceTree = "<group>"; };
+		65A0CDC81F1601F000811B83 /* EntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryViewController.h; sourceTree = "<group>"; };
+		65A0CDC91F1601F000811B83 /* EntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
+		65A0CDD21F1601F000811B83 /* car@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "car@2x.png"; sourceTree = "<group>"; };
+		65A0CDD31F1601F000811B83 /* good@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "good@2x.png"; sourceTree = "<group>"; };
+		65A0CDD41F1601F000811B83 /* gps_map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gps_map@2x.png"; sourceTree = "<group>"; };
+		65A0CDD51F1601F000811B83 /* heatTest_2.heat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = heatTest_2.heat; sourceTree = "<group>"; };
+		65A0CDD61F1601F000811B83 /* marker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "marker@2x.png"; sourceTree = "<group>"; };
+		65A0CDD81F1601F000811B83 /* test_location_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "test_location_1@2x.png"; sourceTree = "<group>"; };
+		95ECBE4731364788B9836708 /* Pods-QMapKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMapKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-QMapKitDemo/Pods-QMapKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65A0CD811F16008B00811B83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				655F304C1F1CBA8F00FA20A9 /* libsqlite3.0.tbd in Frameworks */,
+				655F304A1F1CBA8B00FA20A9 /* libc++.tbd in Frameworks */,
+				0864EE489D930A08E41756E1 /* libPods-QMapKitDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		600029EA21172E550044A9CF /* Navi */ = {
+			isa = PBXGroup;
+			children = (
+				60EEBA3521193DE3008CFEF0 /* NaviSearchRoutes.h */,
+				60EEBA3721195212008CFEF0 /* NaviSearchRoutes.m */,
+				60EEBA392119ACDF008CFEF0 /* RealNaviController.h */,
+				60EEBA3A2119AE03008CFEF0 /* RealNaviController.m */,
+				60EEBA3C2119B442008CFEF0 /* SimuNaviController.h */,
+				60EEBA3D2119B482008CFEF0 /* SimuNaviController.m */,
+				6052EDA0211A9820008A4FF2 /* NaviModeController.h */,
+				6052EDA1211A9A88008A4FF2 /* NaviModeController.m */,
+				6052EDA3211AB3DD008A4FF2 /* NaviDayNightController.h */,
+				6052EDA4211AB421008A4FF2 /* NaviDayNightController.m */,
+				6052EDA6211AB96C008A4FF2 /* NaviRouteWidthController.h */,
+				6052EDA7211AB99F008A4FF2 /* NaviRouteWidthController.m */,
+				6052EDA9211ADC2B008A4FF2 /* CustomNaviController.h */,
+				6052EDAA211ADFAD008A4FF2 /* CustomNaviController.m */,
+				6052EDAC211B045A008A4FF2 /* AddKitNaviController.h */,
+				6052EDAD211B046F008A4FF2 /* AddKitNaviController.m */,
+				603D1FDC211D230D0017CE94 /* AddMapKitNaviController.h */,
+				603D1FDD211D234E0017CE94 /* AddMapKitNaviController.m */,
+			);
+			path = Navi;
+			sourceTree = "<group>";
+		};
+		647855C8C6815E0C45EB2890 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95ECBE4731364788B9836708 /* Pods-QMapKitDemo.debug.xcconfig */,
+				1E2964B3669D76ADAF63B423 /* Pods-QMapKitDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		655F30461F1CBA8700FA20A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				655F304B1F1CBA8F00FA20A9 /* libsqlite3.0.tbd */,
+				655F30491F1CBA8B00FA20A9 /* libc++.tbd */,
+				321A734CB08200BA1653AB8D /* libPods-QMapKitDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		65A0CD7B1F16008B00811B83 = {
+			isa = PBXGroup;
+			children = (
+				65A0CD861F16008B00811B83 /* QMapKitDemo */,
+				65A0CD851F16008B00811B83 /* Products */,
+				655F30461F1CBA8700FA20A9 /* Frameworks */,
+				647855C8C6815E0C45EB2890 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		65A0CD851F16008B00811B83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65A0CD841F16008B00811B83 /* QMapKitDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65A0CD861F16008B00811B83 /* QMapKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				65A0CD9E1F1601F000811B83 /* Demos */,
+				65A0CDD11F1601F000811B83 /* Resources */,
+				65A0CD8A1F16008B00811B83 /* AppDelegate.h */,
+				65A0CD8B1F16008B00811B83 /* AppDelegate.m */,
+				65A0CD931F16008B00811B83 /* Assets.xcassets */,
+				65A0CD951F16008B00811B83 /* LaunchScreen.storyboard */,
+				65A0CD981F16008B00811B83 /* Info.plist */,
+				65A0CD871F16008B00811B83 /* Supporting Files */,
+			);
+			path = QMapKitDemo;
+			sourceTree = "<group>";
+		};
+		65A0CD871F16008B00811B83 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				65A0CD881F16008B00811B83 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65A0CD9E1F1601F000811B83 /* Demos */ = {
+			isa = PBXGroup;
+			children = (
+				65A0CD9F1F1601F000811B83 /* Controllers */,
+				65A0CDC61F1601F000811B83 /* EntryData.h */,
+				65A0CDC71F1601F000811B83 /* EntryData.m */,
+				65A0CDC81F1601F000811B83 /* EntryViewController.h */,
+				65A0CDC91F1601F000811B83 /* EntryViewController.m */,
+			);
+			path = Demos;
+			sourceTree = "<group>";
+		};
+		65A0CD9F1F1601F000811B83 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				600029EA21172E550044A9CF /* Navi */,
+				60EEBA32211874F0008CFEF0 /* BaseNaviViewController.h */,
+				60EEBA33211875E0008CFEF0 /* BaseNaviViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		65A0CDD11F1601F000811B83 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				319793F41F3471DB007486B9 /* ball.png */,
+				31BFE8E71F346D6F0026C9BB /* arrow.png */,
+				31BFE8E51F3467550026C9BB /* foot.jpg */,
+				31BFE8D91F3463FC0026C9BB /* colorSample.png */,
+				65A0CDD21F1601F000811B83 /* car@2x.png */,
+				65A0CDD31F1601F000811B83 /* good@2x.png */,
+				65A0CDD41F1601F000811B83 /* gps_map@2x.png */,
+				65A0CDD51F1601F000811B83 /* heatTest_2.heat */,
+				65A0CDD61F1601F000811B83 /* marker@2x.png */,
+				65A0CDD81F1601F000811B83 /* test_location_1@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		60B89DA4211441F900A678A6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		65A0CD831F16008B00811B83 /* QMapKitDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65A0CD9B1F16008B00811B83 /* Build configuration list for PBXNativeTarget "QMapKitDemo" */;
+			buildPhases = (
+				D396A13F02F5383917A10743 /* [CP] Check Pods Manifest.lock */,
+				65A0CD801F16008B00811B83 /* Sources */,
+				65A0CD811F16008B00811B83 /* Frameworks */,
+				65A0CD821F16008B00811B83 /* Resources */,
+				65A0CDF81F16020400811B83 /* Embed Frameworks */,
+				60B89DA3211441EA00A678A6 /* CopyFiles */,
+				60B89DA4211441F900A678A6 /* Headers */,
+				27048762B16274D32758A5A1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QMapKitDemo;
+			productName = QMapKitDemo;
+			productReference = 65A0CD841F16008B00811B83 /* QMapKitDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		65A0CD7C1F16008B00811B83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = tencent;
+				TargetAttributes = {
+					65A0CD831F16008B00811B83 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = J57QEZ3JMV;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 65A0CD7F1F16008B00811B83 /* Build configuration list for PBXProject "QMapKitDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = 65A0CD7B1F16008B00811B83;
+			productRefGroup = 65A0CD851F16008B00811B83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				65A0CD831F16008B00811B83 /* QMapKitDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		65A0CD821F16008B00811B83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65A0CDEF1F1601F000811B83 /* car@2x.png in Resources */,
+				65A0CDF51F1601F000811B83 /* test_location_1@2x.png in Resources */,
+				319793F51F3471ED007486B9 /* ball.png in Resources */,
+				65A0CDF11F1601F000811B83 /* gps_map@2x.png in Resources */,
+				65A0CDF21F1601F000811B83 /* heatTest_2.heat in Resources */,
+				65A0CDF01F1601F000811B83 /* good@2x.png in Resources */,
+				31BFE8E81F346D760026C9BB /* arrow.png in Resources */,
+				31BFE8DA1F3464180026C9BB /* colorSample.png in Resources */,
+				65A0CD971F16008B00811B83 /* LaunchScreen.storyboard in Resources */,
+				65A0CD941F16008B00811B83 /* Assets.xcassets in Resources */,
+				31BFE8E61F34675B0026C9BB /* foot.jpg in Resources */,
+				65A0CDF31F1601F000811B83 /* marker@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27048762B16274D32758A5A1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QMapKitDemo/Pods-QMapKitDemo-resources.sh",
+				"${PODS_ROOT}/QMapKit/sdk/QMapKit.framework/QMapKit.bundle",
+				"${PODS_ROOT}/TNKNavigationKit/TNKNavigationKit.framework/TencentNavigationKit.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QMapKit.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TencentNavigationKit.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QMapKitDemo/Pods-QMapKitDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D396A13F02F5383917A10743 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QMapKitDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65A0CD801F16008B00811B83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60EEBA3821195212008CFEF0 /* NaviSearchRoutes.m in Sources */,
+				6052EDAE211B046F008A4FF2 /* AddKitNaviController.m in Sources */,
+				6052EDAB211ADFAD008A4FF2 /* CustomNaviController.m in Sources */,
+				60EEBA3B2119AE04008CFEF0 /* RealNaviController.m in Sources */,
+				60EEBA3E2119B482008CFEF0 /* SimuNaviController.m in Sources */,
+				60EEBA34211875E0008CFEF0 /* BaseNaviViewController.m in Sources */,
+				65A0CD8C1F16008B00811B83 /* AppDelegate.m in Sources */,
+				65A0CDEB1F1601F000811B83 /* EntryViewController.m in Sources */,
+				6052EDA2211A9A88008A4FF2 /* NaviModeController.m in Sources */,
+				603D1FDE211D234E0017CE94 /* AddMapKitNaviController.m in Sources */,
+				6052EDA8211AB99F008A4FF2 /* NaviRouteWidthController.m in Sources */,
+				6052EDA5211AB421008A4FF2 /* NaviDayNightController.m in Sources */,
+				65A0CDEA1F1601F000811B83 /* EntryData.m in Sources */,
+				65A0CD891F16008B00811B83 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		65A0CD951F16008B00811B83 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65A0CD961F16008B00811B83 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		65A0CD991F16008B00811B83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		65A0CD9A1F16008B00811B83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		65A0CD9C1F16008B00811B83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95ECBE4731364788B9836708 /* Pods-QMapKitDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J57QEZ3JMV;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QMapKitDemo/library",
+				);
+				INFOPLIST_FILE = QMapKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_GENERATE_MAP_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.navigationdemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		65A0CD9D1F16008B00811B83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E2964B3669D76ADAF63B423 /* Pods-QMapKitDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J57QEZ3JMV;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QMapKitDemo/library",
+				);
+				INFOPLIST_FILE = QMapKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_GENERATE_MAP_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.navigationdemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		65A0CD7F1F16008B00811B83 /* Build configuration list for PBXProject "QMapKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65A0CD991F16008B00811B83 /* Debug */,
+				65A0CD9A1F16008B00811B83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65A0CD9B1F16008B00811B83 /* Build configuration list for PBXNativeTarget "QMapKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65A0CD9C1F16008B00811B83 /* Debug */,
+				65A0CD9D1F16008B00811B83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 65A0CD7C1F16008B00811B83 /* Project object */;
+}
