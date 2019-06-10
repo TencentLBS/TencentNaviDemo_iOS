@@ -6,3 +6,4 @@ Pods/Manifest.lock filter=lfs diff=lfs merge=lfs -text
 Pods/Pods.xcodeproj filter=lfs diff=lfs merge=lfs -text
 Pods/QMapKit filter=lfs diff=lfs merge=lfs -text
 Pods/TNKNavigationKit filter=lfs diff=lfs merge=lfs -text
+Pods/QMapKit/sdk/QMapKit.framework/QMapKit filter=lfs diff=lfs merge=lfs -text
