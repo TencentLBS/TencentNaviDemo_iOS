@@ -23,10 +23,10 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // Configure API Key.
-    [QMapServices sharedServices].APIKey = @"5K4BZ-LGWK4-ILXUL-DSL73-W24Z5-MQB3S";
+    [QMapServices sharedServices].APIKey = @"";
     NSAssert([QMapServices sharedServices].APIKey.length != 0, @"Please configure API key before using QMapKit.framework");
 
-    [TNKNaviServices sharedServices].APIKey = @"5K4BZ-LGWK4-ILXUL-DSL73-W24Z5-MQB3S";
+    [TNKNaviServices sharedServices].APIKey = @"";
     NSAssert([TNKNaviServices sharedServices].APIKey.length != 0, @"Please configure API key before using TNKNavigationKit.framework");
     
     EntryViewController *entry = [[EntryViewController alloc] init];
