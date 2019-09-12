@@ -15,7 +15,7 @@
 #import "QTypes.h"
 #import "QUserLocationPresentation.h"
 #import "QTileOverlay.h"
-
+#import "QText.h"
 
 typedef NS_ENUM(NSInteger, QUserTrackingMode)
 {
@@ -40,7 +40,7 @@ typedef NS_ENUM(NSUInteger, QMapLogoAnchor)
 #pragma mark - QMapView
 
 /**
- *  @brief  地图view. 核心类
+ *  @brief  地图view的核心类
  */
 @interface QMapView : UIView
 
@@ -65,7 +65,7 @@ typedef NS_ENUM(NSUInteger, QMapLogoAnchor)
  *
  * @param path 资源文件存放目录的全路径
  */
-+ (void)loadPrefferedResourceFilesFromDirectory:(NSString *)path;
++ (void)loadPrefferedResourceFilesFromDirectory:(NSString *)path DEPRECATED_ATTRIBUTE;
 
 #pragma mark - Basic
 
@@ -112,9 +112,19 @@ typedef NS_ENUM(NSUInteger, QMapLogoAnchor)
 @property (nonatomic) BOOL shows3DBuildings;
 
 /**
+ *  @brief  是否显示底图上的标注及名称，默认为YES
+ */
+@property (nonatomic) BOOL showsPoi;
+
+/**
  *  @brief  是否显示指南针，默认为NO
  */
 @property (nonatomic) BOOL showsCompass;
+
+/**
+ *  @brief  设置指南针基于默认位置的偏移. 右下为正
+ */
+- (void)setCompassOffset:(CGPoint)offset;
 
 /**
  * @brief 指定底图文字的首选语言
@@ -178,7 +188,7 @@ typedef NS_ENUM(NSUInteger, QMapLogoAnchor)
  *
  * @param visible yes为显示，否则不显示
  */
-- (void)setRoadEventVisible:(BOOL)visible;
+- (void)setRoadEventVisible:(BOOL)visible DEPRECATED_ATTRIBUTE;
 
 /**
  * @brief 地图动画Layer.
@@ -311,7 +321,7 @@ typedef NS_ENUM(NSUInteger, QMapLogoAnchor)
 - (QMapRect)mapRectThatFits:(QMapRect)mapRect edgePadding:(UIEdgeInsets)insets;
 
 /**
- * @brief  根据当前地图View的窗口大小调整传入的mapRect，返回适合当前地图窗口显示的mapRect
+ * @brief  根据当前地图View的窗口大小调整传入的mapRect，返回适合当前地图窗口显示的mapRect(2D北朝上场景时)
  * @param mapRect 待调整的地理范围
  * @param bContainsCalloutView 计算的maprect是否需要包含calloutView
  * @param annotations 要包含的annotation 数组
@@ -324,12 +334,20 @@ typedef NS_ENUM(NSUInteger, QMapLogoAnchor)
                 edgePadding:(UIEdgeInsets)insets;
 
 /**
- * @brief  根据边界留宽及地理范围计算合适的级别
+ * @brief  根据边界留宽及地理范围计算合适的级别(2D北朝上场景时)
  * @param mapRect 待调整的地理范围
  * @param outCoordinate 合适的中心点经纬度.
  * @return 合适的级别
  */
 - (CGFloat)zoomLevelThatFits:(QMapRect)mapRect edgePadding:(UIEdgeInsets)insets outCenterCoordinate:(CLLocationCoordinate2D *)outCoordinate;
+
+/**
+ * @brief  根据边界留宽显示限制地图区域范围(2D北朝上场景时)
+ * @param mapRect 待调整的地理范围
+ * @param mode    限制地区区域的对齐方式，分等宽对齐和等高对齐
+ * 当传入的mapRect的值都为0时，取消区域限制
+ */
+-(void)setLimitMapRect:(QMapRect)mapRect mode:(QMapLimitRectFitMode)mode;
 
 #pragma mark - Gesture Control
 
@@ -454,6 +472,11 @@ typedef NS_ENUM(NSUInteger, QMapLogoAnchor)
  *  @brief  当前位置在地图中是否可见
  */
 @property (nonatomic, readonly, getter=isUserLocationVisible) BOOL userLocationVisible;
+
+/**
+ *  @brief  在地图中隐藏位置图标
+ */
+- (void)setUserLocationHidden:(BOOL)hidden;
 
 
 @end
@@ -582,38 +605,6 @@ typedef NS_ENUM(NSUInteger, QMapLogoAnchor)
 
 @end
 
-/**
- * @brief  QMapView(TileOverlay):瓦片图相关的API（如热力图）
- */
-@interface QMapView (TileOverlay)
-
-/**
- *  @brief  添加tileOverlay
- *
- *  @param tileOverlay 要添加的tileOverlay
- */
-- (void)addTileOverlay:(QTileOverlay *)tileOverlay;
-
-/**
- *  @brief  移除tileOverlay
- *
- *  @param tileOverlay 要移除的tileOverlay
- */
-- (void)removeTileOverlay:(QTileOverlay *)tileOverlay;
-
-/**
- *  @brief  强制tileOverlay重新加载数据.
- *
- *  @param tileOverlay tileOverlay
- */
-- (void)reloadTileOverlay:(QTileOverlay *)tileOverlay;
-
-/**
- *  @brief  当前地图上的tileOverlay数组
- */
-@property (nonatomic, readonly) NSArray *tileOverlays;
-
-@end
 
 /**
  * @brief  截图相关API
@@ -645,7 +636,6 @@ typedef NS_ENUM(NSUInteger, QMapLogoAnchor)
 - (void)takeSnapshotInRect:(CGRect)rect timeout:(CFTimeInterval)timeout completion:(void (^)(UIImage *resultImage))completion;
 
 @end
-
 
 #pragma mark - QPoiInfo
 
@@ -689,10 +679,21 @@ typedef NS_ENUM(NSUInteger, QMapLogoAnchor)
 /**
  * @brief 所在室内图楼的名称
  */
-@property (nonatomic, assign) NSString *buildingName;
+@property (nonatomic, copy) NSString *buildingName;
 
 @end
 
+/**
+ *  @brief  地图view的错误信息, 用于定位问题
+ */
+@interface QMapView (Debug)
+
+/**
+ *  @brief  地图view的错误信息, 用于定位问题
+ */
+- (NSString *)getDebugError;
+
+@end
 
 #pragma mark - QMapViewDelegate
 
@@ -746,6 +747,13 @@ typedef NS_ENUM(NSUInteger, QMapLogoAnchor)
  * @param poi poi数据
  */
 - (void)mapView:(QMapView *)mapView didTapPoi:(QPoiInfo *)poi;
+
+/**
+ * @brief  点击地图上添加的overlay覆盖物会调用此接口.
+ * @param mapView 地图View
+ * @param overlay overlay对象. 暂时只支持线(QPolyline及子类)的点击
+ */
+- (void)mapView:(QMapView *)mapView didTapOverlay:(id<QOverlay>)overlay;
 
 /**
  * @brief 根据anntation生成对应的View

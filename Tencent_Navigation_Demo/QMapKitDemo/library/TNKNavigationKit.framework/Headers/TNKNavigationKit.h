@@ -12,6 +12,7 @@
 
 #import "TNKBaseNaviView.h"
 #import "TNKCarNaviView.h"
+#import "TNKNaviTrafficBarWidget.h"
 
 #import "TNKBaseNaviManager.h"
 #import "TNKCarNaviManager.h"
@@ -24,7 +25,12 @@
 #import "TNKRouteTrafficStatus.h"
 #import "TNKRouteTrafficData.h"
 #import "TNKNaviTTS.h"
+#import "TNKAudioPlayer.h"
+#import "TNKUserLocationPresentation.h"
 
 #import "TNKLocationEntryProtocol.h"
 #import "TNKGPSFileLocationManager.h"
 #import "TNKLocation.h"
+
+#import "QMapView+TNKRouteSearchExtension.h"
+#import "TNKMathTool.h"

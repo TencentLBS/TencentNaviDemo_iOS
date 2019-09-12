@@ -23,6 +23,10 @@
  */
 @property (nonatomic, copy, readonly) NSString *subKey;
 
+/**
+ * @brief 附加 地图字体, nil则使用默认字体
+ */
+@property (nonatomic, copy) NSString *mapFont;
 
 /**
  * @brief 初始化 QMapConfig.

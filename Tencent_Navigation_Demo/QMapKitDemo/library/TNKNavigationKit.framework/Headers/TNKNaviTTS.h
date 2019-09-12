@@ -9,28 +9,37 @@
 #import <Foundation/Foundation.h>
 
 /**
+ * @brief  声音类型.
+ */
+typedef enum _TNKNaviTTSVoiceType
+{
+    TNKNaviTTSVoiceTypeNone    = 0,
+    TNKNaviTTSVoiceTypeBeep    = 1,
+} TNKNaviTTSVoiceType;
+
+/**
  * @brief  TTS播报内容
  */
 @interface TNKNaviTTS : NSObject
 
 /**
-* @brief  播报的字符串内容。
+* @brief  播报的字符串内容.
 */
-@property (nonatomic,strong)NSString* ttsString;
+@property (nonatomic, strong, nonnull) NSString *ttsString;
 
 /**
- * @brief  声音文件路径。
+ * @brief  声音类型.
  */
-@property (nonatomic,strong)NSString* filePath;
+@property (nonatomic, assign) TNKNaviTTSVoiceType voiceType;
 
 /**
- * @brief  优先级，越小越高。暂时无用，保留。
+ * @brief  声音文件路径.
  */
-@property (nonatomic)int priority;
+@property (nonatomic, strong, nullable) NSString *voiceFilePath;
 
 /**
- * @brief  声音文件类型，目前只有叮一声。暂时无用，保留。
+ * @brief  TTS内容优先级, 优先级越小越高. 预留字段, 目前不可用.
  */
-@property (assign)int messageType;
+@property (nonatomic, assign) int priority;
 
 @end

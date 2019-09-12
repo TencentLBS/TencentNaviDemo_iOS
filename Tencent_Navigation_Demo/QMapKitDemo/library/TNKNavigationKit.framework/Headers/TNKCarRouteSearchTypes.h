@@ -7,6 +7,7 @@
 //
 
 #import "TNKSearchTypes.h"
+#import "TNKRouteTrafficData.h"
 
 /**
  * @brief 路线规划的错误
@@ -67,7 +68,11 @@ typedef enum _TNKCarRouteSearchResultStatus
 
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 #pragma mark - TNKCarRouteSearchOption
+
+@class TNKCarRouteSearchExtraRankStrategy;
 
 /**
  * @brief 驾车路线规划的参数配置
@@ -77,35 +82,69 @@ typedef enum _TNKCarRouteSearchResultStatus
 @interface TNKCarRouteSearchOption : TNKSearchOption
 
 /**
- * @brief 驾车路线规划参数：是否避开收费道路,默认NO,即不避开收费道路
+ * @brief 驾车路线规划参数: 是否避开收费道路, 默认NO, 即不避开收费道路.
  */
 @property (nonatomic, assign) BOOL avoidToll;
 
 /**
- * @brief 驾车路线规划参数：是否避开高速道路,默认为NO,即不避开高速道路
+ * @brief 驾车路线规划参数: 是否避开高速道路, 默认为NO, 即不避开高速道路.
  */
 @property (nonatomic, assign) BOOL avoidHighway;
 
 /**
- * @brief 驾车路线规划参数：是否结合路况,默认值NO,即不结合路况
+ * @brief 驾车路线规划参数: 是否结合路况, 默认值NO, 即不结合路况.
  */
 @property (nonatomic, assign) BOOL avoidTrafficJam;
 
 /**
- * @brief 导航场景：1表示去接乘客,2表示去送乘客.默认值为1
+ * @brief 驾车路线规划参数: 导航场景. 1表示去接乘客, 2表示去送乘客. 默认值为1.
  */
 @property (nonatomic, assign) int navScene;
+
+/**
+ * @brief 驾车路线规划参数: 行车方向角度. 沿正北方向顺时针旋转角度值, 有效值区间为[0,360), 默认值为-1.
+ */
+@property (nonatomic, assign) float angle;
     
 /**
- * @brief 起点路段类型：设置详细的起点路段类型,如在桥下、在辅路等.设置该字段可以提升路线规划起点位置的准确程度.默认为无详细起点路段类型
+ * @brief 起点路段类型：设置详细的起点路段类型, 如在桥下、在辅路等. 设置该字段可以提升路线规划起点位置的准确程度. 默认为无详细起点路段类型.
  */
 @property (nonatomic, assign) TNKRoadType startRoadType;
 
 /**
- * @brief 车牌号：设置车牌号后可接收限行信息,可以为空.
+ * @brief 车牌号：设置车牌号后可接收限行信息, 可以为空.
  */
 @property (nonatomic, strong, nullable) NSString *carNumber;
 
+/**
+ * @brief 导航前序点，提高路线规划的准确性
+ */
+@property (nonatomic, copy, nullable) NSArray<CLLocation *> *preLocations;
+
+
+/**
+ * @breif 额外的路线规划策略
+ */
+@property (nonatomic, strong, nullable) TNKCarRouteSearchExtraRankStrategy *extraRankStrategy;
+
+@end
+
+typedef enum _TNKExtraRankStrategy
+{
+    TNKExtraRankStrategyNone                        = 0,        // 默认策略
+    TNKExtraRankStrategyLestDistance                = 1,        // 按距离重排序
+    TNKExtraRankStrategyLestMoney                   = 2,        // 按价格重排序
+} TNKExtraRankStrategy;                             ///< 额外的排序策略
+
+@interface TNKCarRouteSearchExtraRankStrategy : NSObject
+
+@property (nonatomic, assign) TNKExtraRankStrategy rankStrategy;
+// 每公里价格
+@property (nonatomic, assign) float pricePerKilometer;
+// 每分钟价格
+@property (nonatomic, assign) float pricePerMinute;
+
+- (id _Nonnull)clone;
 @end
 
 #pragma mark - TNKCarRouteSearchRequest
@@ -123,8 +162,7 @@ typedef enum _TNKCarRouteSearchResultStatus
 /**
  * @brief 驾车路线规划的配置项,不可为空
  */
-@property (nonatomic, strong, nonnull) TNKCarRouteSearchOption *searchOption;
-
+@property (nonatomic, strong) TNKCarRouteSearchOption *searchOption;
 @end
 
 #pragma mark - TNKCarRouteSearchResult
@@ -154,7 +192,7 @@ typedef enum _TNKCarRouteSearchResultStatus
 /**
  * @brief 路线结果集合
  */
-@property (readonly, nonatomic, strong, nonnull) NSArray<TNKCarRouteSearchRoutePlan *> *routes;
+@property (readonly, nonatomic, strong) NSArray<TNKCarRouteSearchRoutePlan *> *routes;
 
 @end
 
@@ -171,7 +209,7 @@ typedef enum _TNKCarRouteSearchResultStatus
 /**
  * @brief 路线ID
  */
-@property (readonly, nonatomic, copy, nonnull) NSString *routeID;
+@property (readonly, nonatomic, copy) NSString *routeID;
 
 /**
  * @brief 总距离
@@ -189,6 +227,16 @@ typedef enum _TNKCarRouteSearchResultStatus
 @property (readonly, nonatomic, copy, nullable) NSString *recommendReason;
 
 /**
+ * @brief 路线红绿灯个数
+ */
+@property (nonatomic) int trafficLightNumber;
+
+/**
+ * @brief 路线所需路费 单位: 元
+ */
+@property (nonatomic) int fee;
+
+/**
  * @brief 道路封路状态信息. 暂不支持按位组合操作
  */
 @property (readonly, nonatomic) TNKCarRouteClosedStatus closedStatus;
@@ -196,7 +244,7 @@ typedef enum _TNKCarRouteSearchResultStatus
 /**
  * @brief 驾车路线规划的路线数据
  */
-@property (readonly, nonatomic, strong, nonnull) TNKCarRouteSearchRouteLine *line;
+@property (readonly, nonatomic, strong) TNKCarRouteSearchRouteLine *line;
 
 @end
 
@@ -210,27 +258,32 @@ typedef enum _TNKCarRouteSearchResultStatus
 /**
  * @brief 路线规划的起点
  */
-@property (nonatomic, strong, nonnull) TNKSearchNaviPoi   *startPoint;
+@property (nonatomic, strong) TNKSearchNaviPoi   *startPoint;
 
 /**
  * @brief 路线规划的终点
  */
-@property (nonatomic, strong, nonnull) TNKSearchNaviPoi   *destinationPoint;
+@property (nonatomic, strong) TNKSearchNaviPoi   *destinationPoint;
 
 /**
  * @brief 途经点
  */
-@property (nonatomic, strong, nullable) NSArray<TNKSearchNaviPoi *>   *wayPoints;
+@property (nonatomic, strong, nullable) NSArray<TNKSearchNaviPoi *> *wayPoints;
 
 /**
  * @brief 道路信息的坐标点串
  */
-@property (readonly, nonatomic, strong, nonnull) NSArray<TNKCoordinatePoint *> *coordinatePoints;
+@property (readonly, nonatomic, strong) NSArray<TNKCoordinatePoint *> *coordinatePoints;
 
 /**
  * @brief 可配置每一子段显示样式的集合
  */
-@property (readonly, nonatomic, strong, nonnull) NSArray<TNKCarRouteSearchRouteSegmentStyle *> *segmentStyles;
+@property (readonly, nonatomic, strong) NSArray<TNKCarRouteSearchRouteSegmentStyle *> *segmentStyles DEPRECATED_MSG_ATTRIBUTE("use trafficDataArray");
+
+/**
+ * @brief 路线规划时的路况状态数据.
+ */
+@property (nonatomic, strong) NSArray <TNKRouteTrafficData *> *initialTrafficDataArray;
 
 @end
 
@@ -258,4 +311,5 @@ typedef enum _TNKCarRouteSearchResultStatus
 
 @end
 
+NS_ASSUME_NONNULL_END
 

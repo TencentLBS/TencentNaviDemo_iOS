@@ -75,6 +75,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)carNavigationManager:(TNKCarNaviManager *)manager updateRouteTrafficStatus:(TNKRouteTrafficStatus *)status;
 
+/**
+ * @brief  路线切换回调
+ * @param manager manager
+ * @param routePlan 路线数据
+ * @param trafficStatus 路况数据
+ */
+- (void)carNavigationManager:(TNKCarNaviManager *)manager routeDidChange:(TNKCarRouteSearchRoutePlan *)routePlan routeTrafficStatus:(TNKRouteTrafficStatus *)trafficStatus;
+
 @end
 
 /**
@@ -107,7 +115,7 @@ NS_ASSUME_NONNULL_BEGIN
                broadcastTTS:(TNKNaviTTS *)naviTTS;
 
 /**
- * @brief  获取到达终点回调.
+ * @brief  获取到达终点附近的回调. 尚未结束导航时, 这个回调可能执行多次.
  * @param manager manager
  */
 - (void)carNavigationManagerDidArriveDestination:(TNKCarNaviManager *)manager;
@@ -177,6 +185,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)carNavigationManager:(TNKCarNaviManager *)manager
     didCancelRecaculateRoute:(TNKCarNaviManagerRecaculateType)type;
+
+/**
+ * @brief  获取路线切换回调. 当走向备选路线或者用户主动切换到备选路线上会触发此回调
+ * @param manager manager
+ * @param routePlan 路线信息
+ * @param trafficStatus 路况信息
+ */
+- (void)carNavigationManager:(TNKCarNaviManager *)manager
+    didChangeRoute:(TNKCarRouteSearchRoutePlan *)routePlan routeTrafficStatus:(TNKRouteTrafficStatus *)trafficStatus;
 
 @end
 
@@ -275,6 +292,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL enableGuidedLane;
 
 /**
+ *  @brief  是否开启内置导航语音播报功能. 开启后无法通过TTS回调控制播报状态. 默认关闭.
+ */
+@property (nonatomic, assign) BOOL enableInternalTTS;
+
+/**
+ *  @brief  是否开启导航过程中的伴随路线. 默认关闭.
+ *  必须在导航之前设置的。导航过程中设备不生效。
+ */
+@property (nonatomic, assign, getter=isMultiRoutesEnabled) BOOL multiRoutesEnabled;
+
+/**
  * @brief  发起驾车导航路线规划. 通过路线规划请求配置起点、终点、途经点(可选)、规划参数(可选)发起路线规划.
  * @param request 路线规划请求
  * @param callback 路线规划完成回调
@@ -283,7 +311,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * 错误信息参考TNKCarRouteSearchErrorCode, TNKCarRouteSearchErrorDomain
  */
-- (TNKSearchTask *)searchNavigationRoutesWithRequest:(TNKCarRouteSearchRequest *)request completion:(void (^)(TNKCarRouteSearchResult *result, NSError *error))callback;
+- (TNKSearchTask *)searchNavigationRoutesWithRequest:(TNKCarRouteSearchRequest *)request completion:(void (^)(TNKCarRouteSearchResult *result, NSError * _Nullable error))callback;
 
 /**
  * @brief  更改导航路线

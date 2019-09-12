@@ -11,6 +11,7 @@
 #import <QMapKit/QMapKit.h>
 
 #import "TNKRemainingOverviewData.h"
+#import "TNKUserLocationPresentation.h"
 
 typedef enum _TNKCarNaviUIMode
 {
@@ -19,20 +20,20 @@ typedef enum _TNKCarNaviUIMode
     TNKCarNaviUIMode2DMapTowardsNorth = 2,    ///< 2D 地图朝北
     TNKCarNaviUIModeOverview          = 3,    ///< 全览模式
     TNKCarNaviUIModeRemainingOverview = 4     ///< 剩余全览模式
-} TNKCarNaviUIMode;
+} TNKCarNaviUIMode;                         ///< 导航地图的导航模式
 
 typedef enum _TNKCarNaviDayNightMode
 {
     TNKCarNaviDayNightModeAuto        = 0,    ///< 自动切换
     TNKCarNaviDayNightModeAlwaysDay   = 1,    ///< 始终白天
     TNKCarNaviDayNightModeAlwaysNight = 2     ///< 始终黑夜
-} TNKCarNaviDayNightMode;
+} TNKCarNaviDayNightMode;                   ///< 导航地图的日夜间模式
 
 typedef enum _TNKCarNaviDayNightStatus
 {
     TNKCarNaviDayNightStatusDay       = 0,    ///< 白天
     TNKCarNaviDayNightStatusNight     = 1,    ///< 黑夜
-} TNKCarNaviDayNightStatus;
+} TNKCarNaviDayNightStatus;                 ///< 导航地图所处的日夜间状态
 
 
 @class TNKCarNaviView;
@@ -156,6 +157,11 @@ typedef enum _TNKCarNaviDayNightStatus
 @property (nonatomic, assign) UIEdgeInsets externalEdgeInsets;
 
 /**
+ * @brief  panel顶部空隙距离, 单位为px. 默认为全屏状态下避开状态栏. 取值范围为[0,100].
+ */
+@property (nonatomic, assign) NSUInteger panelTopGap;
+
+/**
  *  @brief  内部持有的地图实例,可以通过该地图实例接收地图事件回调、添加annotation、操作地图视野等.
  */
 @property (nonatomic, strong, readonly) QMapView *naviMapView;
@@ -191,9 +197,20 @@ typedef enum _TNKCarNaviDayNightStatus
  */
 - (void)setCarCompassEnabled:(BOOL)enabled;
 
+
+/**
+ *  @brief 设置导航地图是否显示实时路况
+ */
+- (void)setShowTraffic:(BOOL)showTraffic;
+
 /**
  *  @brief  清除路线相关UI.该方法用于非导航状态下清除路线相关UI,包括导航路线、自车点图标、动态添加的限速/指示标识等. 导航过程中调用该方法无效.
  */
 - (void)clearAllRouteUI;
+
+/**
+ *  @brief  配置自车位置UI属性. 该方法用于配置导航时自车位置UI属性, 非导航时进行配置会在导航发起后生效, 导航过程中进行配置即时生效.
+ */
+- (void)configUserLocationPresentation:(TNKUserLocationPresentation *)presentation;
 
 @end

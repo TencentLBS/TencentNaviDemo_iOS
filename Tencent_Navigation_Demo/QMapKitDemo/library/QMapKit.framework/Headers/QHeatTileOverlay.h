@@ -9,6 +9,37 @@
 #import "QTileOverlay.h"
 #import "QHeatTileNodeProtocol.h"
 
+#pragma mark - QHeatTileGradient
+
+/**
+ * @brief 热力图渐变属性
+ */
+@interface QHeatTileGradient : NSObject
+
+/**
+ * @brief 颜色变化数组
+ */
+@property (nonatomic, readonly) NSArray<UIColor *> *colors;
+
+/**
+ * 颜色变化节点，需为严格递增数组，区间为[0, 1.0]
+*/
+@property (nonatomic, readonly) NSArray<NSNumber *> *startPoints;
+
+/**
+ * @brief 重新设置gradient的时候，需要执行 QTileOverlayView 的 reloadData 方法重刷新渲染缓存。
+ * @param colors      颜色列表
+ * @param startPoints 颜色变化节点列表，需为严格递增数组(无相同值)，区间为[0, 1.0]
+ * @return QHeatTileGradient
+ *
+ * @notes colors和startPoints的个数必须相同
+ */
+- (instancetype)initWithColor:(NSArray<UIColor *> *)colors andWithStartPoints:(NSArray<NSNumber *> *)startPoints;
+
+@end
+
+#pragma mark - QHeatTileOverlay
+
 /**
  *  @brief  热力图overlay
  *
@@ -16,7 +47,7 @@
 @interface QHeatTileOverlay : QTileOverlay
 
 /**
- *  @brief  生成热力图overlay, 默认的衰变半径为26
+ *  @brief  生成热力图overlay
  *
  *  @param heatTileNodes 热力图节点元素数组, 每个元素符合 QHeatTileNodeProtocol 协议
  *  @return heatTileOverlay
@@ -24,42 +55,33 @@
 - (instancetype)initWithHeatTileNodes:(NSArray *)heatTileNodes;
 
 /**
- *  @brief  生成热力图overlay
+ *  @brief  热力图数据: 原始的节点数据. 数组每个元素符合 QHeatTileNodeProtocol 协议
  *
- *  @param heatTileNodes 热力图节点元素数组, 每个元素符合 QHeatTileNodeProtocol 协议
- *  @param decayRadius 衰变半径, 超过30会影响效率, 参数若 <= 0, 会使用默认值26
- *  @return heatTileOverlay
+ *  在添加完后设值时需要执行 QHeatTileOverlayView 的 reloadData 方法重刷新渲染缓存
  */
-- (instancetype)initWithHeatTileNodes:(NSArray *)heatTileNodes decayRadius:(NSInteger)decayRadius NS_DESIGNATED_INITIALIZER;
+@property (nonatomic, copy ) NSArray<id<QHeatTileNodeProtocol> > *nodes;
 
 /**
- *  @brief  衰变半径
+ *  @brief  热力图样式: 衰变半径. 单位 point
+ *
+ *  范围越大计算耗时越长。默认20. 建议100以内
+ *  在添加完后设值时需要执行 QHeatTileOverlayView 的 reloadData 方法重刷新渲染缓存
  */
-@property (nonatomic, readonly) NSInteger decayRadius;
+@property (nonatomic, assign ) NSInteger decayRadius;
 
 /**
- *  @brief  更新热力图节点数据(全部更新)
+ *  @brief  热力图样式: 透明度. 默认为0.6，范围：0-1
  *
- *  @param heatTileNodes 热力图节点元素数组, 每个元素符合 QHeatTileNodeProtocol 协议
+ *  在添加完后设值时需要执行 QHeatTileOverlayView 的 reloadData 方法重刷新渲染缓存
  */
-- (void)updateHeatTileNodes:(NSArray *)heatTileNodes;
+@property (nonatomic, assign) CGFloat opacity;
+
+/**
+ *  @brief  热力图样式: 颜色梯度
+ *
+ *  在添加完后设值时需要执行 QHeatTileOverlayView 的 reloadData 方法重刷新渲染缓存
+ */
+@property (nonatomic, strong) QHeatTileGradient *gradient;
 
 @end
 
-/**
- * @brief QHeatTileOverlay的扩展类，子类可以重载来配置热力图色盘,用于提供热力度对应的色值
- */
-@interface QHeatTileOverlay (CustomColorPalete)
-
-/**
- *  @brief  根据热度值生成颜色.
- *
- *  @param value 热力值
- *  @param outRed    需要填充的red分量
- *  @param outGreen  需要填充的green分量
- *  @param outBlue   需要填充的blue分量
- *  @param outAlpha  需要填充的alpha分量
- */
-- (void)colorForValue:(CGFloat)value outRed:(CGFloat *)outRed outGreen:(CGFloat *)outGreen outBlue:(CGFloat *)outBlue outAlpha:(CGFloat *)outAlpha;
-
-@end

@@ -34,4 +34,21 @@ typedef NS_ENUM(NSUInteger, QMapLanguage) {
 };
 
 
+/**
+ * @brief 覆盖物的显示级别，决定了与POI等地理元素的压盖关系
+ */
+typedef NS_ENUM(NSInteger, QOverlayLevel) {
+    QOverlayLevelAboveRoads = 0,    // 在道路之上楼块之下
+    QOverlayLevelAboveBuildings,    // 在楼块之上POI之下
+    QOverlayLevelAboveLabels        // 显示在所有POI之上
+};
+
+/**
+ * @brief 限制区域显示的限制方式，分别以区域宽度为参考值和以区域高度为参考值
+ */
+typedef NS_ENUM(NSInteger,QMapLimitRectFitMode) {
+    QMapLimitRectFitWidth = 0,  // 此模式会以 mapRect宽度为参考值限制地图的控制区域，保证横向区域完全展示
+    QMapLimitRectFitHeight      // 此模式会以 mapRect高度为参考值限制地图的控制区域，保证纵向区域完全展示
+};
+
 #endif /* QTypes_h */

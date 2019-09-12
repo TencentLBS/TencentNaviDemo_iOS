@@ -46,7 +46,9 @@ FOUNDATION_EXPORT const unsigned char QMapKitVersionString[];
 #import "QUserLocationPresentation.h"
 
 #import "QTileOverlay.h"
+#import "QTileOverlayView.h"
 #import "QHeatTileOverlay.h"
+#import "QHeatTileOverlayView.h"
 #import "QHeatTileNodeProtocol.h"
 #import "QHeatTileNode.h"
 

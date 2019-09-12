@@ -1,0 +1,2 @@
+Tencent_Navigation_Demo/QMapKitDemo/library/QMapKit.framework/QMapKit filter=lfs diff=lfs merge=lfs -text
+Tencent_Navigation_Demo/QMapKitDemo/library/TNKNavigationKit.framework/TNKNavigationKit filter=lfs diff=lfs merge=lfs -text

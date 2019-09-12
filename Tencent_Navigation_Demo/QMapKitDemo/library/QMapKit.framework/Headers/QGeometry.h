@@ -504,6 +504,12 @@ extern "C" {
      */
     extern QMapRect QBoundingMapRectWithPointsAndCenter(QMapPoint *points, NSUInteger count, QMapPoint centerPoint);
     
+    /**
+     *  @brief  返回全球范围外接矩形.
+     *
+     *  @return 全球范围外接矩形
+     */
+    extern QMapRect QWorldMapRect(void);
     
 #ifdef __cplusplus
 }

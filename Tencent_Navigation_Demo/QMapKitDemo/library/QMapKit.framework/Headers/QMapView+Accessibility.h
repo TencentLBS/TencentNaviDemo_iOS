@@ -8,6 +8,9 @@
 
 #import <QMapKit/QMapKit.h>
 
+/**
+ *  @brief  MapView的无障碍功能
+ */
 @interface QMapView (Accessibility)
 
 /**

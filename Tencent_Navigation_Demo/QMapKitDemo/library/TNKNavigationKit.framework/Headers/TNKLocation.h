@@ -29,4 +29,9 @@
  */
 @property (nonatomic, assign) CLLocationDirection matchedCourse;
 
+/**
+ * @brief  吸附到导航路线上的位置索引. 若未成功吸附到路线上会返回-1.
+ */
+@property (nonatomic, assign) NSInteger matchedIndex;
+
 @end

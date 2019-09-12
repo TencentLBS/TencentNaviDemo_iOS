@@ -38,6 +38,7 @@ TNKSearchType;
  */
 @property (nonatomic, strong) TNKSearchNaviPoi   *destinationPoint;
 
+
 @end
 
 

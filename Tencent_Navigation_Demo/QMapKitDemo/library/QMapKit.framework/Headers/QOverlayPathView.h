@@ -26,7 +26,7 @@
 @property(nonatomic, strong) UIColor *strokeColor;
 
 /**
- * @brief  画笔宽度
+ * @brief  画笔宽度. 单位：Point
  */
 @property(nonatomic, assign) CGFloat lineWidth;
 

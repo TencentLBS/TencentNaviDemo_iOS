@@ -24,6 +24,8 @@
 
 /**
  * @brief  室内位置
+ *
+ * 添加完后修改无效
  */
 @property(nonatomic, strong) QIndoorInfo *indoorInfo;
 
