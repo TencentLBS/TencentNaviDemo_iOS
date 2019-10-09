@@ -23,7 +23,6 @@
 - (void) setupSDK
 {
     self.carManager = [[TNKCarNaviManager alloc] init];
-    [self.carManager registerNaviDelegate:self];
     self.carManager.enableEnlargedIntersection = YES;
     self.carManager.enableGuidedLane = YES;
     

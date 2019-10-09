@@ -21,7 +21,7 @@
     start.coordinate = startPoi;
     
     TNKSearchNaviPoi *dest  = [[TNKSearchNaviPoi alloc] init];
-    CLLocationCoordinate2D endPoi = {39.9930, 116.3376};
+    CLLocationCoordinate2D endPoi = {39.9852, 116.3144};
     dest.coordinate = endPoi;
     
     TNKCarRouteSearchOption *option = [[TNKCarRouteSearchOption alloc] init];

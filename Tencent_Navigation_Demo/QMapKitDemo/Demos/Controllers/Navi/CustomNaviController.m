@@ -50,7 +50,7 @@
     [self.textView2 setText:@"到达苏州街"];
     [backgroundTitleView addSubview:self.textView2];
     
-    [self.carManager registerUIDelegate:self];
+//    [self.carManager registerUIDelegate:self];
 }
 
 - (NSString*)formatDis:(NSInteger)dis
