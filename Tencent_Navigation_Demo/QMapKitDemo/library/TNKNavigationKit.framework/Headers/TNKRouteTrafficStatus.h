@@ -8,12 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "TNKRouteTrafficData.h"
-#import "TNKCarRouteSearchTypes.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class TNKCarRouteSearchRouteLine, TNKSegmentItem;
-
+@class TNKCoordinatePoint;
 /**
  * @brief 路线路况状态类
  */

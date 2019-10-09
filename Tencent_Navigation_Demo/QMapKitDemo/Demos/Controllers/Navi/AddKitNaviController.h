@@ -8,6 +8,6 @@
 
 #import "SimuNaviController.h"
 
-@interface AddKitNaviController: SimuNaviController<TNKCarNaviUIDelegate>
+@interface AddKitNaviController: SimuNaviController<TNKCarNaviUIDelegate, TNKCarNaviDelegate>
 
 @end

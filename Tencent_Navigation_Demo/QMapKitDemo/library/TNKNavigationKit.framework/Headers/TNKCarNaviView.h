@@ -9,9 +9,10 @@
 #import "TNKBaseNaviView.h"
 #import "TNKCarNaviManager.h"
 #import <QMapKit/QMapKit.h>
-
 #import "TNKRemainingOverviewData.h"
 #import "TNKUserLocationPresentation.h"
+
+NS_ASSUME_NONNULL_BEGIN
 
 typedef enum _TNKCarNaviUIMode
 {
@@ -89,12 +90,12 @@ typedef enum _TNKCarNaviDayNightStatus
 /**
  *  @brief  TNKCarNaviView的回调,用于接收导航模式、日夜状态等变化.
  */
-@property (nonatomic, weak) id <TNKCarNaviViewDelegate> delegate;
+@property (nonatomic, weak, nullable) id <TNKCarNaviViewDelegate> delegate;
 
 /**
  *  @brief  TNKCarNaviView的数据源,用于获取所需的数据.
  */
-@property (nonatomic, weak) id <TNKCarNaviViewDataSource> dataSource;
+@property (nonatomic, weak, nullable) id <TNKCarNaviViewDataSource> dataSource;
 
 /**
  *  @brief  是否隐藏默认导航面板, 默认为不隐藏默认导航面板.
@@ -166,6 +167,11 @@ typedef enum _TNKCarNaviDayNightStatus
  */
 @property (nonatomic, strong, readonly) QMapView *naviMapView;
 
+/**
+ *  @brief  问题反馈按钮,可以根据自己的要求调整按钮位置
+ */
+@property (nonatomic, strong, readonly) UIButton *feedbackButton;
+
 
 /**
  *  @brief  设置显示/隐藏路口放大图. 该方法用于导航状态下控制显示/隐藏路口放大图指引. 非导航过程中调用该方法无效.
@@ -214,3 +220,5 @@ typedef enum _TNKCarNaviDayNightStatus
 - (void)configUserLocationPresentation:(TNKUserLocationPresentation *)presentation;
 
 @end
+
+NS_ASSUME_NONNULL_END

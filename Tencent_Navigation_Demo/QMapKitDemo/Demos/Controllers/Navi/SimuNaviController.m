@@ -33,6 +33,7 @@
     request.destinationPoint = dest;
     request.searchOption = option;
     
+
     [self.carManager searchNavigationRoutesWithRequest:request completion:^(TNKCarRouteSearchResult *result, NSError *error) {
         if(error == nil)
         {
@@ -42,13 +43,21 @@
     }];
 }
 
-- (void)buttonPrint
+//- (void)buttonPrint
+//{
+////    self.naviView.TNKCarNaviFixCarProportion2D = CGPointMake(0.35, 0.65);
+////    self.naviView.TNKCarNaviFixCarProportion3D = CGPointMake(0.35, 0.65);
+//    self.naviView.hideNavigationPanel = YES;
+//    [self.carManager stop];
+//    [self.naviView clearAllRouteUI];
+//}
+
+- (void)carNavigationManagerDidArriveDestination:(TNKCarNaviManager *)manager
 {
-//    self.naviView.TNKCarNaviFixCarProportion2D = CGPointMake(0.35, 0.65);
-//    self.naviView.TNKCarNaviFixCarProportion3D = CGPointMake(0.35, 0.65);
-    self.naviView.hideNavigationPanel = YES;
+    
+    [self.carManager unregisterUIDelegate:self.naviView];
+    
     [self.carManager stop];
-    [self.naviView clearAllRouteUI];
 }
 
 #pragma mark - Life Cycle
@@ -58,5 +67,10 @@
     [super viewDidLoad];
     [self startNavi];
     
+}
+
+- (void)dealloc
+{
+    [self.carManager stop];
 }
 @end

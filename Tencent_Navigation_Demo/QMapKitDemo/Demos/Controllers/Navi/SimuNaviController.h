@@ -9,6 +9,9 @@
 #import "BaseNaviViewController.h"
 
 @interface SimuNaviController: BaseNaviViewController
+
 @property (strong)NSMutableArray<TNKSearchNaviPoi*> *wayPoints;
+
 -(void)startNavi;
+
 @end

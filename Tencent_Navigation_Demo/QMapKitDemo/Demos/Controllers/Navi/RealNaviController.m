@@ -26,7 +26,8 @@
     CLLocationCoordinate2D endPoi = {39.9930, 116.3376};
     dest.coordinate = endPoi;
     
-    TNKCarRouteSearchOption *option = [[TNKCarRouteSearchOption alloc] init];     option.avoidTrafficJam = YES;
+    TNKCarRouteSearchOption *option = [[TNKCarRouteSearchOption alloc] init];
+    option.avoidTrafficJam = YES;
     option.startRoadType = TNKRoadType_MainRoad;
     
     TNKCarRouteSearchRequest *request = [[TNKCarRouteSearchRequest alloc] init];
@@ -43,6 +44,13 @@
 }
 
 
+- (void)carNavigationManagerDidArriveDestination:(TNKCarNaviManager *)manager
+{
+    [self.carManager unregisterUIDelegate:self.naviView];
+    
+    [self.carManager stop];
+}
+
 #pragma mark - Life Cycle
 
 - (void)viewDidLoad
@@ -50,5 +58,11 @@
     [super viewDidLoad];
     [self startNavi];
 }
+
+- (void)dealloc
+{
+    [self.carManager stop];
+}
+
 
 @end

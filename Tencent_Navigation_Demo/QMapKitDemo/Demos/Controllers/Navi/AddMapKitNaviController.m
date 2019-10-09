@@ -60,7 +60,8 @@
     TNKSearchNaviPoi *dest  = [[TNKSearchNaviPoi alloc] init];
     dest.coordinate = self.endPoi;
     
-    TNKCarRouteSearchOption *option = [[TNKCarRouteSearchOption alloc] init];     option.avoidTrafficJam = YES;
+    TNKCarRouteSearchOption *option = [[TNKCarRouteSearchOption alloc] init];
+    option.avoidTrafficJam = YES;
     option.startRoadType = TNKRoadType_MainRoad;
     
     TNKCarRouteSearchRequest *request = [[TNKCarRouteSearchRequest alloc] init];

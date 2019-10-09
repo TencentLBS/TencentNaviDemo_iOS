@@ -22,7 +22,6 @@
 		60EEBA3821195212008CFEF0 /* NaviSearchRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EEBA3721195212008CFEF0 /* NaviSearchRoutes.m */; };
 		60EEBA3B2119AE04008CFEF0 /* RealNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EEBA3A2119AE03008CFEF0 /* RealNaviController.m */; };
 		60EEBA3E2119B482008CFEF0 /* SimuNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EEBA3D2119B482008CFEF0 /* SimuNaviController.m */; };
-		655F30481F1CBA8700FA20A9 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 655F30471F1CBA8700FA20A9 /* libstdc++.6.0.9.tbd */; };
 		655F304A1F1CBA8B00FA20A9 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 655F30491F1CBA8B00FA20A9 /* libc++.tbd */; };
 		655F304C1F1CBA8F00FA20A9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 655F304B1F1CBA8F00FA20A9 /* libsqlite3.0.tbd */; };
 		65A0CD891F16008B00811B83 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A0CD881F16008B00811B83 /* main.m */; };
@@ -91,7 +90,6 @@
 		60EEBA3A2119AE03008CFEF0 /* RealNaviController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealNaviController.m; sourceTree = "<group>"; };
 		60EEBA3C2119B442008CFEF0 /* SimuNaviController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimuNaviController.h; sourceTree = "<group>"; };
 		60EEBA3D2119B482008CFEF0 /* SimuNaviController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimuNaviController.m; sourceTree = "<group>"; };
-		655F30471F1CBA8700FA20A9 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		655F30491F1CBA8B00FA20A9 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		655F304B1F1CBA8F00FA20A9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		65A0CD841F16008B00811B83 /* QMapKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QMapKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,7 +124,6 @@
 				60EEBA3621194128008CFEF0 /* WebP.framework in Frameworks */,
 				655F304C1F1CBA8F00FA20A9 /* libsqlite3.0.tbd in Frameworks */,
 				655F304A1F1CBA8B00FA20A9 /* libc++.tbd in Frameworks */,
-				655F30481F1CBA8700FA20A9 /* libstdc++.6.0.9.tbd in Frameworks */,
 				8F1D2BA621A68F470020BE80 /* TNKNavigationKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,7 +161,6 @@
 			children = (
 				655F304B1F1CBA8F00FA20A9 /* libsqlite3.0.tbd */,
 				655F30491F1CBA8B00FA20A9 /* libc++.tbd */,
-				655F30471F1CBA8700FA20A9 /* libstdc++.6.0.9.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -305,7 +301,7 @@
 				TargetAttributes = {
 					65A0CD831F16008B00811B83 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 993M98A87L;
+						DevelopmentTeam = P58TLQHH32;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -315,6 +311,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -500,7 +497,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 993M98A87L;
+				DEVELOPMENT_TEAM = P58TLQHH32;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -520,7 +517,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 993M98A87L;
+				DEVELOPMENT_TEAM = P58TLQHH32;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

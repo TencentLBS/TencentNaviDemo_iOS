@@ -10,6 +10,7 @@
 #import <TNKNavigationKit/TNKCarRouteSearchTypes.h>
 #import <TNKNavigationKit/TNKCarNaviView.h>
 
+
 @interface BaseNaviViewController()
 
 @property (nonatomic, strong, readwrite) TNKCarNaviView *naviView;
@@ -35,9 +36,16 @@
     
     self.naviView.naviMapView.delegate = self;
     
-    [self.carManager registerUIDelegate:self.naviView];
+    
+    CGSize feedbackSize = CGSizeMake(50, 50);
+    self.naviView.feedbackButton.frame = CGRectMake(self.view.bounds.size.width - feedbackSize.width - 5, self.view.bounds.size.height - feedbackSize.height - 100, feedbackSize.width, feedbackSize.height);
+    
+
     
     [self.view addSubview:self.naviView];
+    
+    [self.carManager registerUIDelegate:self.naviView];
+    [self.carManager registerNaviDelegate:self];
 }
 
 #pragma mark - Life Cycle

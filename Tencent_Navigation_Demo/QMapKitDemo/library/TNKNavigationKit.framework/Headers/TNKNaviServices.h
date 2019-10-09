@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *APIKey;
 
 /**
- * @brief 获取导航SDK的版本号(5.1.1)
+ * @brief 获取导航SDK的版本号(5.1.4.1)
  */
 - (NSString *)sdkVersion;
 

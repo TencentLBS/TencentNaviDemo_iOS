@@ -193,7 +193,8 @@ NS_ASSUME_NONNULL_BEGIN
  * @param trafficStatus 路况信息
  */
 - (void)carNavigationManager:(TNKCarNaviManager *)manager
-    didChangeRoute:(TNKCarRouteSearchRoutePlan *)routePlan routeTrafficStatus:(TNKRouteTrafficStatus *)trafficStatus;
+              didChangeRoute:(TNKCarRouteSearchRoutePlan *)routePlan
+          routeTrafficStatus:(TNKRouteTrafficStatus *)trafficStatus;
 
 @end
 
@@ -208,13 +209,13 @@ NS_ASSUME_NONNULL_BEGIN
  *  导航事件变化采用广播形式,可同时注册多个对象接收事件变化.
  * @param naviDelegate 接收导航事件变化的对象
  */
-- (void)registerNaviDelegate:(nullable id <TNKCarNaviDelegate>)naviDelegate;
+- (void)registerNaviDelegate:(id <TNKCarNaviDelegate>)naviDelegate;
 
 /**
  * @brief  注销对象接收导航事件变化.
  * @param naviDelegate naviDelegate
  */
-- (void)unregisterNaviDelegate:(nullable id <TNKCarNaviDelegate>)naviDelegate;
+- (void)unregisterNaviDelegate:(id <TNKCarNaviDelegate>)naviDelegate;
 
 /**
  * @brief  注销所有对象接收导航事件变化.
@@ -229,13 +230,13 @@ NS_ASSUME_NONNULL_BEGIN
  *  导航UI数据更新采用广播形式,可同时注册多个对象接收数据更新.
  * @param UIDelegate 接收导航UI数据更新的对象
  */
-- (void)registerUIDelegate:(nullable id <TNKCarNaviUIDelegate>)UIDelegate;
+- (void)registerUIDelegate:(id <TNKCarNaviUIDelegate>)UIDelegate;
 
 /**
  * @brief  注销对象接收导航UI数据更新.
  * @param UIDelegate naviDelegate
  */
-- (void)unregisterUIDelegate:(nullable id <TNKCarNaviUIDelegate>)UIDelegate;
+- (void)unregisterUIDelegate:(id <TNKCarNaviUIDelegate>)UIDelegate;
 
 /**
  * @brief  注销所有对象接收导航UI数据更新.
@@ -319,6 +320,16 @@ NS_ASSUME_NONNULL_BEGIN
  *
  */
 - (void)changeNavigationRoute:(TNKCarNaviManagerRecaculateType)type;
+
+/**
+ * @brief  调用反馈功能。只能在导航过程中调用此方法
+ */
+- (void)feedback;
+
+/**
+ *  @brief  是否开启反馈功能中的录音反馈
+ */
+@property (nonatomic, assign, getter=isAudioFeedbackEnabled) BOOL audioFeedbackEnabled;
 
 @end
 

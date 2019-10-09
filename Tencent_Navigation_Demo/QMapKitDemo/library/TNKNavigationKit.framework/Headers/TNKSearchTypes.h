@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import <UIKit/UIKit.h>
-#import "TNKGeometry.h"
 #import "TNKSearchTask.h"
+
+NS_ASSUME_NONNULL_BEGIN
 
 typedef enum _TNKSearhType {
     kTNKSearchType_Car,
@@ -21,7 +22,7 @@ TNKSearchType;
 
 #pragma mark - TNKSearchRequest
 
-@class TNKSearchNaviPoi, TNKSearchOption;
+@class TNKSearchNaviPoi, TNKSearchOption, TNKCoordinatePoint;
 
 /**
  * @brief 路线规划的起终点类型
@@ -59,7 +60,7 @@ TNKSearchType;
 /**
  * @brief 该地点的唯一标识. 有uid时优先使用uid
  */
-@property (nonatomic,strong) NSString        *uid;
+@property (nonatomic,strong) NSString   *uid;
 
 @end
 
@@ -97,16 +98,46 @@ TNKSearchType;
  */
 @interface TNKSearchRoutePlan : NSObject
 
+/**
+ * @brief 路线ID
+ */
+@property (readonly, nonatomic, copy) NSString *routeID;
+
+/**
+ * @brief 总距离
+ */
+@property (readonly, nonatomic) int totalDistance;
+
+/**
+ * @brief 总预计时间
+ */
+@property (readonly, nonatomic) int totalTime;
+
 @end
 
 
 #pragma mark - TNKSearchRouteLine
 
 /**
- * @brief 路线规划的一条可选路线的子线段
+ * @brief 路线规划的一条可选路线的线段
  */
 @interface TNKSearchRouteLine : NSObject
 
+/**
+ * @brief 路线规划的起点
+ */
+@property (nonatomic, strong) TNKSearchNaviPoi  *startPoint;
+
+/**
+ * @brief 路线规划的终点
+ */
+@property (nonatomic, strong) TNKSearchNaviPoi  *destinationPoint;
+
+/**
+ * @brief 道路信息的坐标点串
+ */
+@property (readonly, nonatomic, strong) NSArray<TNKCoordinatePoint *> *coordinatePoints;
+
 @end
 
-
+NS_ASSUME_NONNULL_END

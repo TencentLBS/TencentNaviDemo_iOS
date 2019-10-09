@@ -17,7 +17,7 @@
 
 - (void)setupPanel
 {
-    self.textView = [[UITextField alloc] initWithFrame:CGRectMake(7, 130, 60, 60)];
+    self.textView = [[UITextField alloc] initWithFrame:CGRectMake(7, 160, 60, 60)];
     [self.textView setBackgroundColor:[UIColor whiteColor]];
     [self.textView.layer setBorderWidth:3.0];
     [self.textView.layer setBorderColor:[UIColor redColor].CGColor];
@@ -29,7 +29,7 @@
     [self.view addSubview:self.textView];
     
     
-    self.textView2 = [[UITextField alloc] initWithFrame:CGRectMake(7, 200, 60, 60)];
+    self.textView2 = [[UITextField alloc] initWithFrame:CGRectMake(7, 230, 60, 60)];
     [self.textView2 setBackgroundColor:[UIColor whiteColor]];
     [self.textView2.layer setBorderWidth:3.0];
     [self.textView2.layer setBorderColor:[UIColor blueColor].CGColor];
@@ -49,11 +49,25 @@
     [self.textView2 setText:[[NSString alloc] initWithFormat:@"%i", data.currentSpeed]];
 }
 
+- (void)setupTrafficBarWidget
+{
+    
+    CGFloat trafficBarHeight = [UIScreen mainScreen].bounds.size.height * 0.45;
+    TNKNaviTrafficBarWidget *trafficBarWidget = [[TNKNaviTrafficBarWidget alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - 30, (self.view.bounds.size.height - trafficBarHeight) / 2.0, 18, trafficBarHeight)];
+    trafficBarWidget.orientation = TNKNaviTrafficBarWidgetOrientationVertical;
+    trafficBarWidget.cornerRadius = trafficBarWidget.bounds.size.width / 2.0;
+    
+    [self.view addSubview:trafficBarWidget];
+    [self.carManager registerUIDelegate:trafficBarWidget];
+    
+}
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self setupPanel];
+    [self setupTrafficBarWidget];
     
 }
 
