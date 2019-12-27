@@ -7,48 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4F363D50-A28E-4BEB-809D-8C76EAAB3A7B"
+            uuid = "69FE420A-206D-486F-B3A1-FDFB93961609"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "QMapKitDemo/Demos/Controllers/Navi/SimuNaviController.m"
+            filePath = "QMapKitDemo/Demos/Controllers/Navi/DefaultNaviController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "-carNavigationManagerDidArriveDestination:"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "-carNaviViewCloseButtonClicked:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "353DAEFF-70DF-4876-87FB-B5DF8C5E0E30"
+            uuid = "A4DC20E8-45B9-4458-B08C-421FB974916A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "QMapKitDemo/Demos/Controllers/Navi/SimuNaviController.m"
+            filePath = "QMapKitDemo/Demos/Controllers/Navi/DefaultNaviController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "-carNavigationManagerDidArriveDestination:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "312699D0-F951-4C75-BB05-5349C011392A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "QMapKitDemo/Demos/Controllers/Navi/SimuNaviController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "-dealloc"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "-stopNavi"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

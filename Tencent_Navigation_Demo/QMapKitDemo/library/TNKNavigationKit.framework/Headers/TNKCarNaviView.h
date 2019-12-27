@@ -7,7 +7,6 @@
 //
 
 #import "TNKBaseNaviView.h"
-#import "TNKCarNaviManager.h"
 #import <QMapKit/QMapKit.h>
 #import "TNKRemainingOverviewData.h"
 #import "TNKUserLocationPresentation.h"
@@ -38,6 +37,7 @@ typedef enum _TNKCarNaviDayNightStatus
 
 
 @class TNKCarNaviView;
+@protocol TNKCarNaviUIDelegate;
 
 /**
  *  @brief 驾车导航UI类回调. 用于显示默认导航界面(包括地图和导航面板).
@@ -48,17 +48,23 @@ typedef enum _TNKCarNaviDayNightStatus
 
 /**
  * @brief  获取导航模式改变回调.
- * @param carNaviView view
+ * @param carNaviView 驾车地图
  * @param mode 导航模式
  */
 - (void)carNaviView:(TNKCarNaviView *)carNaviView didChangeUIMode:(TNKCarNaviUIMode)mode;
 
 /**
  * @brief  获取日夜状态改变回调.
- * @param carNaviView view
+ * @param carNaviView 驾车地图
  * @param status 日夜状态
  */
 - (void)carNaviView:(TNKCarNaviView *)carNaviView didChangeDayNightStatus:(TNKCarNaviDayNightStatus)status;
+
+/**
+ * @brief  点击退出按钮的回调.
+ * @param carNaviView 驾车地图
+ */
+- (void)carNaviViewCloseButtonClicked:(TNKCarNaviView *)carNaviView ;
 
 @end
 
@@ -85,7 +91,7 @@ typedef enum _TNKCarNaviDayNightStatus
  *
  *  用于显示默认导航UI,包括导航面板,路线,车标,起终点等.
  */
-@interface TNKCarNaviView : TNKBaseNaviView <TNKCarNaviUIDelegate>
+@interface TNKCarNaviView : TNKBaseNaviView<TNKCarNaviUIDelegate>
 
 /**
  *  @brief  TNKCarNaviView的回调,用于接收导航模式、日夜状态等变化.
@@ -97,22 +103,87 @@ typedef enum _TNKCarNaviDayNightStatus
  */
 @property (nonatomic, weak, nullable) id <TNKCarNaviViewDataSource> dataSource;
 
+
 /**
- *  @brief  是否隐藏默认导航面板, 默认为不隐藏默认导航面板.
+ *  @brief  是否隐藏默认导航面板, 默认为NO. 导航面板包括，顶部提示面板、路口放大图、车道线
  */
 @property (nonatomic, assign) BOOL hideNavigationPanel;
 
+/****************    导航界面元素控制-开始    ****************/
 /**
- *  @brief  导航模式. 导航模式包括3D车头朝上、2D地图朝北、全览和剩余全览4种模式. 默认为3D车头朝上模式.
+ *  @brief  是否显示界面元素,默认NO。（不包含对导航面板的控制）
+ */
+@property (nonatomic, assign) BOOL showUIElements;
+
+/**
+ *  @brief  是否显示路况光柱图，默认NO
+ */
+@property (nonatomic, assign) BOOL showTrafficBar;
+
+/**
+ *  @brief  是否显示主辅路切换按钮，默认NO
+ */
+@property (nonatomic, assign) BOOL showRoadTypeButton;
+
+/**
+ *  @brief  是否显示全览/退出全览切换按钮，默认NO
+ */
+@property (nonatomic, assign) BOOL showOverviewButton;
+
+/**
+ *  @brief  是否显示底部工具栏，默认NO（包含退出、剩余距离时间、预计到达时间、设置）
+ */
+@property (nonatomic, assign) BOOL showBottomToolbar;
+
+/**
+ *  @brief  是否显示当前车速
+ */
+@property (nonatomic, assign) BOOL showCurrentSpeedView;
+
+/**
+ *  @brief  是否显示限速、当前路名
+ */
+@property (nonatomic, assign) BOOL showLimitSpeedAndCurrentRoadNameView;
+
+/**
+ *  @brief  是否显示切换实时路况的按钮,默认NO
+ */
+@property (nonatomic, assign) BOOL showMapTrafficButton;
+
+/**
+ *  @brief  是否显示问题上报按钮，默认NO
+ */
+@property (nonatomic, assign) BOOL showFeedbackButton;
+
+/**
+ *  @brief  是否显示调整zoomlevel控件，默认NO
+ */
+@property (nonatomic, assign) BOOL showZoomLevelControl;
+
+/****************    导航界面元素控制-结束    ****************/
+
+/**
+ *  @brief  导航视角模式. 导航模式包括3D车头朝上、2D地图朝北、全览和剩余全览4种模式. 默认为3D车头朝上模式.
  *          回弹模式在导航状态下使用手势操作地图时被触发,会在手势操作结束后一段时间切换回之前的导航模式.
  *          该时间可由bounceTime设定,默认回弹时间为5秒.直接设置导航模式为回弹模式将不会被响应.
  */
 @property (nonatomic, assign) TNKCarNaviUIMode mode;
 
 /**
+ *  @brief  非全览的导航视角模式. 导航模式包括3D车头朝上、2D地图朝.
+ */
+@property (nonatomic, assign) TNKCarNaviUIMode nonOverviewNaviUIMode;
+
+/**
+ *  @brief  全览的导航视角模式. 全览和剩余全览.
+ */
+@property (nonatomic, assign) TNKCarNaviUIMode overviewNaviUIMode;
+
+/**
  *  @brief  回弹模式的回弹时间，单位为秒，需大于0. 默认为5秒.
  */
 @property (nonatomic, assign) NSUInteger bounceTime;
+
 
 /**
  *  @brief  地图日夜间模式切换策略. 包括自动切换、始终白天、始终黑夜3种模式. 默认为日夜状态自动切换.
@@ -158,7 +229,7 @@ typedef enum _TNKCarNaviDayNightStatus
 @property (nonatomic, assign) UIEdgeInsets externalEdgeInsets;
 
 /**
- * @brief  panel顶部空隙距离, 单位为px. 默认为全屏状态下避开状态栏. 取值范围为[0,100].
+ * @brief  panel顶部空隙距离. 默认为全屏状态下避开状态栏. 取值范围为[0,100].
  */
 @property (nonatomic, assign) NSUInteger panelTopGap;
 
@@ -167,11 +238,11 @@ typedef enum _TNKCarNaviDayNightStatus
  */
 @property (nonatomic, strong, readonly) QMapView *naviMapView;
 
-/**
- *  @brief  问题反馈按钮,可以根据自己的要求调整按钮位置
- */
-@property (nonatomic, strong, readonly) UIButton *feedbackButton;
 
+/**
+ *  @brief 设置导航地图是否显示实时路况,不影响showMapTrafficButton的逻辑
+ */
+@property (nonatomic, assign) BOOL showTraffic;
 
 /**
  *  @brief  设置显示/隐藏路口放大图. 该方法用于导航状态下控制显示/隐藏路口放大图指引. 非导航过程中调用该方法无效.
@@ -202,12 +273,6 @@ typedef enum _TNKCarNaviDayNightStatus
  *          自车点罗盘在3D车头朝上模式下会默认显示, 在2D地图朝北、全览模式和剩余全览模式下会默认隐藏.
  */
 - (void)setCarCompassEnabled:(BOOL)enabled;
-
-
-/**
- *  @brief 设置导航地图是否显示实时路况
- */
-- (void)setShowTraffic:(BOOL)showTraffic;
 
 /**
  *  @brief  清除路线相关UI.该方法用于非导航状态下清除路线相关UI,包括导航路线、自车点图标、动态添加的限速/指示标识等. 导航过程中调用该方法无效.

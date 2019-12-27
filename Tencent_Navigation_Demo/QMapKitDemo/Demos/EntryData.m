@@ -93,6 +93,11 @@
 
         {
             Cell *cell = [[Cell alloc] init];
+            cell.title = @"默认导航面板";
+            cell.controllerClassName = @"DefaultNaviController";
+            [cellArray addObject:cell];
+            
+            cell = [[Cell alloc] init];
             cell.title = @"自定义导航面板";
             cell.controllerClassName = @"CustomNaviController";
             [cellArray addObject:cell];

@@ -76,7 +76,7 @@ typedef enum _TNKCarRouteSearchResultStatus
  *
  * 如，是否走高速，躲避拥堵等
  */
-@interface TNKCarRouteSearchOption : TNKSearchOption
+@interface TNKCarRouteSearchOption : TNKSearchOption <NSCopying>
 
 /**
  * @brief 驾车路线规划参数: 是否避开收费道路, 默认NO, 即不避开收费道路.
@@ -143,7 +143,7 @@ typedef enum _TNKExtraRankStrategy
     TNKExtraRankStrategyLestMoney                   = 2,        // 按价格重排序
 } TNKExtraRankStrategy;                             ///< 额外的排序策略
 
-@interface TNKCarRouteSearchExtraRankStrategy : NSObject
+@interface TNKCarRouteSearchExtraRankStrategy : NSObject<NSCopying>
 
 @property (nonatomic, assign) TNKExtraRankStrategy rankStrategy;
 // 每公里价格
@@ -151,7 +151,6 @@ typedef enum _TNKExtraRankStrategy
 // 每分钟价格
 @property (nonatomic, assign) float pricePerMinute;
 
-- (id _Nonnull)clone;
 @end
 
 #pragma mark - TNKCarRouteSearchRequest

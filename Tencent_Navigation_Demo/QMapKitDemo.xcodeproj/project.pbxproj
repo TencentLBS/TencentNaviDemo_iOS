@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03B0AFAB23B5ABC6000BF8BC /* DefaultNaviController.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B0AFA923B5ABC6000BF8BC /* DefaultNaviController.h */; };
+		03B0AFAC23B5ABC6000BF8BC /* DefaultNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B0AFAA23B5ABC6000BF8BC /* DefaultNaviController.m */; };
 		319793F51F3471ED007486B9 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 319793F41F3471DB007486B9 /* ball.png */; };
 		31BFE8DA1F3464180026C9BB /* colorSample.png in Resources */ = {isa = PBXBuildFile; fileRef = 31BFE8D91F3463FC0026C9BB /* colorSample.png */; };
 		31BFE8E61F34675B0026C9BB /* foot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 31BFE8E51F3467550026C9BB /* foot.jpg */; };
@@ -65,6 +67,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03B0AFA923B5ABC6000BF8BC /* DefaultNaviController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultNaviController.h; sourceTree = "<group>"; };
+		03B0AFAA23B5ABC6000BF8BC /* DefaultNaviController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultNaviController.m; sourceTree = "<group>"; };
 		319793F41F3471DB007486B9 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
 		31BFE8D91F3463FC0026C9BB /* colorSample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colorSample.png; sourceTree = "<group>"; };
 		31BFE8E51F3467550026C9BB /* foot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = foot.jpg; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 				6052EDA4211AB421008A4FF2 /* NaviDayNightController.m */,
 				6052EDA6211AB96C008A4FF2 /* NaviRouteWidthController.h */,
 				6052EDA7211AB99F008A4FF2 /* NaviRouteWidthController.m */,
+				03B0AFA923B5ABC6000BF8BC /* DefaultNaviController.h */,
+				03B0AFAA23B5ABC6000BF8BC /* DefaultNaviController.m */,
 				6052EDA9211ADC2B008A4FF2 /* CustomNaviController.h */,
 				6052EDAA211ADFAD008A4FF2 /* CustomNaviController.m */,
 				6052EDAC211B045A008A4FF2 /* AddKitNaviController.h */,
@@ -264,6 +270,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03B0AFAB23B5ABC6000BF8BC /* DefaultNaviController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +364,7 @@
 				60EEBA3821195212008CFEF0 /* NaviSearchRoutes.m in Sources */,
 				6052EDAE211B046F008A4FF2 /* AddKitNaviController.m in Sources */,
 				6052EDAB211ADFAD008A4FF2 /* CustomNaviController.m in Sources */,
+				03B0AFAC23B5ABC6000BF8BC /* DefaultNaviController.m in Sources */,
 				60EEBA3B2119AE04008CFEF0 /* RealNaviController.m in Sources */,
 				60EEBA3E2119B482008CFEF0 /* SimuNaviController.m in Sources */,
 				60EEBA34211875E0008CFEF0 /* BaseNaviViewController.m in Sources */,

@@ -15,6 +15,7 @@
 #import "QTypes.h"
 #import "QUserLocationPresentation.h"
 #import "QTileOverlay.h"
+#import "QCustomLayer.h"
 #import "QText.h"
 
 typedef NS_ENUM(NSInteger, QUserTrackingMode)
@@ -606,6 +607,28 @@ typedef NS_ENUM(NSUInteger, QMapLogoAnchor)
 @end
 
 
+#pragma mark - CustomLayer
+
+/**
+ *  @brief  个性化图层相关的API
+ */
+@interface QMapView (CustomLayer)
+
+/**
+ * @brief  向地图添加一个图层
+ * @param layer 要添加的图层
+ */
+- (void)addCustomLayer:(QCustomLayer *)layer;
+
+/**
+ * @brief  从地图移除一个个性化图层
+ * @param layer 要移除的图层
+ */
+- (void)removeCustomLayer:(QCustomLayer *)layer;
+
+@end
+
+#pragma mark - Snapshot
 /**
  * @brief  截图相关API
  */

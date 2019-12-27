@@ -14,4 +14,9 @@
 @interface QShape : NSObject
 
 
+/**
+ * @brief  供用户储存自定义数据，SDK本身不使用
+ */
+@property (nonatomic, strong) id    userData;
+
 @end

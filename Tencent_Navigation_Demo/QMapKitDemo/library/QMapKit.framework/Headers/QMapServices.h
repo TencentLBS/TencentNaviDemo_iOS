@@ -23,7 +23,7 @@
 @property (nonnull, copy, nonatomic) NSString *APIKey;
 
 /**
- * @brief 获取地图SDK的版本号 (4.2.7)
+ * @brief 获取地图SDK的版本号 (4.3.1)
  */
 - (NSString * _Nonnull)sdkVersion;
 

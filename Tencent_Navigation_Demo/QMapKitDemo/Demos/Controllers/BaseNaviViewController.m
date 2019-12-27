@@ -36,10 +36,10 @@
     self.naviView.naviMapView.delegate = self;
     
     
-    CGSize feedbackSize = CGSizeMake(50, 50);
-    self.naviView.feedbackButton.frame = CGRectMake(self.view.bounds.size.width - feedbackSize.width - 5, self.view.bounds.size.height - feedbackSize.height - 100, feedbackSize.width, feedbackSize.height);
+//    CGSize feedbackSize = CGSizeMake(50, 50);
+//    self.naviView.feedbackButton.frame = CGRectMake(self.view.bounds.size.width - feedbackSize.width - 5, self.view.bounds.size.height - feedbackSize.height - 100, feedbackSize.width, feedbackSize.height);
     
-
+//    self.naviView.showFeedbackButton = YES;
     
     [self.view addSubview:self.naviView];
     

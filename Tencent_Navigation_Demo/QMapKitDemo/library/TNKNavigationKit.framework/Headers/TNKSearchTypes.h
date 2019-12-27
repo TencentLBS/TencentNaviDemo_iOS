@@ -58,7 +58,7 @@ TNKSearchType;
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 
 /**
- * @brief 该地点的唯一标识. 有uid时优先使用uid
+ * @brief 该地点的唯一标识,即poi id. 有uid时优先使用uid,
  */
 @property (nonatomic,strong) NSString   *uid;
 
@@ -101,17 +101,17 @@ TNKSearchType;
 /**
  * @brief 路线ID
  */
-@property (readonly, nonatomic, copy) NSString *routeID;
+@property (nonatomic, readonly) NSString *routeID;
 
 /**
- * @brief 总距离
+ * @brief 总距离. 单位，米
  */
-@property (readonly, nonatomic) int totalDistance;
+@property (nonatomic, readonly) int totalDistance;
 
 /**
- * @brief 总预计时间
+ * @brief 总预计时间. 单位，分钟
  */
-@property (readonly, nonatomic) int totalTime;
+@property (nonatomic, readonly) int totalTime;
 
 @end
 
@@ -136,7 +136,7 @@ TNKSearchType;
 /**
  * @brief 道路信息的坐标点串
  */
-@property (readonly, nonatomic, strong) NSArray<TNKCoordinatePoint *> *coordinatePoints;
+@property (nonatomic, strong, readonly) NSArray<TNKCoordinatePoint *> *coordinatePoints;
 
 @end
 

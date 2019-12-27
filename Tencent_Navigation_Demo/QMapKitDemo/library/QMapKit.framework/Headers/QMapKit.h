@@ -37,6 +37,7 @@ FOUNDATION_EXPORT const unsigned char QMapKitVersionString[];
 #import "QOverlayPathView.h"
 #import "QPolylineView.h"
 #import "QTexturePolylineView.h"
+#import "QTexturePolylineView+Animate.h"
 #import "QPolygon.h"
 #import "QPolygonView.h"
 #import "QCircle.h"
@@ -51,6 +52,7 @@ FOUNDATION_EXPORT const unsigned char QMapKitVersionString[];
 #import "QHeatTileOverlayView.h"
 #import "QHeatTileNodeProtocol.h"
 #import "QHeatTileNode.h"
+#import "QCustomLayer.h"
 
 #import "QMapView+Config.h"
 #import "QMapView+Indoor.h"

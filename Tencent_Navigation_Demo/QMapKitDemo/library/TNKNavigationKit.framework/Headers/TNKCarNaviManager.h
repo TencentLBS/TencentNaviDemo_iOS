@@ -249,6 +249,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) CLLocation *lastLocationBeforeNavigation;
 
 /**
+ *  @brief  模拟导航车速，单位km/h，设置范围[20,108]，默认72;
+ *  注意：开启导航之前设置有效
+ */
+@property (nonatomic, assign) int simulationSpeed;
+
+/**
  *  @brief  启动导航. 需要在驾车导航路线规划成功后进行.
  *  @param index 路线索引index. 与路线规划返回的路线结果顺序一致.
  */
@@ -299,7 +305,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  *  @brief  是否开启导航过程中的伴随路线. 默认关闭.
- *  必须在导航之前设置的。导航过程中设备不生效。
+ *  必须在导航之前设置的，导航过程中设置不生效。
  */
 @property (nonatomic, assign, getter=isMultiRoutesEnabled) BOOL multiRoutesEnabled;
 

@@ -15,7 +15,8 @@
  */
 typedef NS_ENUM(NSUInteger, QMapType) {
     QMapTypeStandard = 0,       ///<标准地图
-    QMapTypeSatellite           ///<卫星地图
+    QMapTypeSatellite,          ///<卫星地图
+    QMapTypeDark                ///<暗色模式地图
 };
 
 

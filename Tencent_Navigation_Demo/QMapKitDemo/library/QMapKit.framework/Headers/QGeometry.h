@@ -6,20 +6,20 @@
 //  Copyright © 2017年 tencent. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <CoreLocation/CoreLocation.h>
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
     
     /**
-     *  @brief  定义了以CLLocationDegree为单位的矩形
+     *  @brief 定义了以 CLLocationDegree 为单位的矩形
      *
-     *  一单位纬度(latitudeDelta)大约为111公里; 单位经度和纬度相关,一单位经度值(latitudeDelta)赤道时大约是111公里, 到极地为0
+     *  一单位纬度 (latitudeDelta) 大约为111公里; 单位经度和纬度相关, 一单位经度值 (latitudeDelta) 赤道时大约是111公里, 到极地为0
      */
-    typedef struct {
+    typedef struct
+    {
         CLLocationDegrees latitudeDelta;
         CLLocationDegrees longitudeDelta;
     } QCoordinateSpan;
@@ -27,18 +27,19 @@ extern "C" {
     /**
      *  @brief 定义了地图的某一部份的数据结构
      */
-    typedef struct {
+    typedef struct
+    {
         CLLocationCoordinate2D center;
         QCoordinateSpan span;
     } QCoordinateRegion;
     
     /**
-     *  @brief  构造QCoordinateSpan类型数据
+     *  @brief 构造 QCoordinateSpan 类型数据
      *
      *  @param latitudeDelta  纬度值
      *  @param longitudeDelta 经度值
      *
-     *  @return 构造的span数据
+     *  @return 构造的 span 数据
      */
     static inline QCoordinateSpan QCoordinateSpanMake(CLLocationDegrees latitudeDelta, CLLocationDegrees longitudeDelta)
     {
@@ -46,12 +47,12 @@ extern "C" {
     }
     
     /**
-     *  @brief  构造QCoordinateRegion类型数据
+     *  @brief 构造 QCoordinateRegion 类型数据
      *
      *  @param centerCoordinate 中心点经纬度坐标
-     *  @param span             span大小
+     *  @param span             span 大小
      *
-     *  @return 构造的region数据
+     *  @return 构造的 region 数据
      */
     static inline QCoordinateRegion QCoordinateRegionMake(CLLocationCoordinate2D centerCoordinate, QCoordinateSpan span)
     {
@@ -60,31 +61,39 @@ extern "C" {
     
     
     /**
-     *  @brief  平面投影坐标结构定义
+     *  @brief 平面投影坐标结构定义
      */
-    typedef struct {
+    typedef struct
+    {
         double x;
         double y;
     } QMapPoint;
     
     /**
-     *  @brief  平面投影大小结构定义
+     *  @brief 平面投影大小结构定义
      */
-    typedef struct {
+    typedef struct
+    {
         double width;
         double height;
     } QMapSize;
     
     /**
-     *  @brief  平面投影矩形结构定义
+     *  @brief 平面投影矩形结构定义
      */
-    typedef struct {
+    typedef struct
+    {
         QMapPoint origin;
         QMapSize size;
     } QMapRect;
     
     /**
-     *  @brief  根据x,y坐标构建QMapPoint
+     *  @brief 为空的平面投影矩形
+     */
+    extern const QMapRect QMapRectNull;
+    
+    /**
+     *  @brief 根据 x, y 坐标构建 QMapPoint
      *
      *  @param x 横轴坐标
      *  @param y 纵轴坐标
@@ -97,7 +106,7 @@ extern "C" {
     }
     
     /**
-     *  @brief  根据长宽构建QMapSize
+     *  @brief 根据长宽构建 QMapSize
      *
      *  @param width  宽
      *  @param height 长
@@ -110,7 +119,7 @@ extern "C" {
     }
     
     /**
-     *  @brief  构建QMapRect
+     *  @brief 构建 QMapRect
      *
      *  @param x      横轴顶点坐标
      *  @param y      纵轴顶点坐标
@@ -125,11 +134,11 @@ extern "C" {
     }
     
     /**
-     *  @brief  获取QMapRect左上点x值
+     *  @brief 获取 QMapRect 左上点 x 值
      *
-     *  @param rect QMapRect数据
+     *  @param rect QMapRect 数据
      *
-     *  @return 顶点x值
+     *  @return 顶点 x 值
      */
     static inline double QMapRectGetMinX(QMapRect rect)
     {
@@ -137,11 +146,11 @@ extern "C" {
     }
     
     /**
-     *  @brief  获取QMapRect左上点y值
+     *  @brief 获取 QMapRect 左上点 y 值
      *
-     *  @param rect QMapRect数据
+     *  @param rect QMapRect 数据
      *
-     *  @return 顶点y值
+     *  @return 顶点 y 值
      */
     static inline double QMapRectGetMinY(QMapRect rect)
     {
@@ -149,11 +158,11 @@ extern "C" {
     }
     
     /**
-     *  @brief  获取QMapRect中心点x值
+     *  @brief 获取 QMapRect 中心点 x 值
      *
-     *  @param rect QMapRect数据
+     *  @param rect QMapRect 数据
      *
-     *  @return 中心点x值
+     *  @return 中心点 x 值
      */
     static inline double QMapRectGetMidX(QMapRect rect)
     {
@@ -161,11 +170,11 @@ extern "C" {
     }
     
     /**
-     *  @brief  获取QMapRect中心点y值
+     *  @brief 获取 QMapRect 中心点 y 值
      *
-     *  @param rect QMapRect数据
+     *  @param rect QMapRect 数据
      *
-     *  @return 中心点y值
+     *  @return 中心点 y 值
      */
     static inline double QMapRectGetMidY(QMapRect rect)
     {
@@ -173,11 +182,11 @@ extern "C" {
     }
     
     /**
-     *  @brief  获取QMapRect右下角x值
+     *  @brief 获取 QMapRect 右下角 x 值
      *
-     *  @param rect QMapRect数据
+     *  @param rect QMapRect 数据
      *
-     *  @return 右下角x值
+     *  @return 右下角 x 值
      */
     static inline double QMapRectGetMaxX(QMapRect rect)
     {
@@ -185,11 +194,11 @@ extern "C" {
     }
     
     /**
-     *  @brief  获取QMapRect右下角y值
+     *  @brief 获取 QMapRect 右下角 y 值
      *
-     *  @param rect QMapRect数据
+     *  @param rect QMapRect 数据
      *
-     *  @return 右下角y值
+     *  @return 右下角 y 值
      */
     static inline double QMapRectGetMaxY(QMapRect rect)
     {
@@ -197,9 +206,9 @@ extern "C" {
     }
     
     /**
-     *  @brief  获取QMapRect宽度
+     *  @brief 获取 QMapRect 宽度
      *
-     *  @param rect QMapRect数据
+     *  @param rect QMapRect 数据
      *
      *  @return 宽度值
      */
@@ -209,9 +218,9 @@ extern "C" {
     }
     
     /**
-     *  @brief  获取QMapRect长度度
+     *  @brief 获取 QMapRect 长度
      *
-     *  @param rect QMapRect数据
+     *  @param rect QMapRect 数据
      *
      *  @return 长度值
      */
@@ -221,67 +230,72 @@ extern "C" {
     }
     
     /**
-     *  @brief  比较两个QMapPoint x, y值是否同时相等
+     *  @brief 比较两个 QMapPoint x, y 值是否同时相等
      *
      *  @param point1 第一个点
      *  @param point2 第二个点
      *
      *  @return 是否相等
      */
-    static inline BOOL QMapPointEqualToPoint(QMapPoint point1, QMapPoint point2) {
+    static inline BOOL QMapPointEqualToPoint(QMapPoint point1, QMapPoint point2)
+    {
         return point1.x == point2.x && point1.y == point2.y;
     }
     
     /**
-     *  @brief  判断两个QMapSize是否相等
+     *  @brief 判断两个 QMapSize 是否相等
      *
      *  @param size1 QMapSize1
      *  @param size2 QMapSize2
      *
      *  @return 是否相等
      */
-    static inline BOOL QMapSizeEqualToSize(QMapSize size1, QMapSize size2) {
+    static inline BOOL QMapSizeEqualToSize(QMapSize size1, QMapSize size2)
+    {
         return size1.width == size2.width && size1.height == size2.height;
     }
     
     /**
-     *  @brief  判断两个QMapRect是否相等
+     *  @brief 判断两个 QMapRect 是否相等
      *
      *  @param rect1 QMapRect1
      *  @param rect2 QMapRect2
      *
      *  @return 是否相等
      */
-    static inline BOOL QMapRectEqualToRect(QMapRect rect1, QMapRect rect2) {
+    static inline BOOL QMapRectEqualToRect(QMapRect rect1, QMapRect rect2)
+    {
         return
         QMapPointEqualToPoint(rect1.origin, rect2.origin) &&
         QMapSizeEqualToSize(rect1.size, rect2.size);
     }
     
     /**
-     *  @brief  判断QMapRect是否为NULL, x或y为无穷小是返回YES
+     *  @brief 判断 QMapRect 是否为 NULL
      *
      *  @param rect QMapRect
      *
-     *  @return 是否为NULL
+     *  @return 是否为 NULL
      */
-    static inline BOOL QMapRectIsNull(QMapRect rect) {
-        return isinf(rect.origin.x) || isinf(rect.origin.y);
+    static inline BOOL QMapRectIsNull(QMapRect rect)
+    {
+        return QMapPointEqualToPoint(rect.origin, QMapRectNull.origin);
     }
     
     /**
-     *  @brief  判断QMapRect是否为空
+     *  @brief 判断 QMapRect 是否为空
      *
      *  @param rect QMapRect
      *
      *  @return 是否为空
      */
-    static inline BOOL QMapRectIsEmpty(QMapRect rect) {
+    static inline BOOL QMapRectIsEmpty(QMapRect rect)
+    {
         return QMapRectIsNull(rect) || (rect.size.width == 0.0 && rect.size.height == 0.0);
     }
     
     /**
-     *  @brief  判断点是否在矩形内
+     *  @brief 判断点是否在矩形内
      *
      *  @param rect  矩形
      *  @param point 点
@@ -291,17 +305,17 @@ extern "C" {
     extern BOOL QMapRectContainsPoint(QMapRect rect, QMapPoint point);
     
     /**
-     * @brief   计算矩形和点的并集
+     * @brief 计算矩形和点的并集
      *
-     *  @param rect1 矩形
+     *  @param rect  矩形
      *  @param point 点
      *
      *  @return 矩形
      */
-    QMapRect QMapRectUnionPoint(QMapRect rect1, QMapPoint point);
+    extern QMapRect QMapRectUnionPoint(QMapRect rect, QMapPoint point);
     
     /**
-     *  @brief  返回两个矩形的并集
+     *  @brief 返回两个矩形的并集
      *
      *  @param rect1 矩形1
      *  @param rect2 矩形2
@@ -311,7 +325,7 @@ extern "C" {
     extern QMapRect QMapRectUnion(QMapRect rect1, QMapRect rect2);
     
     /**
-     *  @brief  判断两个矩形是否相交
+     *  @brief 判断两个矩形是否相交
      *
      *  @param rect1 矩形1
      *  @param rect2 矩形2
@@ -321,7 +335,7 @@ extern "C" {
     extern BOOL QMapRectIntersectsRect(QMapRect rect1, QMapRect rect2);
     
     /**
-     *  @brief  判断rect1是否包含rect2
+     *  @brief 判断 rect1 是否包含 rect2
      *
      *  @param rect1 矩形1
      *  @param rect2 矩形2
@@ -331,41 +345,44 @@ extern "C" {
     extern BOOL QMapRectContainsRect(QMapRect rect1, QMapRect rect2);
     
     /**
-     *  @brief  格式化输出QMapPoint类型数据
+     *  @brief 格式化输出 QMapPoint 类型数据
      *
      *  @param point QMapPoint
      *
      *  @return 格式化后的字符串
      */
-    static inline NSString *QStringFromMapPoint(QMapPoint point) {
+    static inline NSString *QStringFromMapPoint(QMapPoint point)
+    {
         return [NSString stringWithFormat:@"{%.1f, %.1f}", point.x, point.y];
     }
     
     /**
-     *  @brief  格式化输出QMapSize类型数据
+     *  @brief 格式化输出 QMapSize 类型数据
      *
      *  @param size QMapSize
      *
      *  @return 格式化后的字符串
      */
-    static inline NSString *QStringFromMapSize(QMapSize size) {
+    static inline NSString *QStringFromMapSize(QMapSize size)
+    {
         return [NSString stringWithFormat:@"{%.1f, %.1f}", size.width, size.height];
     }
     
     /**
-     *  @brief  格式化输出QMapRect类型数据
+     *  @brief 格式化输出 QMapRect 类型数据
      *
      *  @param rect QMapRect
      *
      *  @return 格式化后的字符串
      */
-    static inline NSString *QStringFromMapRect(QMapRect rect) {
+    static inline NSString *QStringFromMapRect(QMapRect rect)
+    {
         return [NSString stringWithFormat:@"{%@, %@}", QStringFromMapPoint(rect.origin), QStringFromMapSize(rect.size)];
     }
     
     
     /**
-     *  @brief  经纬度坐标转平面投影坐标
+     *  @brief 经纬度坐标转平面投影坐标
      *
      *  @param coordinate 要转化的经纬度坐标
      *
@@ -374,16 +391,16 @@ extern "C" {
     extern QMapPoint QMapPointForCoordinate(CLLocationCoordinate2D coordinate);
     
     /**
-     *  @brief  平面投影坐标转经纬度坐标
+     *  @brief 平面投影坐标转经纬度坐标
      *
-     *  @param mapPoint 要转化的平面投影矩形
+     *  @param mapPoint 要转化的平面投影坐标
      *
      *  @return 经纬度坐标
      */
     extern CLLocationCoordinate2D QCoordinateForMapPoint(QMapPoint mapPoint);
     
     /**
-     *  @brief  平面投影矩形转region
+     *  @brief 平面投影矩形转 region
      *
      *  @param rect 要转化的平面投影矩形
      *
@@ -392,7 +409,7 @@ extern "C" {
     extern QCoordinateRegion QCoordinateRegionForMapRect(QMapRect rect);
     
     /**
-     *  @brief  region转平面投影矩形
+     *  @brief region 转平面投影矩形
      *
      *  @param region 要转化的region
      *
@@ -401,7 +418,7 @@ extern "C" {
     extern QMapRect QMapRectForCoordinateRegion(QCoordinateRegion region);
     
     /**
-     *  @brief  在特定纬度单位mapPoint代表的距离, 单位:米
+     *  @brief 在特定纬度单位 mapPoint 代表的距离, 单位:米
      *
      *  @param latitude 纬度参数
      *
@@ -410,16 +427,16 @@ extern "C" {
     extern CLLocationDistance QMetersPerMapPointAtLatitude(CLLocationDegrees latitude);
     
     /**
-     *  @brief  在特定纬度每米代表的mapPoint值
+     *  @brief 在特定纬度每米代表的 mapPoint 值
      *
      *  @param latitude 纬度参数
      *
-     *  @return mapPoint个数
+     *  @return mapPoint 个数
      */
     extern double QMapPointsPerMeterAtLatitude(CLLocationDegrees latitude);
     
     /**
-     *  @brief  生成一个新的QCoordinateRegion
+     *  @brief  生成一个新的 QCoordinateRegion
      *
      *  @param centerCoordinate   中心点坐标
      *  @param latitudinalMeters  垂直跨度(单位 米)
@@ -464,54 +481,74 @@ extern "C" {
     extern BOOL QPolygonContainsCoordinate(CLLocationCoordinate2D coordinate, CLLocationCoordinate2D *polygon, NSUInteger count);
     
     /**
-     *  @brief  返回两个QapPoint之间的距离 单位:米
+     *  @brief 返回两个 QMapPoint 之间的距离, 单位:米
      *
-     *  @param a 点a
-     *  @param b 点b
+     *  @param a 点 a
+     *  @param b 点 b
      *
      *  @return 距离值
      */
     extern CLLocationDistance QMetersBetweenMapPoints(QMapPoint a, QMapPoint b);
     
     /**
-     *  @brief  返回两个经纬度之间的距离 单位:米
+     *  @brief 返回两个经纬度之间的距离, 单位:米
      *
-     *  @param a 点a
-     *  @param b 点b
+     *  @param a 点 a
+     *  @param b 点 b
      *
      *  @return 距离值
      */
     extern CLLocationDistance QMetersBetweenCoordinates(CLLocationCoordinate2D a, CLLocationCoordinate2D b);
     
     /**
-     *  @brief  返回最小外接矩形.
+     *  @brief 返回最小外接平面投影矩形.
      *
      *  @param points 点数组
      *  @param count  点个数
      *
-     *  @return 最小外接矩形
+     *  @return 最小外接平面投影矩形
      */
     extern QMapRect QBoundingMapRectWithPoints(QMapPoint *points, NSUInteger count);
     
     /**
-     *  @brief  根据中心点构建最小外接矩形.
+     *  @brief 根据中心点构建最小外接平面投影矩形.
      *
      *  @param points      点数组
      *  @param count       点个数
      *  @param centerPoint 中心点
      *
-     *  @return 最小外接矩形
+     *  @return 最小外接平面投影矩形
      */
     extern QMapRect QBoundingMapRectWithPointsAndCenter(QMapPoint *points, NSUInteger count, QMapPoint centerPoint);
     
     /**
-     *  @brief  返回全球范围外接矩形.
+     *  @brief 返回最小外接 region.
      *
-     *  @return 全球范围外接矩形
+     *  @param coordinates 点数组
+     *  @param count       点个数
+     *
+     *  @return 最小外接 region
+     */
+    extern QCoordinateRegion QBoundingCoordinateRegionWithCoordinates(CLLocationCoordinate2D *coordinates, NSUInteger count);
+    
+    /**
+     *  @brief 根据中心点构建最小外接 region.
+     *
+     *  @param coordinates      点数组
+     *  @param count            点个数
+     *  @param centerCoordinate 中心点
+     *
+     *  @return 最小外接 region
+     */
+    extern QCoordinateRegion QBoundingCoordinateRegionWithCoordinatesAndCenter(CLLocationCoordinate2D *coordinates, NSUInteger count, CLLocationCoordinate2D centerCoordinate);
+    
+    /**
+     *  @brief 返回全球范围外接平面投影矩形.
+     *
+     *  @return 全球范围外接平面投影矩形
      */
     extern QMapRect QWorldMapRect(void);
     
 #ifdef __cplusplus
 }
 #endif
-

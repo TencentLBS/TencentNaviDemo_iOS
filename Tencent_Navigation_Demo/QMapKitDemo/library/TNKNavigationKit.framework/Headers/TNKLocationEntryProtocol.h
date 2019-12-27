@@ -72,4 +72,15 @@
  */
 - (void)locationEntry:(id<TNKLocationEntry>)entry didUpdateHeading:(CLHeading *)heading;
 
+/**
+ * @brief  定位点变差的回调.
+ * @param entry entry
+ */
+- (void)locationEntryGPSBecomeWeak:(id<TNKLocationEntry>)entry;
+
+/**
+ * @brief  定位点变强的回调.
+ * @param entry entry
+ */
+- (void)locationEntryGPSBecomeStrong:(id<TNKLocationEntry>)entry;
 @end
