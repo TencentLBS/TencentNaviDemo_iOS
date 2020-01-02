@@ -25,8 +25,9 @@
     self.carManager = [[TNKCarNaviManager alloc] init];
     self.carManager.enableEnlargedIntersection = YES;
     self.carManager.enableGuidedLane = YES;
-    
-    self.naviView = [[TNKCarNaviView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width,  self.view.bounds.size.height - 64)];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.naviView = [[TNKCarNaviView alloc] initWithFrame:self.view.bounds];
+    self.naviView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.naviView.mode = TNKCarNaviUIMode3DCarTowardsUp;
     self.naviView.hideNavigationPanel = NO;
     self.naviView.TNKCarNaviFixCarProportion2D = CGPointMake(0.5, 0.5);
