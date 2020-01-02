@@ -46,6 +46,7 @@
     CLLocationCoordinate2D lineCoord[2];
     lineCoord[0] = userLocation.location.coordinate;
     lineCoord[1] = self.endPoi;
+    
     self.polyline = [QPolyline polylineWithCoordinates:lineCoord count:2];
     [self.naviView.naviMapView addOverlay:self.polyline];
 }
@@ -80,7 +81,7 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    self.endPoi = CLLocationCoordinate2DMake(39.9930, 116.3376);
+    self.endPoi = CLLocationCoordinate2DMake(39.9852, 116.3144);
     [self.naviView.naviMapView setShowsUserLocation:YES];
 }
 
