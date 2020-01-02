@@ -26,9 +26,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *APIKey;
 
 /**
- * @brief 获取导航SDK的版本号(5.1.5)
+ * @brief 获取导航SDK的版本号(5.1.7)
  */
 - (NSString *)sdkVersion;
+
+/**
+ * @brief identifier 设备标识，默认取自idfv。排查问题时需提供此identifier。注意，卸载重装时identifier可能发生变化。
+ * 如果希望使用自己业务上的设备标识来排查问题，可以将identifier修改为自己业务上的设备标识。
+ */
+@property (nonatomic, copy) NSString *identifier;
 
 @end
 

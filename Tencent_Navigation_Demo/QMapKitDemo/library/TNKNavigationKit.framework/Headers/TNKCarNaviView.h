@@ -10,6 +10,7 @@
 #import <QMapKit/QMapKit.h>
 #import "TNKRemainingOverviewData.h"
 #import "TNKUserLocationPresentation.h"
+#import "TNKCarNaviManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -64,7 +65,7 @@ typedef enum _TNKCarNaviDayNightStatus
  * @brief  点击退出按钮的回调.
  * @param carNaviView 驾车地图
  */
-- (void)carNaviViewCloseButtonClicked:(TNKCarNaviView *)carNaviView ;
+- (void)carNaviViewCloseButtonClicked:(TNKCarNaviView *)carNaviView;
 
 @end
 
