@@ -7,6 +7,13 @@
 //
 
 #import "NaviSearchRoutes.h"
+#import "TrafficPolyline.h"
+
+@interface NaviSearchRoutes()
+
+@property (nonatomic, strong) TrafficPolyline *trafficLine;
+
+@end
 
 @implementation NaviSearchRoutes
 
@@ -49,12 +56,23 @@
         
         return polygonRender;
     }
-    else if ([overlay isKindOfClass:[QPolyline class]])
+//    else if ([overlay isKindOfClass:[QPolyline class]])
+//    {
+//        QPolylineView *polylineRender = [[QPolylineView alloc] initWithPolyline:overlay];
+//        polylineRender.lineWidth   = 5;
+//        polylineRender.strokeColor = [UIColor greenColor];
+//
+//        return polylineRender;
+//    }
+    else if([overlay isKindOfClass:[TrafficPolyline class]])
     {
-        QPolylineView *polylineRender = [[QPolylineView alloc] initWithPolyline:overlay];
-        polylineRender.lineWidth   = 5;
-        polylineRender.strokeColor = [UIColor greenColor];
-        
+        TrafficPolyline *tl = (TrafficPolyline*)overlay;
+        QTexturePolylineView *polylineRender = [[QTexturePolylineView alloc] initWithPolyline:overlay];
+        polylineRender.drawType = QTextureLineDrawType_ColorLine;
+        polylineRender.drawSymbol = YES;
+        polylineRender.segmentColor = tl.arrLine;
+        polylineRender.lineWidth   = 10;
+        polylineRender.borderWidth = 1.5;
         return polylineRender;
     }
     
@@ -112,7 +130,7 @@
     annotation.coordinate = CLLocationCoordinate2DMake(39.9894, 116.3271);
     [annotations addObject:annotation];
     
-    
+     __weak typeof (self) weakSelf = self;
     
     [self.carManager searchNavigationRoutesWithRequest:request completion:^(TNKCarRouteSearchResult *result, NSError *error) {
         if(error == nil)
@@ -124,13 +142,58 @@
             {
                 line[i] = route[i].coordinate;
             }
-            [self.naviView.naviMapView addOverlay:[[QPolyline alloc] initWithCoordinates:line count:len]];
+            
+            weakSelf.trafficLine = [weakSelf polylineForNaviResult:result];
+            [weakSelf.naviView.naviMapView addOverlay: weakSelf.trafficLine];
             [annotations enumerateObjectsUsingBlock:^(QPointAnnotation * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                [self.naviView.naviMapView addAnnotation:obj];
+                [weakSelf.naviView.naviMapView addAnnotation:obj];
             }];
             //[self.naviView.naviMapView addOverlays:annotations];
         }
     }];
+}
+
+- (TrafficPolyline *)polylineForNaviResult:(TNKCarRouteSearchResult *)result
+{
+    if (result.routes.count == 0)
+    {
+        NSLog(@"route.count = 0");
+        return nil;
+    }
+    TNKCarRouteSearchRoutePlan *plan = result.routes[0];
+    TNKCarRouteSearchRouteLine *line = plan.line;
+    
+
+    
+//    for (int i = 0; i < line.wayPoints.count; i++) {
+//        NSLog(@"wayPoints uid: %@", line.wayPoints[i].uid);
+//        NSLog(@"wayPoints index: %d", line.wayPoints[i].wayPointIndex);
+//    }
+    
+    NSArray <TNKRouteTrafficData *> *segments = line.initialTrafficDataArray;
+    int count = (int)line.coordinatePoints.count;
+    CLLocationCoordinate2D *coordinateArray = (CLLocationCoordinate2D*)malloc(sizeof(CLLocationCoordinate2D)*count);
+    for (int i = 0; i < count; ++i)
+    {
+        coordinateArray[i] = [(TNKCoordinatePoint*)[line.coordinatePoints objectAtIndex:i] coordinate];
+    }
+    
+    NSMutableArray* routeLineArray = [NSMutableArray array];
+    for (TNKRouteTrafficData *trafficData in segments) {
+        QSegmentColor *subLine = [[QSegmentColor alloc] init];
+        subLine.startIndex = (int)trafficData.from;
+        subLine.endIndex   = (int)trafficData.to;
+        subLine.color = TNKRouteTrafficStatusColor(trafficData.color);
+        subLine.borderColor = TNKRouteTrafficStatusBorderColor(trafficData.color);
+        [routeLineArray addObject:subLine];
+    }
+    
+    // 创建路线,一条路线由一个点数组和线段数组组成
+    TrafficPolyline *routeOverlay = [[TrafficPolyline alloc] initWithCoordinates:coordinateArray count:count arrLine:routeLineArray];
+    
+    free(coordinateArray);
+    
+    return routeOverlay;
 }
 
 #pragma mark - Life Cycle
