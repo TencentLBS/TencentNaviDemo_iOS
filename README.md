@@ -20,6 +20,10 @@
 
 #### 2. 引入SDK
 在`TARGETS->Build Phases->Link Binary Libraries`中添加`WebP.framework`、导航SDK`TNKNavigationKit.framework`，在`TARGETS->Build Phases->Copy Bundle Resources`中添加资源文件`TencentNavigationKit.bundle`。
+
+在library目录下，新建QMapKit目录和TNKNavigationKit目录，并且把对应的地图sdk和导航sdk放到该目录下，
+![](大文件.png)
+
 由于导航SDK依赖地图SDK，还需要依照[http://lbs.qq.com/ios_v1/guide-project-setup.html](http://lbs.qq.com/ios_v1/guide-project-setup.html)添加地图SDK。
 
 #### 3. 申请和设置开发密钥
