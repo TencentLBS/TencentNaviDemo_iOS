@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03538FFF246A8B71002DE0CF /* QMapKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 03538FFE246A8B71002DE0CF /* QMapKit.bundle */; };
+		03539001246A8B8B002DE0CF /* TencentNavigationKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 03539000246A8B8B002DE0CF /* TencentNavigationKit.bundle */; };
 		03B0AFAB23B5ABC6000BF8BC /* DefaultNaviController.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B0AFA923B5ABC6000BF8BC /* DefaultNaviController.h */; };
 		03B0AFAC23B5ABC6000BF8BC /* DefaultNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B0AFAA23B5ABC6000BF8BC /* DefaultNaviController.m */; };
+		03DF98C824285FF900A7752C /* TrafficPolyline.h in Headers */ = {isa = PBXBuildFile; fileRef = 03DF98C624285FF900A7752C /* TrafficPolyline.h */; };
+		03DF98C924285FF900A7752C /* TrafficPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DF98C724285FF900A7752C /* TrafficPolyline.m */; };
 		319793F51F3471ED007486B9 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 319793F41F3471DB007486B9 /* ball.png */; };
 		31BFE8DA1F3464180026C9BB /* colorSample.png in Resources */ = {isa = PBXBuildFile; fileRef = 31BFE8D91F3463FC0026C9BB /* colorSample.png */; };
 		31BFE8E61F34675B0026C9BB /* foot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 31BFE8E51F3467550026C9BB /* foot.jpg */; };
@@ -38,10 +42,8 @@
 		65A0CDF21F1601F000811B83 /* heatTest_2.heat in Resources */ = {isa = PBXBuildFile; fileRef = 65A0CDD51F1601F000811B83 /* heatTest_2.heat */; };
 		65A0CDF31F1601F000811B83 /* marker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65A0CDD61F1601F000811B83 /* marker@2x.png */; };
 		65A0CDF51F1601F000811B83 /* test_location_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65A0CDD81F1601F000811B83 /* test_location_1@2x.png */; };
-		8C7CFDD520C8CAE90057BCB5 /* QMapKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8C7CFDD420C8CAE90057BCB5 /* QMapKit.bundle */; };
 		8F1D2BA621A68F470020BE80 /* TNKNavigationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1D2BA521A68F470020BE80 /* TNKNavigationKit.framework */; };
 		8FA8D495217878B800D0E884 /* QMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA8D494217878B800D0E884 /* QMapKit.framework */; };
-		8FA8D49921787D5800D0E884 /* TencentNavigationKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8FA8D49821787D5700D0E884 /* TencentNavigationKit.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,8 +69,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03538FFE246A8B71002DE0CF /* QMapKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = QMapKit.bundle; path = QMapKitDemo/library/QMapKit/QMapKit.framework/QMapKit.bundle; sourceTree = "<group>"; };
+		03539000246A8B8B002DE0CF /* TencentNavigationKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TencentNavigationKit.bundle; path = QMapKitDemo/library/TNKNavigationKit/TNKNavigationKit.framework/TencentNavigationKit.bundle; sourceTree = "<group>"; };
 		03B0AFA923B5ABC6000BF8BC /* DefaultNaviController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultNaviController.h; sourceTree = "<group>"; };
 		03B0AFAA23B5ABC6000BF8BC /* DefaultNaviController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultNaviController.m; sourceTree = "<group>"; };
+		03DF98C624285FF900A7752C /* TrafficPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrafficPolyline.h; sourceTree = "<group>"; };
+		03DF98C724285FF900A7752C /* TrafficPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrafficPolyline.m; sourceTree = "<group>"; };
 		319793F41F3471DB007486B9 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
 		31BFE8D91F3463FC0026C9BB /* colorSample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colorSample.png; sourceTree = "<group>"; };
 		31BFE8E51F3467550026C9BB /* foot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = foot.jpg; sourceTree = "<group>"; };
@@ -135,6 +141,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03DF98C524285FE100A7752C /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				03DF98C624285FF900A7752C /* TrafficPolyline.h */,
+				03DF98C724285FF900A7752C /* TrafficPolyline.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		600029EA21172E550044A9CF /* Navi */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +189,8 @@
 		65A0CD7B1F16008B00811B83 = {
 			isa = PBXGroup;
 			children = (
+				03539000246A8B8B002DE0CF /* TencentNavigationKit.bundle */,
+				03538FFE246A8B71002DE0CF /* QMapKit.bundle */,
 				8FA8D49821787D5700D0E884 /* TencentNavigationKit.bundle */,
 				65A0CD861F16008B00811B83 /* QMapKitDemo */,
 				65A0CD851F16008B00811B83 /* Products */,
@@ -216,6 +233,7 @@
 		65A0CD9E1F1601F000811B83 /* Demos */ = {
 			isa = PBXGroup;
 			children = (
+				03DF98C524285FE100A7752C /* Tools */,
 				65A0CD9F1F1601F000811B83 /* Controllers */,
 				65A0CDC61F1601F000811B83 /* EntryData.h */,
 				65A0CDC71F1601F000811B83 /* EntryData.m */,
@@ -270,6 +288,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03DF98C824285FF900A7752C /* TrafficPolyline.h in Headers */,
 				03B0AFAB23B5ABC6000BF8BC /* DefaultNaviController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,12 +356,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03539001246A8B8B002DE0CF /* TencentNavigationKit.bundle in Resources */,
+				03538FFF246A8B71002DE0CF /* QMapKit.bundle in Resources */,
 				65A0CDEF1F1601F000811B83 /* car@2x.png in Resources */,
 				65A0CDF51F1601F000811B83 /* test_location_1@2x.png in Resources */,
 				319793F51F3471ED007486B9 /* ball.png in Resources */,
 				65A0CDF11F1601F000811B83 /* gps_map@2x.png in Resources */,
-				8C7CFDD520C8CAE90057BCB5 /* QMapKit.bundle in Resources */,
-				8FA8D49921787D5800D0E884 /* TencentNavigationKit.bundle in Resources */,
 				65A0CDF21F1601F000811B83 /* heatTest_2.heat in Resources */,
 				65A0CDF01F1601F000811B83 /* good@2x.png in Resources */,
 				31BFE8E81F346D760026C9BB /* arrow.png in Resources */,
@@ -368,6 +387,7 @@
 				60EEBA3B2119AE04008CFEF0 /* RealNaviController.m in Sources */,
 				60EEBA3E2119B482008CFEF0 /* SimuNaviController.m in Sources */,
 				60EEBA34211875E0008CFEF0 /* BaseNaviViewController.m in Sources */,
+				03DF98C924285FF900A7752C /* TrafficPolyline.m in Sources */,
 				65A0CD8C1F16008B00811B83 /* AppDelegate.m in Sources */,
 				65A0CDEB1F1601F000811B83 /* EntryViewController.m in Sources */,
 				6052EDA2211A9A88008A4FF2 /* NaviModeController.m in Sources */,
@@ -509,6 +529,8 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/QMapKitDemo/library/QMapKit",
+					"$(PROJECT_DIR)/QMapKitDemo/library/TNKNavigationKit",
 					"$(PROJECT_DIR)/QMapKitDemo/library",
 				);
 				INFOPLIST_FILE = QMapKitDemo/Info.plist;
@@ -529,6 +551,8 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/QMapKitDemo/library/QMapKit",
+					"$(PROJECT_DIR)/QMapKitDemo/library/TNKNavigationKit",
 					"$(PROJECT_DIR)/QMapKitDemo/library",
 				);
 				INFOPLIST_FILE = QMapKitDemo/Info.plist;
