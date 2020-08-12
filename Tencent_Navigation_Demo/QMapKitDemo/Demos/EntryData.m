@@ -50,7 +50,7 @@
             [cellArray addObject:cell];
             
             cell = [[Cell alloc] init];
-            cell.title = @"模拟";
+            cell.title = @"模拟导航";
             cell.controllerClassName = @"SimuNaviController";
             [cellArray addObject:cell];
         }
@@ -112,6 +112,26 @@
             cell.controllerClassName = @"AddMapKitNaviController";
             [cellArray addObject:cell];
 
+        }
+    }
+    
+    {
+        Section *section = [[Section alloc] init];
+        section.title = @"步骑行导航";
+        NSMutableArray<Cell *> *cellArray = [NSMutableArray array];
+        section.cells = cellArray;
+        
+        [sectionArray addObject:section];
+        {
+            Cell *cell = [[Cell alloc] init];
+            cell.title = @"步行导航";
+            cell.controllerClassName = @"WalkNaviViewController";
+            [cellArray addObject:cell];
+            
+            cell = [[Cell alloc] init];
+            cell.title = @"骑行导航";
+            cell.controllerClassName = @"RideNaviViewController";
+            [cellArray addObject:cell];
         }
     }
     
