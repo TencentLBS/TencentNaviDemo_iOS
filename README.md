@@ -25,7 +25,7 @@
 ![](大文件.png)
 
 由于导航SDK依赖地图SDK，还需要依照[http://lbs.qq.com/ios_v1/guide-project-setup.html](http://lbs.qq.com/ios_v1/guide-project-setup.html)添加地图SDK。
-
+从导航SDK v5.2.2版本开始必须引入定位SDK (v4.9.5及其以上版本)，该定位SDK可以和腾讯的同学联系给出。
 #### 3. 申请和设置开发密钥
 前往[http://lbs.qq.com/console/mykey.html](http://lbs.qq.com/console/mykey.html)申请开发密钥，分别在QMapServices和TNKNaviServices的APIKey属性上设置。
 ```objc
