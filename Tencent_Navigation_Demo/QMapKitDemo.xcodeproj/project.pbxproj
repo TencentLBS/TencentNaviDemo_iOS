@@ -14,6 +14,10 @@
 		030CBF7124E38F870017E616 /* RideNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 030CBF6F24E38F870017E616 /* RideNaviViewController.m */; };
 		030CBF7324E3ACF60017E616 /* TNKNavigationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030CBF7224E3ACF60017E616 /* TNKNavigationKit.framework */; };
 		030CBF7724E3BE9E0017E616 /* TencentNavigationKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 030CBF7624E3BE9E0017E616 /* TencentNavigationKit.bundle */; };
+		030CBF7A24ECCB1C0017E616 /* NaviRouteColorViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 030CBF7824ECCB1C0017E616 /* NaviRouteColorViewController.h */; };
+		030CBF7B24ECCB1C0017E616 /* NaviRouteColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 030CBF7924ECCB1C0017E616 /* NaviRouteColorViewController.m */; };
+		030CBF7E24ECCCA60017E616 /* NaviRouteSymbolGapViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 030CBF7C24ECCCA60017E616 /* NaviRouteSymbolGapViewController.h */; };
+		030CBF7F24ECCCA60017E616 /* NaviRouteSymbolGapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 030CBF7D24ECCCA60017E616 /* NaviRouteSymbolGapViewController.m */; };
 		03538FFF246A8B71002DE0CF /* QMapKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 03538FFE246A8B71002DE0CF /* QMapKit.bundle */; };
 		03B0AFAB23B5ABC6000BF8BC /* DefaultNaviController.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B0AFA923B5ABC6000BF8BC /* DefaultNaviController.h */; };
 		03B0AFAC23B5ABC6000BF8BC /* DefaultNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B0AFAA23B5ABC6000BF8BC /* DefaultNaviController.m */; };
@@ -82,6 +86,10 @@
 		030CBF7224E3ACF60017E616 /* TNKNavigationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TNKNavigationKit.framework; sourceTree = "<group>"; };
 		030CBF7424E3AD3B0017E616 /* TencentNavigationKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TencentNavigationKit.bundle; path = QMapKitDemo/library/TNKNavigationKit.framework/TencentNavigationKit.bundle; sourceTree = "<group>"; };
 		030CBF7624E3BE9E0017E616 /* TencentNavigationKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TencentNavigationKit.bundle; path = QMapKitDemo/library/TNKNavigationKit/TNKNavigationKit.framework/TencentNavigationKit.bundle; sourceTree = "<group>"; };
+		030CBF7824ECCB1C0017E616 /* NaviRouteColorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaviRouteColorViewController.h; sourceTree = "<group>"; };
+		030CBF7924ECCB1C0017E616 /* NaviRouteColorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaviRouteColorViewController.m; sourceTree = "<group>"; };
+		030CBF7C24ECCCA60017E616 /* NaviRouteSymbolGapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaviRouteSymbolGapViewController.h; sourceTree = "<group>"; };
+		030CBF7D24ECCCA60017E616 /* NaviRouteSymbolGapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaviRouteSymbolGapViewController.m; sourceTree = "<group>"; };
 		03538FFE246A8B71002DE0CF /* QMapKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = QMapKit.bundle; path = QMapKitDemo/library/QMapKit/QMapKit.framework/QMapKit.bundle; sourceTree = "<group>"; };
 		03B0AFA923B5ABC6000BF8BC /* DefaultNaviController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultNaviController.h; sourceTree = "<group>"; };
 		03B0AFAA23B5ABC6000BF8BC /* DefaultNaviController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultNaviController.m; sourceTree = "<group>"; };
@@ -196,6 +204,10 @@
 				6052EDA4211AB421008A4FF2 /* NaviDayNightController.m */,
 				6052EDA6211AB96C008A4FF2 /* NaviRouteWidthController.h */,
 				6052EDA7211AB99F008A4FF2 /* NaviRouteWidthController.m */,
+				030CBF7824ECCB1C0017E616 /* NaviRouteColorViewController.h */,
+				030CBF7924ECCB1C0017E616 /* NaviRouteColorViewController.m */,
+				030CBF7C24ECCCA60017E616 /* NaviRouteSymbolGapViewController.h */,
+				030CBF7D24ECCCA60017E616 /* NaviRouteSymbolGapViewController.m */,
 				03B0AFA923B5ABC6000BF8BC /* DefaultNaviController.h */,
 				03B0AFAA23B5ABC6000BF8BC /* DefaultNaviController.m */,
 				6052EDA9211ADC2B008A4FF2 /* CustomNaviController.h */,
@@ -320,7 +332,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				030CBF7E24ECCCA60017E616 /* NaviRouteSymbolGapViewController.h in Headers */,
 				030CBF6C24E38F780017E616 /* WalkNaviViewController.h in Headers */,
+				030CBF7A24ECCB1C0017E616 /* NaviRouteColorViewController.h in Headers */,
 				03DF98C824285FF900A7752C /* TrafficPolyline.h in Headers */,
 				03B0AFAB23B5ABC6000BF8BC /* DefaultNaviController.h in Headers */,
 				030CBF7024E38F870017E616 /* RideNaviViewController.h in Headers */,
@@ -425,9 +439,11 @@
 				03DF98C924285FF900A7752C /* TrafficPolyline.m in Sources */,
 				65A0CD8C1F16008B00811B83 /* AppDelegate.m in Sources */,
 				030CBF7124E38F870017E616 /* RideNaviViewController.m in Sources */,
+				030CBF7B24ECCB1C0017E616 /* NaviRouteColorViewController.m in Sources */,
 				65A0CDEB1F1601F000811B83 /* EntryViewController.m in Sources */,
 				6052EDA2211A9A88008A4FF2 /* NaviModeController.m in Sources */,
 				603D1FDE211D234E0017CE94 /* AddMapKitNaviController.m in Sources */,
+				030CBF7F24ECCCA60017E616 /* NaviRouteSymbolGapViewController.m in Sources */,
 				6052EDA8211AB99F008A4FF2 /* NaviRouteWidthController.m in Sources */,
 				6052EDA5211AB421008A4FF2 /* NaviDayNightController.m in Sources */,
 				65A0CDEA1F1601F000811B83 /* EntryData.m in Sources */,

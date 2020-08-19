@@ -79,6 +79,17 @@
             cell.title = @"设置路线宽度";
             cell.controllerClassName = @"NaviRouteWidthController";
             [cellArray addObject:cell];
+            
+            cell = [[Cell alloc] init];
+            cell.title = @"设置路况线颜色";
+            cell.controllerClassName = @"NaviRouteColorViewController";
+            [cellArray addObject:cell];
+            
+            cell = [[Cell alloc] init];
+            cell.title = @"设置路况箭头间隔";
+            cell.controllerClassName = @"NaviRouteSymbolGapViewController";
+            [cellArray addObject:cell];
+            
         }
     }
     
