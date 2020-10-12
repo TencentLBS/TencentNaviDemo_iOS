@@ -201,8 +201,10 @@ if(error == nil)
 ```
 **4. 结束导航**
 
-到达终点后会自动结束导航，导航过程中可以手动结束导航：
+到达终点后需手动结束导航并且注销代理：
 ```objc
+[self.carManager unregisterUIDelegate:self.carNaviView];
+[self.carManager unregisterUIDelegate:self];
 [self.carManager stop];
 ```
 非导航状态下，用户可以清除导航线路相关UI，包括导航路线、自车点以及动态添加的限速等标注：（非导航状态下调用无效）
