@@ -48,7 +48,7 @@
 {
     [self.carManager unregisterUIDelegate:self.naviView];
     
-    [self.carManager stop];
+//    [self.carManager stop];
 }
 
 #pragma mark - Life Cycle

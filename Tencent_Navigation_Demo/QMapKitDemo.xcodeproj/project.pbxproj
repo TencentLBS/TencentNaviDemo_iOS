@@ -19,6 +19,8 @@
 		030CBF7E24ECCCA60017E616 /* NaviRouteSymbolGapViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 030CBF7C24ECCCA60017E616 /* NaviRouteSymbolGapViewController.h */; };
 		030CBF7F24ECCCA60017E616 /* NaviRouteSymbolGapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 030CBF7D24ECCCA60017E616 /* NaviRouteSymbolGapViewController.m */; };
 		03538FFF246A8B71002DE0CF /* QMapKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 03538FFE246A8B71002DE0CF /* QMapKit.bundle */; };
+		0380BCF6254A7225003035D5 /* AutoScaleViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0380BCF4254A7225003035D5 /* AutoScaleViewController.h */; };
+		0380BCF7254A7225003035D5 /* AutoScaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0380BCF5254A7225003035D5 /* AutoScaleViewController.m */; };
 		03B0AFAB23B5ABC6000BF8BC /* DefaultNaviController.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B0AFA923B5ABC6000BF8BC /* DefaultNaviController.h */; };
 		03B0AFAC23B5ABC6000BF8BC /* DefaultNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B0AFAA23B5ABC6000BF8BC /* DefaultNaviController.m */; };
 		03DF98C824285FF900A7752C /* TrafficPolyline.h in Headers */ = {isa = PBXBuildFile; fileRef = 03DF98C624285FF900A7752C /* TrafficPolyline.h */; };
@@ -91,6 +93,8 @@
 		030CBF7C24ECCCA60017E616 /* NaviRouteSymbolGapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaviRouteSymbolGapViewController.h; sourceTree = "<group>"; };
 		030CBF7D24ECCCA60017E616 /* NaviRouteSymbolGapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaviRouteSymbolGapViewController.m; sourceTree = "<group>"; };
 		03538FFE246A8B71002DE0CF /* QMapKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = QMapKit.bundle; path = QMapKitDemo/library/QMapKit/QMapKit.framework/QMapKit.bundle; sourceTree = "<group>"; };
+		0380BCF4254A7225003035D5 /* AutoScaleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoScaleViewController.h; sourceTree = "<group>"; };
+		0380BCF5254A7225003035D5 /* AutoScaleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoScaleViewController.m; sourceTree = "<group>"; };
 		03B0AFA923B5ABC6000BF8BC /* DefaultNaviController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultNaviController.h; sourceTree = "<group>"; };
 		03B0AFAA23B5ABC6000BF8BC /* DefaultNaviController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultNaviController.m; sourceTree = "<group>"; };
 		03DF98C624285FF900A7752C /* TrafficPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrafficPolyline.h; sourceTree = "<group>"; };
@@ -216,6 +220,8 @@
 				6052EDAD211B046F008A4FF2 /* AddKitNaviController.m */,
 				603D1FDC211D230D0017CE94 /* AddMapKitNaviController.h */,
 				603D1FDD211D234E0017CE94 /* AddMapKitNaviController.m */,
+				0380BCF4254A7225003035D5 /* AutoScaleViewController.h */,
+				0380BCF5254A7225003035D5 /* AutoScaleViewController.m */,
 			);
 			path = CarNavi;
 			sourceTree = "<group>";
@@ -338,6 +344,7 @@
 				03DF98C824285FF900A7752C /* TrafficPolyline.h in Headers */,
 				03B0AFAB23B5ABC6000BF8BC /* DefaultNaviController.h in Headers */,
 				030CBF7024E38F870017E616 /* RideNaviViewController.h in Headers */,
+				0380BCF6254A7225003035D5 /* AutoScaleViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0380BCF7254A7225003035D5 /* AutoScaleViewController.m in Sources */,
 				60EEBA3821195212008CFEF0 /* NaviSearchRoutes.m in Sources */,
 				6052EDAE211B046F008A4FF2 /* AddKitNaviController.m in Sources */,
 				030CBF6D24E38F780017E616 /* WalkNaviViewController.m in Sources */,

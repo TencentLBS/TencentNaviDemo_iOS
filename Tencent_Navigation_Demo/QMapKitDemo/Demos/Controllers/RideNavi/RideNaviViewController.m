@@ -31,7 +31,7 @@
 #pragma mark - Setups
 - (void)setupRideSDK {
     self.rideNaviManager = [[TNKRideNaviManager alloc] init];
-
+    self.rideNaviManager.enableInternalTTS = YES;
     self.rideNaviView = [[TNKRideNaviView alloc] initWithFrame:self.view.bounds];
     self.rideNaviView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.rideNaviView.externalEdgeInsets = UIEdgeInsetsMake(220, 40, 160, 40);

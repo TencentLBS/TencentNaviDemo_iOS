@@ -90,6 +90,10 @@
             cell.controllerClassName = @"NaviRouteSymbolGapViewController";
             [cellArray addObject:cell];
             
+            cell = [[Cell alloc] init];
+            cell.title = @"设置自动缩放比例尺";
+            cell.controllerClassName = @"AutoScaleViewController";
+            [cellArray addObject:cell];
         }
     }
     

@@ -31,6 +31,7 @@
 #pragma mark - Setups
 - (void)setupWalkSDK {
     self.walkNaviManager = [[TNKWalkNaviManager alloc] init];
+    self.walkNaviManager.enableInternalTTS = YES;
 
     self.walkNaviView = [[TNKWalkNaviView alloc] initWithFrame:self.view.bounds];
     self.walkNaviView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
