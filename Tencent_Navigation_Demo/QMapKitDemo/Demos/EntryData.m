@@ -26,7 +26,23 @@
     NSMutableArray<Section *> *sectionArray = [NSMutableArray array];
     entry.sections = sectionArray;
     
-    // Map Section.
+
+    {
+        Section *section = [[Section alloc] init];
+        section.title = @"导航全流程";
+        NSMutableArray<Cell *> *cellArray = [NSMutableArray array];
+        section.cells = cellArray;
+    
+        [sectionArray addObject:section];
+        
+        // 基础导航
+        {
+            Cell *cell = [[Cell alloc] init];
+            cell.title = @"导航全流程";
+            cell.controllerClassName = @"CarPlanController";
+            [cellArray addObject:cell];
+        }
+    }
     
     // Navi Section.
     {

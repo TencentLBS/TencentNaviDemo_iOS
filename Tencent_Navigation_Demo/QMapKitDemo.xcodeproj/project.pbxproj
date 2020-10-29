@@ -21,6 +21,38 @@
 		03538FFF246A8B71002DE0CF /* QMapKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 03538FFE246A8B71002DE0CF /* QMapKit.bundle */; };
 		0380BCF6254A7225003035D5 /* AutoScaleViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0380BCF4254A7225003035D5 /* AutoScaleViewController.h */; };
 		0380BCF7254A7225003035D5 /* AutoScaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0380BCF5254A7225003035D5 /* AutoScaleViewController.m */; };
+		0380BD13254A97E0003035D5 /* MathTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0380BD11254A97DF003035D5 /* MathTool.m */; };
+		0380BD14254A97E0003035D5 /* MathTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 0380BD12254A97E0003035D5 /* MathTool.h */; };
+		0380BD17254A97EB003035D5 /* DeviceUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0380BD15254A97EB003035D5 /* DeviceUtils.h */; };
+		0380BD18254A97EB003035D5 /* DeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0380BD16254A97EB003035D5 /* DeviceUtils.m */; };
+		0380BD1B254A980B003035D5 /* ReplaceUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0380BD19254A9808003035D5 /* ReplaceUnicode.m */; };
+		0380BD1C254A980B003035D5 /* ReplaceUnicode.h in Headers */ = {isa = PBXBuildFile; fileRef = 0380BD1A254A980B003035D5 /* ReplaceUnicode.h */; };
+		0380BD25254A982F003035D5 /* SearchManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0380BD1D254A982E003035D5 /* SearchManager.h */; };
+		0380BD26254A982F003035D5 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0380BD1E254A982E003035D5 /* SearchViewController.m */; };
+		0380BD27254A982F003035D5 /* SearchRecordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0380BD1F254A982E003035D5 /* SearchRecordTableViewCell.m */; };
+		0380BD28254A982F003035D5 /* SearchRecordTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0380BD20254A982E003035D5 /* SearchRecordTableViewCell.h */; };
+		0380BD29254A982F003035D5 /* SearchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0380BD21254A982E003035D5 /* SearchManager.m */; };
+		0380BD2A254A982F003035D5 /* SearchResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0380BD22254A982E003035D5 /* SearchResultTableViewCell.m */; };
+		0380BD2B254A982F003035D5 /* SearchResultTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0380BD23254A982E003035D5 /* SearchResultTableViewCell.h */; };
+		0380BD2C254A982F003035D5 /* SearchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0380BD24254A982F003035D5 /* SearchViewController.h */; };
+		0380BD2F254A984A003035D5 /* NavigationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0380BD2D254A9849003035D5 /* NavigationViewController.h */; };
+		0380BD30254A984A003035D5 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0380BD2E254A984A003035D5 /* NavigationViewController.m */; };
+		0380BD33254A9B25003035D5 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0380BD32254A9B25003035D5 /* SVProgressHUD.bundle */; };
+		0380BD3A254A9B44003035D5 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0380BD35254A9B43003035D5 /* SVIndefiniteAnimatedView.m */; };
+		0380BD3B254A9B44003035D5 /* SVProgressAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0380BD36254A9B44003035D5 /* SVProgressAnimatedView.h */; };
+		0380BD3C254A9B44003035D5 /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0380BD37254A9B44003035D5 /* SVIndefiniteAnimatedView.h */; };
+		0380BD3D254A9B44003035D5 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0380BD38254A9B44003035D5 /* SVProgressAnimatedView.m */; };
+		0380BD3E254A9B44003035D5 /* SVProgressHUD-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 0380BD39254A9B44003035D5 /* SVProgressHUD-Prefix.pch */; };
+		0380BD43254A9B4B003035D5 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0380BD3F254A9B4B003035D5 /* SVRadialGradientLayer.m */; };
+		0380BD44254A9B4B003035D5 /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0380BD40254A9B4B003035D5 /* SVRadialGradientLayer.h */; };
+		0380BD45254A9B4B003035D5 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0380BD41254A9B4B003035D5 /* SVProgressHUD.m */; };
+		0380BD46254A9B4B003035D5 /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 0380BD42254A9B4B003035D5 /* SVProgressHUD.h */; };
+		0380BD49254A9C3A003035D5 /* CarPlanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0380BD47254A9C39003035D5 /* CarPlanController.m */; };
+		0380BD4A254A9C3A003035D5 /* CarPlanController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0380BD48254A9C3A003035D5 /* CarPlanController.h */; };
+		0380BD4F254A9D29003035D5 /* RoutePolyline.h in Headers */ = {isa = PBXBuildFile; fileRef = 0380BD4B254A9D28003035D5 /* RoutePolyline.h */; };
+		0380BD50254A9D29003035D5 /* NaviPoi.m in Sources */ = {isa = PBXBuildFile; fileRef = 0380BD4C254A9D29003035D5 /* NaviPoi.m */; };
+		0380BD51254A9D29003035D5 /* NaviPoi.h in Headers */ = {isa = PBXBuildFile; fileRef = 0380BD4D254A9D29003035D5 /* NaviPoi.h */; };
+		0380BD52254A9D29003035D5 /* RoutePolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 0380BD4E254A9D29003035D5 /* RoutePolyline.m */; };
 		03B0AFAB23B5ABC6000BF8BC /* DefaultNaviController.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B0AFA923B5ABC6000BF8BC /* DefaultNaviController.h */; };
 		03B0AFAC23B5ABC6000BF8BC /* DefaultNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B0AFAA23B5ABC6000BF8BC /* DefaultNaviController.m */; };
 		03DF98C824285FF900A7752C /* TrafficPolyline.h in Headers */ = {isa = PBXBuildFile; fileRef = 03DF98C624285FF900A7752C /* TrafficPolyline.h */; };
@@ -95,6 +127,38 @@
 		03538FFE246A8B71002DE0CF /* QMapKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = QMapKit.bundle; path = QMapKitDemo/library/QMapKit/QMapKit.framework/QMapKit.bundle; sourceTree = "<group>"; };
 		0380BCF4254A7225003035D5 /* AutoScaleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoScaleViewController.h; sourceTree = "<group>"; };
 		0380BCF5254A7225003035D5 /* AutoScaleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoScaleViewController.m; sourceTree = "<group>"; };
+		0380BD11254A97DF003035D5 /* MathTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathTool.m; sourceTree = "<group>"; };
+		0380BD12254A97E0003035D5 /* MathTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathTool.h; sourceTree = "<group>"; };
+		0380BD15254A97EB003035D5 /* DeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceUtils.h; sourceTree = "<group>"; };
+		0380BD16254A97EB003035D5 /* DeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUtils.m; sourceTree = "<group>"; };
+		0380BD19254A9808003035D5 /* ReplaceUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplaceUnicode.m; sourceTree = "<group>"; };
+		0380BD1A254A980B003035D5 /* ReplaceUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplaceUnicode.h; sourceTree = "<group>"; };
+		0380BD1D254A982E003035D5 /* SearchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchManager.h; sourceTree = "<group>"; };
+		0380BD1E254A982E003035D5 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		0380BD1F254A982E003035D5 /* SearchRecordTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchRecordTableViewCell.m; sourceTree = "<group>"; };
+		0380BD20254A982E003035D5 /* SearchRecordTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchRecordTableViewCell.h; sourceTree = "<group>"; };
+		0380BD21254A982E003035D5 /* SearchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchManager.m; sourceTree = "<group>"; };
+		0380BD22254A982E003035D5 /* SearchResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultTableViewCell.m; sourceTree = "<group>"; };
+		0380BD23254A982E003035D5 /* SearchResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultTableViewCell.h; sourceTree = "<group>"; };
+		0380BD24254A982F003035D5 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		0380BD2D254A9849003035D5 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		0380BD2E254A984A003035D5 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		0380BD32254A9B25003035D5 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		0380BD35254A9B43003035D5 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		0380BD36254A9B44003035D5 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		0380BD37254A9B44003035D5 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		0380BD38254A9B44003035D5 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		0380BD39254A9B44003035D5 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		0380BD3F254A9B4B003035D5 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		0380BD40254A9B4B003035D5 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		0380BD41254A9B4B003035D5 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		0380BD42254A9B4B003035D5 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		0380BD47254A9C39003035D5 /* CarPlanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarPlanController.m; sourceTree = "<group>"; };
+		0380BD48254A9C3A003035D5 /* CarPlanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarPlanController.h; sourceTree = "<group>"; };
+		0380BD4B254A9D28003035D5 /* RoutePolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutePolyline.h; sourceTree = "<group>"; };
+		0380BD4C254A9D29003035D5 /* NaviPoi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaviPoi.m; sourceTree = "<group>"; };
+		0380BD4D254A9D29003035D5 /* NaviPoi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviPoi.h; sourceTree = "<group>"; };
+		0380BD4E254A9D29003035D5 /* RoutePolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutePolyline.m; sourceTree = "<group>"; };
 		03B0AFA923B5ABC6000BF8BC /* DefaultNaviController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultNaviController.h; sourceTree = "<group>"; };
 		03B0AFAA23B5ABC6000BF8BC /* DefaultNaviController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultNaviController.m; sourceTree = "<group>"; };
 		03DF98C624285FF900A7752C /* TrafficPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrafficPolyline.h; sourceTree = "<group>"; };
@@ -182,11 +246,88 @@
 			path = RideNavi;
 			sourceTree = "<group>";
 		};
+		0380BCF9254A76FE003035D5 /* NaviProcess */ = {
+			isa = PBXGroup;
+			children = (
+				0380BD09254A7C79003035D5 /* Plan */,
+				0380BD0A254A7C88003035D5 /* Navigation */,
+				0380BD0B254A7C96003035D5 /* Search */,
+			);
+			path = NaviProcess;
+			sourceTree = "<group>";
+		};
+		0380BD09254A7C79003035D5 /* Plan */ = {
+			isa = PBXGroup;
+			children = (
+				0380BD48254A9C3A003035D5 /* CarPlanController.h */,
+				0380BD47254A9C39003035D5 /* CarPlanController.m */,
+			);
+			path = Plan;
+			sourceTree = "<group>";
+		};
+		0380BD0A254A7C88003035D5 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				0380BD2D254A9849003035D5 /* NavigationViewController.h */,
+				0380BD2E254A984A003035D5 /* NavigationViewController.m */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		0380BD0B254A7C96003035D5 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				0380BD1D254A982E003035D5 /* SearchManager.h */,
+				0380BD21254A982E003035D5 /* SearchManager.m */,
+				0380BD20254A982E003035D5 /* SearchRecordTableViewCell.h */,
+				0380BD1F254A982E003035D5 /* SearchRecordTableViewCell.m */,
+				0380BD23254A982E003035D5 /* SearchResultTableViewCell.h */,
+				0380BD22254A982E003035D5 /* SearchResultTableViewCell.m */,
+				0380BD24254A982F003035D5 /* SearchViewController.h */,
+				0380BD1E254A982E003035D5 /* SearchViewController.m */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		0380BD31254A98E6003035D5 /* Dependency */ = {
+			isa = PBXGroup;
+			children = (
+				0380BD34254A9B2B003035D5 /* SVProgressHUD */,
+			);
+			path = Dependency;
+			sourceTree = "<group>";
+		};
+		0380BD34254A9B2B003035D5 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				0380BD37254A9B44003035D5 /* SVIndefiniteAnimatedView.h */,
+				0380BD35254A9B43003035D5 /* SVIndefiniteAnimatedView.m */,
+				0380BD36254A9B44003035D5 /* SVProgressAnimatedView.h */,
+				0380BD38254A9B44003035D5 /* SVProgressAnimatedView.m */,
+				0380BD39254A9B44003035D5 /* SVProgressHUD-Prefix.pch */,
+				0380BD42254A9B4B003035D5 /* SVProgressHUD.h */,
+				0380BD41254A9B4B003035D5 /* SVProgressHUD.m */,
+				0380BD40254A9B4B003035D5 /* SVRadialGradientLayer.h */,
+				0380BD3F254A9B4B003035D5 /* SVRadialGradientLayer.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		03DF98C524285FE100A7752C /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				0380BD12254A97E0003035D5 /* MathTool.h */,
+				0380BD11254A97DF003035D5 /* MathTool.m */,
 				03DF98C624285FF900A7752C /* TrafficPolyline.h */,
 				03DF98C724285FF900A7752C /* TrafficPolyline.m */,
+				0380BD4D254A9D29003035D5 /* NaviPoi.h */,
+				0380BD4C254A9D29003035D5 /* NaviPoi.m */,
+				0380BD4B254A9D28003035D5 /* RoutePolyline.h */,
+				0380BD4E254A9D29003035D5 /* RoutePolyline.m */,
+				0380BD1A254A980B003035D5 /* ReplaceUnicode.h */,
+				0380BD19254A9808003035D5 /* ReplaceUnicode.m */,
+				0380BD15254A97EB003035D5 /* DeviceUtils.h */,
+				0380BD16254A97EB003035D5 /* DeviceUtils.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -238,6 +379,7 @@
 		65A0CD7B1F16008B00811B83 = {
 			isa = PBXGroup;
 			children = (
+				0380BD32254A9B25003035D5 /* SVProgressHUD.bundle */,
 				030CBF7424E3AD3B0017E616 /* TencentNavigationKit.bundle */,
 				030CBF7624E3BE9E0017E616 /* TencentNavigationKit.bundle */,
 				03538FFE246A8B71002DE0CF /* QMapKit.bundle */,
@@ -258,6 +400,7 @@
 		65A0CD861F16008B00811B83 /* QMapKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0380BD31254A98E6003035D5 /* Dependency */,
 				65A0CD9E1F1601F000811B83 /* Demos */,
 				65A0CDCF1F1601F000811B83 /* library */,
 				65A0CDD11F1601F000811B83 /* Resources */,
@@ -295,6 +438,7 @@
 		65A0CD9F1F1601F000811B83 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0380BCF9254A76FE003035D5 /* NaviProcess */,
 				030CBF6924E38F430017E616 /* RideNavi */,
 				030CBF6824E38F360017E616 /* WalkNavi */,
 				600029EA21172E550044A9CF /* CarNavi */,
@@ -339,12 +483,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				030CBF7E24ECCCA60017E616 /* NaviRouteSymbolGapViewController.h in Headers */,
+				0380BD2C254A982F003035D5 /* SearchViewController.h in Headers */,
 				030CBF6C24E38F780017E616 /* WalkNaviViewController.h in Headers */,
 				030CBF7A24ECCB1C0017E616 /* NaviRouteColorViewController.h in Headers */,
+				0380BD3E254A9B44003035D5 /* SVProgressHUD-Prefix.pch in Headers */,
+				0380BD3C254A9B44003035D5 /* SVIndefiniteAnimatedView.h in Headers */,
+				0380BD4F254A9D29003035D5 /* RoutePolyline.h in Headers */,
 				03DF98C824285FF900A7752C /* TrafficPolyline.h in Headers */,
 				03B0AFAB23B5ABC6000BF8BC /* DefaultNaviController.h in Headers */,
+				0380BD1C254A980B003035D5 /* ReplaceUnicode.h in Headers */,
 				030CBF7024E38F870017E616 /* RideNaviViewController.h in Headers */,
+				0380BD25254A982F003035D5 /* SearchManager.h in Headers */,
+				0380BD51254A9D29003035D5 /* NaviPoi.h in Headers */,
+				0380BD2B254A982F003035D5 /* SearchResultTableViewCell.h in Headers */,
+				0380BD14254A97E0003035D5 /* MathTool.h in Headers */,
+				0380BD17254A97EB003035D5 /* DeviceUtils.h in Headers */,
+				0380BD46254A9B4B003035D5 /* SVProgressHUD.h in Headers */,
+				0380BD4A254A9C3A003035D5 /* CarPlanController.h in Headers */,
+				0380BD44254A9B4B003035D5 /* SVRadialGradientLayer.h in Headers */,
+				0380BD28254A982F003035D5 /* SearchRecordTableViewCell.h in Headers */,
 				0380BCF6254A7225003035D5 /* AutoScaleViewController.h in Headers */,
+				0380BD2F254A984A003035D5 /* NavigationViewController.h in Headers */,
+				0380BD3B254A9B44003035D5 /* SVProgressAnimatedView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +571,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0380BD33254A9B25003035D5 /* SVProgressHUD.bundle in Resources */,
 				030CBF7724E3BE9E0017E616 /* TencentNavigationKit.bundle in Resources */,
 				03538FFF246A8B71002DE0CF /* QMapKit.bundle in Resources */,
 				65A0CDEF1F1601F000811B83 /* car@2x.png in Resources */,
@@ -436,22 +597,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				0380BCF7254A7225003035D5 /* AutoScaleViewController.m in Sources */,
+				0380BD1B254A980B003035D5 /* ReplaceUnicode.m in Sources */,
+				0380BD30254A984A003035D5 /* NavigationViewController.m in Sources */,
+				0380BD49254A9C3A003035D5 /* CarPlanController.m in Sources */,
+				0380BD29254A982F003035D5 /* SearchManager.m in Sources */,
+				0380BD52254A9D29003035D5 /* RoutePolyline.m in Sources */,
 				60EEBA3821195212008CFEF0 /* NaviSearchRoutes.m in Sources */,
+				0380BD45254A9B4B003035D5 /* SVProgressHUD.m in Sources */,
 				6052EDAE211B046F008A4FF2 /* AddKitNaviController.m in Sources */,
+				0380BD26254A982F003035D5 /* SearchViewController.m in Sources */,
 				030CBF6D24E38F780017E616 /* WalkNaviViewController.m in Sources */,
+				0380BD13254A97E0003035D5 /* MathTool.m in Sources */,
 				6052EDAB211ADFAD008A4FF2 /* CustomNaviController.m in Sources */,
+				0380BD43254A9B4B003035D5 /* SVRadialGradientLayer.m in Sources */,
 				03B0AFAC23B5ABC6000BF8BC /* DefaultNaviController.m in Sources */,
+				0380BD3A254A9B44003035D5 /* SVIndefiniteAnimatedView.m in Sources */,
 				60EEBA3B2119AE04008CFEF0 /* RealNaviController.m in Sources */,
 				60EEBA3E2119B482008CFEF0 /* SimuNaviController.m in Sources */,
+				0380BD18254A97EB003035D5 /* DeviceUtils.m in Sources */,
+				0380BD3D254A9B44003035D5 /* SVProgressAnimatedView.m in Sources */,
 				60EEBA34211875E0008CFEF0 /* BaseNaviViewController.m in Sources */,
 				03DF98C924285FF900A7752C /* TrafficPolyline.m in Sources */,
+				0380BD27254A982F003035D5 /* SearchRecordTableViewCell.m in Sources */,
 				65A0CD8C1F16008B00811B83 /* AppDelegate.m in Sources */,
 				030CBF7124E38F870017E616 /* RideNaviViewController.m in Sources */,
 				030CBF7B24ECCB1C0017E616 /* NaviRouteColorViewController.m in Sources */,
 				65A0CDEB1F1601F000811B83 /* EntryViewController.m in Sources */,
 				6052EDA2211A9A88008A4FF2 /* NaviModeController.m in Sources */,
 				603D1FDE211D234E0017CE94 /* AddMapKitNaviController.m in Sources */,
+				0380BD50254A9D29003035D5 /* NaviPoi.m in Sources */,
 				030CBF7F24ECCCA60017E616 /* NaviRouteSymbolGapViewController.m in Sources */,
+				0380BD2A254A982F003035D5 /* SearchResultTableViewCell.m in Sources */,
 				6052EDA8211AB99F008A4FF2 /* NaviRouteWidthController.m in Sources */,
 				6052EDA5211AB421008A4FF2 /* NaviDayNightController.m in Sources */,
 				65A0CDEA1F1601F000811B83 /* EntryData.m in Sources */,

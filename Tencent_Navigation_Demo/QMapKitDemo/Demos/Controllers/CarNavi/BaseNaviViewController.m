@@ -31,8 +31,8 @@
     self.naviView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.naviView.mode = TNKCarNaviUIMode3DCarTowardsUp;
     self.naviView.hideNavigationPanel = NO;
-    self.naviView.TNKCarNaviFixCarProportion2D = CGPointMake(0.5, 0.5);
-    self.naviView.TNKCarNaviFixCarProportion3D = CGPointMake(0.5, 0.5);
+    self.naviView.TNKCarNaviFixCarProportion2D = CGPointMake(0.5, 0.75);
+    self.naviView.TNKCarNaviFixCarProportion3D = CGPointMake(0.5, 0.75);
     self.naviView.routeLineEraseType = 0;
     
     self.naviView.naviMapView.delegate = self;

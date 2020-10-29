@@ -10,7 +10,7 @@
 #import "EntryViewController.h"
 #import <QMapKit/QMapKit.h>
 #import <TNKNavigationKit/TNKNaviServices.h>
-
+#import <QMapKit/QMSSearchServices.h>
 @interface AppDelegate ()
 
 @end
@@ -26,8 +26,13 @@
     [QMapServices sharedServices].APIKey = @"";
     NSAssert([QMapServices sharedServices].APIKey.length != 0, @"Please configure API key before using QMapKit.framework");
 
+    [QMSSearchServices sharedServices].apiKey = @"";
+    NSAssert([QMapServices sharedServices].APIKey.length != 0, @"Please configure API key before using QMapKit.framework");
+    
     [TNKNaviServices sharedServices].APIKey = @"";
     NSAssert([TNKNaviServices sharedServices].APIKey.length != 0, @"Please configure API key before using TNKNavigationKit.framework");
+    
+    
     
     EntryViewController *entry = [[EntryViewController alloc] init];
     
