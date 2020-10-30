@@ -9,7 +9,6 @@
 #import "RealNaviController.h"
 
 @interface RealNaviController()
-@property BOOL flag;
 @end
 
 @implementation RealNaviController

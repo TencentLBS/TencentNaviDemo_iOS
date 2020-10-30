@@ -69,6 +69,7 @@
             cell.title = @"模拟导航";
             cell.controllerClassName = @"SimuNaviController";
             [cellArray addObject:cell];
+            
         }
     }
     
@@ -109,6 +110,11 @@
             cell = [[Cell alloc] init];
             cell.title = @"设置自动缩放比例尺";
             cell.controllerClassName = @"AutoScaleViewController";
+            [cellArray addObject:cell];
+            
+            cell = [[Cell alloc] init];
+            cell.title = @"设置自车点罗盘";
+            cell.controllerClassName = @"NaviCustomCarCompassViewController";
             [cellArray addObject:cell];
         }
     }

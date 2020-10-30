@@ -53,6 +53,9 @@
 		0380BD50254A9D29003035D5 /* NaviPoi.m in Sources */ = {isa = PBXBuildFile; fileRef = 0380BD4C254A9D29003035D5 /* NaviPoi.m */; };
 		0380BD51254A9D29003035D5 /* NaviPoi.h in Headers */ = {isa = PBXBuildFile; fileRef = 0380BD4D254A9D29003035D5 /* NaviPoi.h */; };
 		0380BD52254A9D29003035D5 /* RoutePolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 0380BD4E254A9D29003035D5 /* RoutePolyline.m */; };
+		0380BD81254BE6B4003035D5 /* NaviCustomCarCompassViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0380BD7F254BE6B4003035D5 /* NaviCustomCarCompassViewController.h */; };
+		0380BD82254BE6B4003035D5 /* NaviCustomCarCompassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0380BD80254BE6B4003035D5 /* NaviCustomCarCompassViewController.m */; };
+		0380BD88254BEB65003035D5 /* test.gps in Resources */ = {isa = PBXBuildFile; fileRef = 0380BD87254BEB65003035D5 /* test.gps */; };
 		03B0AFAB23B5ABC6000BF8BC /* DefaultNaviController.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B0AFA923B5ABC6000BF8BC /* DefaultNaviController.h */; };
 		03B0AFAC23B5ABC6000BF8BC /* DefaultNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B0AFAA23B5ABC6000BF8BC /* DefaultNaviController.m */; };
 		03DF98C824285FF900A7752C /* TrafficPolyline.h in Headers */ = {isa = PBXBuildFile; fileRef = 03DF98C624285FF900A7752C /* TrafficPolyline.h */; };
@@ -159,6 +162,9 @@
 		0380BD4C254A9D29003035D5 /* NaviPoi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaviPoi.m; sourceTree = "<group>"; };
 		0380BD4D254A9D29003035D5 /* NaviPoi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviPoi.h; sourceTree = "<group>"; };
 		0380BD4E254A9D29003035D5 /* RoutePolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutePolyline.m; sourceTree = "<group>"; };
+		0380BD7F254BE6B4003035D5 /* NaviCustomCarCompassViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaviCustomCarCompassViewController.h; sourceTree = "<group>"; };
+		0380BD80254BE6B4003035D5 /* NaviCustomCarCompassViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaviCustomCarCompassViewController.m; sourceTree = "<group>"; };
+		0380BD87254BEB65003035D5 /* test.gps */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.gps; sourceTree = "<group>"; };
 		03B0AFA923B5ABC6000BF8BC /* DefaultNaviController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultNaviController.h; sourceTree = "<group>"; };
 		03B0AFAA23B5ABC6000BF8BC /* DefaultNaviController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultNaviController.m; sourceTree = "<group>"; };
 		03DF98C624285FF900A7752C /* TrafficPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrafficPolyline.h; sourceTree = "<group>"; };
@@ -180,7 +186,7 @@
 		6052EDAC211B045A008A4FF2 /* AddKitNaviController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddKitNaviController.h; sourceTree = "<group>"; };
 		6052EDAD211B046F008A4FF2 /* AddKitNaviController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddKitNaviController.m; sourceTree = "<group>"; };
 		60B89DA621144C6900A678A6 /* WebP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebP.framework; sourceTree = "<group>"; };
-		60EEBA32211874F0008CFEF0 /* BaseNaviViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BaseNaviViewController.h; path = ../Navi/BaseNaviViewController.h; sourceTree = "<group>"; };
+		60EEBA32211874F0008CFEF0 /* BaseNaviViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNaviViewController.h; sourceTree = "<group>"; };
 		60EEBA33211875E0008CFEF0 /* BaseNaviViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNaviViewController.m; sourceTree = "<group>"; };
 		60EEBA3521193DE3008CFEF0 /* NaviSearchRoutes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaviSearchRoutes.h; sourceTree = "<group>"; };
 		60EEBA3721195212008CFEF0 /* NaviSearchRoutes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaviSearchRoutes.m; sourceTree = "<group>"; };
@@ -313,6 +319,66 @@
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
+		0380BD83254BEA54003035D5 /* BaseNavi */ = {
+			isa = PBXGroup;
+			children = (
+				60EEBA32211874F0008CFEF0 /* BaseNaviViewController.h */,
+				60EEBA33211875E0008CFEF0 /* BaseNaviViewController.m */,
+				60EEBA3521193DE3008CFEF0 /* NaviSearchRoutes.h */,
+				60EEBA3721195212008CFEF0 /* NaviSearchRoutes.m */,
+				60EEBA392119ACDF008CFEF0 /* RealNaviController.h */,
+				60EEBA3A2119AE03008CFEF0 /* RealNaviController.m */,
+				60EEBA3C2119B442008CFEF0 /* SimuNaviController.h */,
+				60EEBA3D2119B482008CFEF0 /* SimuNaviController.m */,
+			);
+			path = BaseNavi;
+			sourceTree = "<group>";
+		};
+		0380BD84254BEAB3003035D5 /* NaviConfig */ = {
+			isa = PBXGroup;
+			children = (
+				0380BCF4254A7225003035D5 /* AutoScaleViewController.h */,
+				0380BCF5254A7225003035D5 /* AutoScaleViewController.m */,
+				0380BD7F254BE6B4003035D5 /* NaviCustomCarCompassViewController.h */,
+				0380BD80254BE6B4003035D5 /* NaviCustomCarCompassViewController.m */,
+				6052EDA0211A9820008A4FF2 /* NaviModeController.h */,
+				6052EDA1211A9A88008A4FF2 /* NaviModeController.m */,
+				6052EDA3211AB3DD008A4FF2 /* NaviDayNightController.h */,
+				6052EDA4211AB421008A4FF2 /* NaviDayNightController.m */,
+				6052EDA6211AB96C008A4FF2 /* NaviRouteWidthController.h */,
+				6052EDA7211AB99F008A4FF2 /* NaviRouteWidthController.m */,
+				030CBF7824ECCB1C0017E616 /* NaviRouteColorViewController.h */,
+				030CBF7924ECCB1C0017E616 /* NaviRouteColorViewController.m */,
+				030CBF7C24ECCCA60017E616 /* NaviRouteSymbolGapViewController.h */,
+				030CBF7D24ECCCA60017E616 /* NaviRouteSymbolGapViewController.m */,
+			);
+			path = NaviConfig;
+			sourceTree = "<group>";
+		};
+		0380BD85254BEAE0003035D5 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				03B0AFA923B5ABC6000BF8BC /* DefaultNaviController.h */,
+				03B0AFAA23B5ABC6000BF8BC /* DefaultNaviController.m */,
+				6052EDA9211ADC2B008A4FF2 /* CustomNaviController.h */,
+				6052EDAA211ADFAD008A4FF2 /* CustomNaviController.m */,
+				6052EDAC211B045A008A4FF2 /* AddKitNaviController.h */,
+				6052EDAD211B046F008A4FF2 /* AddKitNaviController.m */,
+				603D1FDC211D230D0017CE94 /* AddMapKitNaviController.h */,
+				603D1FDD211D234E0017CE94 /* AddMapKitNaviController.m */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		0380BD86254BEB09003035D5 /* WalkRideNavi */ = {
+			isa = PBXGroup;
+			children = (
+				030CBF6924E38F430017E616 /* RideNavi */,
+				030CBF6824E38F360017E616 /* WalkNavi */,
+			);
+			path = WalkRideNavi;
+			sourceTree = "<group>";
+		};
 		03DF98C524285FE100A7752C /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,41 +396,6 @@
 				0380BD16254A97EB003035D5 /* DeviceUtils.m */,
 			);
 			path = Tools;
-			sourceTree = "<group>";
-		};
-		600029EA21172E550044A9CF /* CarNavi */ = {
-			isa = PBXGroup;
-			children = (
-				60EEBA32211874F0008CFEF0 /* BaseNaviViewController.h */,
-				60EEBA33211875E0008CFEF0 /* BaseNaviViewController.m */,
-				60EEBA3521193DE3008CFEF0 /* NaviSearchRoutes.h */,
-				60EEBA3721195212008CFEF0 /* NaviSearchRoutes.m */,
-				60EEBA392119ACDF008CFEF0 /* RealNaviController.h */,
-				60EEBA3A2119AE03008CFEF0 /* RealNaviController.m */,
-				60EEBA3C2119B442008CFEF0 /* SimuNaviController.h */,
-				60EEBA3D2119B482008CFEF0 /* SimuNaviController.m */,
-				6052EDA0211A9820008A4FF2 /* NaviModeController.h */,
-				6052EDA1211A9A88008A4FF2 /* NaviModeController.m */,
-				6052EDA3211AB3DD008A4FF2 /* NaviDayNightController.h */,
-				6052EDA4211AB421008A4FF2 /* NaviDayNightController.m */,
-				6052EDA6211AB96C008A4FF2 /* NaviRouteWidthController.h */,
-				6052EDA7211AB99F008A4FF2 /* NaviRouteWidthController.m */,
-				030CBF7824ECCB1C0017E616 /* NaviRouteColorViewController.h */,
-				030CBF7924ECCB1C0017E616 /* NaviRouteColorViewController.m */,
-				030CBF7C24ECCCA60017E616 /* NaviRouteSymbolGapViewController.h */,
-				030CBF7D24ECCCA60017E616 /* NaviRouteSymbolGapViewController.m */,
-				03B0AFA923B5ABC6000BF8BC /* DefaultNaviController.h */,
-				03B0AFAA23B5ABC6000BF8BC /* DefaultNaviController.m */,
-				6052EDA9211ADC2B008A4FF2 /* CustomNaviController.h */,
-				6052EDAA211ADFAD008A4FF2 /* CustomNaviController.m */,
-				6052EDAC211B045A008A4FF2 /* AddKitNaviController.h */,
-				6052EDAD211B046F008A4FF2 /* AddKitNaviController.m */,
-				603D1FDC211D230D0017CE94 /* AddMapKitNaviController.h */,
-				603D1FDD211D234E0017CE94 /* AddMapKitNaviController.m */,
-				0380BCF4254A7225003035D5 /* AutoScaleViewController.h */,
-				0380BCF5254A7225003035D5 /* AutoScaleViewController.m */,
-			);
-			path = CarNavi;
 			sourceTree = "<group>";
 		};
 		655F30461F1CBA8700FA20A9 /* Frameworks */ = {
@@ -406,6 +437,7 @@
 				65A0CDD11F1601F000811B83 /* Resources */,
 				65A0CD8A1F16008B00811B83 /* AppDelegate.h */,
 				65A0CD8B1F16008B00811B83 /* AppDelegate.m */,
+				0380BD87254BEB65003035D5 /* test.gps */,
 				65A0CD931F16008B00811B83 /* Assets.xcassets */,
 				65A0CD951F16008B00811B83 /* LaunchScreen.storyboard */,
 				65A0CD981F16008B00811B83 /* Info.plist */,
@@ -439,9 +471,10 @@
 			isa = PBXGroup;
 			children = (
 				0380BCF9254A76FE003035D5 /* NaviProcess */,
-				030CBF6924E38F430017E616 /* RideNavi */,
-				030CBF6824E38F360017E616 /* WalkNavi */,
-				600029EA21172E550044A9CF /* CarNavi */,
+				0380BD83254BEA54003035D5 /* BaseNavi */,
+				0380BD84254BEAB3003035D5 /* NaviConfig */,
+				0380BD85254BEAE0003035D5 /* CustomUI */,
+				0380BD86254BEB09003035D5 /* WalkRideNavi */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -504,6 +537,7 @@
 				0380BD28254A982F003035D5 /* SearchRecordTableViewCell.h in Headers */,
 				0380BCF6254A7225003035D5 /* AutoScaleViewController.h in Headers */,
 				0380BD2F254A984A003035D5 /* NavigationViewController.h in Headers */,
+				0380BD81254BE6B4003035D5 /* NaviCustomCarCompassViewController.h in Headers */,
 				0380BD3B254A9B44003035D5 /* SVProgressAnimatedView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,6 +605,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0380BD88254BEB65003035D5 /* test.gps in Resources */,
 				0380BD33254A9B25003035D5 /* SVProgressHUD.bundle in Resources */,
 				030CBF7724E3BE9E0017E616 /* TencentNavigationKit.bundle in Resources */,
 				03538FFF246A8B71002DE0CF /* QMapKit.bundle in Resources */,
@@ -608,6 +643,7 @@
 				0380BD26254A982F003035D5 /* SearchViewController.m in Sources */,
 				030CBF6D24E38F780017E616 /* WalkNaviViewController.m in Sources */,
 				0380BD13254A97E0003035D5 /* MathTool.m in Sources */,
+				0380BD82254BE6B4003035D5 /* NaviCustomCarCompassViewController.m in Sources */,
 				6052EDAB211ADFAD008A4FF2 /* CustomNaviController.m in Sources */,
 				0380BD43254A9B4B003035D5 /* SVRadialGradientLayer.m in Sources */,
 				03B0AFAC23B5ABC6000BF8BC /* DefaultNaviController.m in Sources */,
