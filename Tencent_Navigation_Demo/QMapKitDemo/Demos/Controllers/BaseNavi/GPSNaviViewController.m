@@ -50,6 +50,10 @@
         if(error == nil)
         {
             // 可以通过给定的GPS文件进行测试导航，可以测试偏航场景
+            // 初始化GPS模拟导航manager. 文件格式定义如下:
+            // 每个定位数据元素占一行,共有按序排列的八个属性,以逗号分隔,最后一个数据后不带逗号.
+            // 八个属性为:经度,纬度,水平精度,角度,速度,时间,时间戳,海拔高度.
+            //  例: 116.308086,39.983521,30,313.94,1.72,2014-6-10 11:17:5,1402370225.698,96
             NSString *filePath = [[NSBundle mainBundle] pathForResource:@"ios_traffic_time" ofType:@"gps"];
 
             TNKGPSFileLocationManager *manager = [[TNKGPSFileLocationManager alloc] initWithFilePath:filePath];
