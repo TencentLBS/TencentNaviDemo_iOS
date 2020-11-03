@@ -70,6 +70,11 @@
             cell.controllerClassName = @"SimuNaviController";
             [cellArray addObject:cell];
             
+            cell = [[Cell alloc] init];
+            cell.title = @"GPS文件测试导航";
+            cell.controllerClassName = @"GPSNaviViewController";
+            [cellArray addObject:cell];
+            
         }
     }
     

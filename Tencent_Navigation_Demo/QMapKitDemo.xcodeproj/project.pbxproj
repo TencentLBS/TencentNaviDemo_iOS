@@ -56,6 +56,9 @@
 		0380BD81254BE6B4003035D5 /* NaviCustomCarCompassViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0380BD7F254BE6B4003035D5 /* NaviCustomCarCompassViewController.h */; };
 		0380BD82254BE6B4003035D5 /* NaviCustomCarCompassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0380BD80254BE6B4003035D5 /* NaviCustomCarCompassViewController.m */; };
 		0380BD88254BEB65003035D5 /* test.gps in Resources */ = {isa = PBXBuildFile; fileRef = 0380BD87254BEB65003035D5 /* test.gps */; };
+		0380BDC5255102E6003035D5 /* GPSNaviViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0380BDC3255102E6003035D5 /* GPSNaviViewController.h */; };
+		0380BDC6255102E6003035D5 /* GPSNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0380BDC4255102E6003035D5 /* GPSNaviViewController.m */; };
+		0380BDC8255102F1003035D5 /* ios_traffic_time.gps in Resources */ = {isa = PBXBuildFile; fileRef = 0380BDC7255102F1003035D5 /* ios_traffic_time.gps */; };
 		03B0AFAB23B5ABC6000BF8BC /* DefaultNaviController.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B0AFA923B5ABC6000BF8BC /* DefaultNaviController.h */; };
 		03B0AFAC23B5ABC6000BF8BC /* DefaultNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B0AFAA23B5ABC6000BF8BC /* DefaultNaviController.m */; };
 		03DF98C824285FF900A7752C /* TrafficPolyline.h in Headers */ = {isa = PBXBuildFile; fileRef = 03DF98C624285FF900A7752C /* TrafficPolyline.h */; };
@@ -165,6 +168,9 @@
 		0380BD7F254BE6B4003035D5 /* NaviCustomCarCompassViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaviCustomCarCompassViewController.h; sourceTree = "<group>"; };
 		0380BD80254BE6B4003035D5 /* NaviCustomCarCompassViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaviCustomCarCompassViewController.m; sourceTree = "<group>"; };
 		0380BD87254BEB65003035D5 /* test.gps */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.gps; sourceTree = "<group>"; };
+		0380BDC3255102E6003035D5 /* GPSNaviViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPSNaviViewController.h; sourceTree = "<group>"; };
+		0380BDC4255102E6003035D5 /* GPSNaviViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPSNaviViewController.m; sourceTree = "<group>"; };
+		0380BDC7255102F1003035D5 /* ios_traffic_time.gps */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ios_traffic_time.gps; sourceTree = "<group>"; };
 		03B0AFA923B5ABC6000BF8BC /* DefaultNaviController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultNaviController.h; sourceTree = "<group>"; };
 		03B0AFAA23B5ABC6000BF8BC /* DefaultNaviController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultNaviController.m; sourceTree = "<group>"; };
 		03DF98C624285FF900A7752C /* TrafficPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrafficPolyline.h; sourceTree = "<group>"; };
@@ -330,6 +336,8 @@
 				60EEBA3A2119AE03008CFEF0 /* RealNaviController.m */,
 				60EEBA3C2119B442008CFEF0 /* SimuNaviController.h */,
 				60EEBA3D2119B482008CFEF0 /* SimuNaviController.m */,
+				0380BDC3255102E6003035D5 /* GPSNaviViewController.h */,
+				0380BDC4255102E6003035D5 /* GPSNaviViewController.m */,
 			);
 			path = BaseNavi;
 			sourceTree = "<group>";
@@ -438,6 +446,7 @@
 				65A0CD8A1F16008B00811B83 /* AppDelegate.h */,
 				65A0CD8B1F16008B00811B83 /* AppDelegate.m */,
 				0380BD87254BEB65003035D5 /* test.gps */,
+				0380BDC7255102F1003035D5 /* ios_traffic_time.gps */,
 				65A0CD931F16008B00811B83 /* Assets.xcassets */,
 				65A0CD951F16008B00811B83 /* LaunchScreen.storyboard */,
 				65A0CD981F16008B00811B83 /* Info.plist */,
@@ -532,6 +541,7 @@
 				0380BD14254A97E0003035D5 /* MathTool.h in Headers */,
 				0380BD17254A97EB003035D5 /* DeviceUtils.h in Headers */,
 				0380BD46254A9B4B003035D5 /* SVProgressHUD.h in Headers */,
+				0380BDC5255102E6003035D5 /* GPSNaviViewController.h in Headers */,
 				0380BD4A254A9C3A003035D5 /* CarPlanController.h in Headers */,
 				0380BD44254A9B4B003035D5 /* SVRadialGradientLayer.h in Headers */,
 				0380BD28254A982F003035D5 /* SearchRecordTableViewCell.h in Headers */,
@@ -621,6 +631,7 @@
 				65A0CD941F16008B00811B83 /* Assets.xcassets in Resources */,
 				31BFE8E61F34675B0026C9BB /* foot.jpg in Resources */,
 				65A0CDF31F1601F000811B83 /* marker@2x.png in Resources */,
+				0380BDC8255102F1003035D5 /* ios_traffic_time.gps in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,6 +661,7 @@
 				0380BD3A254A9B44003035D5 /* SVIndefiniteAnimatedView.m in Sources */,
 				60EEBA3B2119AE04008CFEF0 /* RealNaviController.m in Sources */,
 				60EEBA3E2119B482008CFEF0 /* SimuNaviController.m in Sources */,
+				0380BDC6255102E6003035D5 /* GPSNaviViewController.m in Sources */,
 				0380BD18254A97EB003035D5 /* DeviceUtils.m in Sources */,
 				0380BD3D254A9B44003035D5 /* SVProgressAnimatedView.m in Sources */,
 				60EEBA34211875E0008CFEF0 /* BaseNaviViewController.m in Sources */,
